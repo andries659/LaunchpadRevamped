@@ -82,7 +82,7 @@ public class RevivedModifier : BaseModifier
     {
         if (MeetingHud.Instance)
         {
-            var playerState = MeetingHud.Instance.playerStates.First(plr => plr.TargetPlayerId == Player.PlayerId);
+            var playerState = MeetingHud.Instance.playerStates.First(plr => plr.PlayerId == Player.PlayerId);
             if (playerState is null)
             {
                 return;

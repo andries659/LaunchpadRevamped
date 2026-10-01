@@ -70,7 +70,7 @@ public static class MeetingEvents
     {
         foreach (var player in GameData.Instance.AllPlayers)
         {
-            var state = @event.MeetingHud.playerStates.FirstOrDefault(state => state.TargetPlayerId == player.PlayerId);
+            var state = @event.MeetingHud.playerStates.FirstOrDefault(state => state.PlayerId == player.PlayerId);
             var tagManager = player.Object.GetTagManager();
 
             if (state != null && tagManager != null)

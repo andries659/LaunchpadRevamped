@@ -51,7 +51,7 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
         {
             _inMeeting = true;
 
-            voteArea = meeting.playerStates.FirstOrDefault(plr => plr.TargetPlayerId == player.PlayerId);
+            voteArea = meeting.playerStates.FirstOrDefault(plr => plr.PlayerId == player.PlayerId);
 
             if (voteArea != null)
             {

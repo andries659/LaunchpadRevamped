@@ -73,7 +73,7 @@ public static class VotingTypesManager
 
         foreach (var voteArea in MeetingHud.Instance.playerStates)
         {
-            chances.TryGetValue(voteArea.TargetPlayerId, out var val);
+            chances.TryGetValue((byte)voteArea.PlayerId, out var val);
             if (voteArea.AmDead || val < 1)
             {
                 continue;

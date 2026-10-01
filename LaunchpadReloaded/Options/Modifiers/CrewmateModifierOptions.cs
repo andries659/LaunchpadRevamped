@@ -8,7 +8,7 @@ namespace LaunchpadReloaded.Options.Modifiers;
 public class CrewmateModifierOptions : AbstractOptionGroup
 {
     public override string GroupName => "Crewmate Modifiers";
-    public override bool ShowInModifiersMenu => true;
+    public override MenuCategory ParentMenu => MenuCategory.Modifiers;
     public override Color GroupColor => Palette.CrewmateRoleHeaderBlue;
 
     [ModdedNumberOption("Mayor Chance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]

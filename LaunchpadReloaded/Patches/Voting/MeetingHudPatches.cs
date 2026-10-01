@@ -43,7 +43,7 @@ public static class MeetingHudPatches
         {
             _confirmVotes = Object.Instantiate(__instance.SkipVoteButton, __instance.SkipVoteButton.transform.parent);
             _confirmVotes.gameObject.name = "ConfirmVotesBtn";
-            _confirmVotes.SetTargetPlayerId((byte)SpecialVotes.Confirm);
+            _confirmVotes.PlayerId = (byte)SpecialVotes.Confirm;
             _confirmVotes.Parent = __instance;
 
             var confirmText = _confirmVotes.gameObject.GetComponentInChildren<TextMeshPro>();
@@ -110,7 +110,7 @@ public static class MeetingHudPatches
             }
 
             _typeText.gameObject.SetActive(false);
-            if (__instance.state != MeetingHud.VoteStates.Results)
+            if (__instance.state != MeetingHud.MeetingStates.Results)
             {
                 return;
             }
@@ -125,8 +125,8 @@ public static class MeetingHudPatches
 
         switch (__instance.state)
         {
-            case MeetingHud.VoteStates.Voted:
-            case MeetingHud.VoteStates.NotVoted:
+            case MeetingHud.MeetingStates.Voted:
+            case MeetingHud.MeetingStates.NotVoted:
                 if (PlayerControl.LocalPlayer.GetVoteData().VotesRemaining == 0)
                 {
                     _typeText.gameObject.SetActive(false);
@@ -146,7 +146,7 @@ public static class MeetingHudPatches
 
                 break;
 
-            case MeetingHud.VoteStates.Results:
+            case MeetingHud.MeetingStates.Results:
                 if (_confirmVotes != null)
                 {
                     _confirmVotes.SetDisabled();

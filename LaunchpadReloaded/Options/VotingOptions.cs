@@ -12,7 +12,7 @@ public class VotingOptions : AbstractOptionGroup
 {
     public override string GroupName => "Voting Type";
 
-    public override Func<bool> GroupVisible => CustomGameModeManager.IsDefault;
+    public override Func<bool> GroupVisible => CustomGameModeManager.IsClassic;
 
     [ModdedEnumOption("Voting Type", typeof(VotingTypes))]
     public VotingTypes VotingType { get; set; } = VotingTypes.Classic;

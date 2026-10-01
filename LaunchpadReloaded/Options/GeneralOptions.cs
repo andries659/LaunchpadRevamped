@@ -10,7 +10,7 @@ namespace LaunchpadReloaded.Options;
 public class GeneralOptions : AbstractOptionGroup
 {
     public override string GroupName => "General";
-    public override Func<bool> GroupVisible => CustomGameModeManager.IsDefault;
+    public override Func<bool> GroupVisible => CustomGameModeManager.IsClassic;
 
     public ModdedToggleOption Notepad { get; set; } = new("Notepad", true)
     {
