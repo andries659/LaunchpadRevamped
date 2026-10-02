@@ -9,9 +9,9 @@ using MiraAPI.GameOptions;
 using MiraAPI.Roles;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Outcast;
+namespace LaunchpadReloaded.Roles.Neutral;
 
-public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), IOutcastRole
+public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public string RoleName => "Reaper";
     public string RoleDescription => "Collect souls to win";
@@ -25,7 +25,7 @@ public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), IOutcastRole
     {
         TasksCountForProgress = false,
         CanUseVent = false,
-        GhostRole = (RoleTypes)RoleId.Get<OutcastGhostRole>(),
+        GhostRole = (RoleTypes)RoleId.Get<NeutralGhostRole>(),
         Icon = LaunchpadAssets.SoulButton,
         OptionsScreenshot = LaunchpadAssets.JesterBanner,
     };

@@ -6,7 +6,7 @@ using Reactor.Networking.Attributes;
 using Reactor.Utilities;
 using System.Collections;
 using LaunchpadReloaded.GameOver;
-using LaunchpadReloaded.Roles.Outcast;
+using LaunchpadReloaded.Roles.Neutral;
 using MiraAPI.GameEnd;
 using MiraAPI.Utilities;
 using Helpers = MiraAPI.Utilities.Helpers;

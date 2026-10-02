@@ -15,9 +15,9 @@ using MiraAPI.Utilities;
 using Reactor.Utilities.Extensions;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Outcast;
+namespace LaunchpadReloaded.Roles.Neutral;
 
-public class ExecutionerRole(System.IntPtr ptr) : RoleBehaviour(ptr), IOutcastRole
+public class ExecutionerRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public string RoleName => "Executioner";
     public string RoleDescription => $"Get <b>{(target ? target!.Data.PlayerName : "your target")}</b> voted out to win.";
@@ -29,7 +29,7 @@ public class ExecutionerRole(System.IntPtr ptr) : RoleBehaviour(ptr), IOutcastRo
     {
         TasksCountForProgress = false,
         CanUseVent = false,
-        GhostRole = (RoleTypes)RoleId.Get<OutcastGhostRole>(),
+        GhostRole = (RoleTypes)RoleId.Get<NeutralGhostRole>(),
     };
 
     private static readonly PlayerTag TargetTag = new()

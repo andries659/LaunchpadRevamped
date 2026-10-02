@@ -1,0 +1,295 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Roles (keys follow ICustomRole defaults: <namespace>.<ClassName>) -->
+    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole">Captain</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.IntroBlurb">Protect the crew with your abilities</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.MedDescription">Protect the crew with your abilities</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.TabDescription">Use your zoom ability to keep an eye on the crew
+ And call meetings from any location!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.WikiDescription">Use your zoom ability to keep an eye on the crew
+ And call meetings from any location!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole">Coroner</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.IntroBlurb">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.MedDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.TabDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.WikiDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole">Gambler</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.IntroBlurb">Guess a player's role to reveal it!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.MedDescription">Guess a player's role to reveal it!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.TabDescription">Guess a player's role to reveal it!
+However, if you get it incorrect, you will die.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.WikiDescription">Guess a player's role to reveal it!
+However, if you get it incorrect, you will die.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole">Detective</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.IntroBlurb">Investigate and find clues on murders.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.MedDescription">Investigate and find clues on murders.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.TabDescription">Investigate bodies to get clues and use your instinct ability
+to see recent footsteps around you!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.WikiDescription">Investigate bodies to get clues and use your instinct ability
+to see recent footsteps around you!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole">Medic</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.IntroBlurb">Help the crewmates by reviving dead players.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.MedDescription">Help the crewmates by reviving dead players.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.TabDescription">Use your revive ability to bring dead bodies
+back to life!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.WikiDescription">Use your revive ability to bring dead bodies
+back to life!</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole">Sealer</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.IntroBlurb">Seal vents around the map.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.MedDescription">Seal vents around the map.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.TabDescription">Seal vents around the map.
+This will prevent anyone from entering the vent.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.WikiDescription">Seal vents around the map.
+This will prevent anyone from entering the vent.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole">Sheriff</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.IntroBlurb">Take your chance by shooting a player.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.MedDescription">Take your chance by shooting a player.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.TabDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
+but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
+    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.WikiDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
+but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole">Burrower</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.IntroBlurb">Create vents around the map.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.MedDescription">Create vents around the map.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.TabDescription">Move around the map easier
+By digging new vents.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.WikiDescription">Move around the map easier
+By digging new vents.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole">Hacker</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.IntroBlurb">Hack meetings and sabotage the crewmates</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.MedDescription">Hack meetings and sabotage the crewmates</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.TabDescription">Hack crewmates and make them unable to do tasks
+And view the admin map from anywhere!</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.WikiDescription">Hack crewmates and make them unable to do tasks
+And view the admin map from anywhere!</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole">Hitman</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.IntroBlurb">Slow down time and kill the Crewmates.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.MedDescription">Slow down time and kill the Crewmates.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.TabDescription">Slow down time and kill the Crewmates.
+You can kill multiple players at once.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.WikiDescription">Slow down time and kill the Crewmates.
+You can kill multiple players at once.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole">Janitor</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.IntroBlurb">Drag bodies and hide them in vents</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.MedDescription">Drag bodies and hide them in vents</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.TabDescription">You can drag bodies and hide them in vents
+Which will cause them to disappear unless the vent is used.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.WikiDescription">You can drag bodies and hide them in vents
+Which will cause them to disappear unless the vent is used.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole">Surgeon</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.IntroBlurb">Poison other players and dissect bodies</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.MedDescription">Poison other players and dissect bodies</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.TabDescription">You can poison players resulting in their death
+and you can dissect bodies to make them unreportable.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.WikiDescription">You can poison players resulting in their death
+and you can dissect bodies to make them unreportable.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole">Swapshifter</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.IntroBlurb">Shift and swap into other players.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.MedDescription">Shift and swap into other players.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.TabDescription">Shift and swap into other players.
+This can help you frame players and disguise kills.</string>
+    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.WikiDescription">Shift and swap into other players.
+This can help you frame players and disguise kills.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole">Executioner</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.TabDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.WikiDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole">Jester</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.IntroBlurb">Get ejected to win</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.MedDescription">Get ejected to win</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.TabDescription">Convince the crew to vote you out by being suspicious.
+If you get voted out, you win the game.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.WikiDescription">Convince the crew to vote you out by being suspicious.
+If you get voted out, you win the game.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole">Reaper</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.IntroBlurb">Collect souls to win</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.MedDescription">Collect souls to win</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole">Outcast Ghost</string>
+    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.IntroBlurb"></string>
+    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.MedDescription"></string>
+    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.TabDescription"></string>
+    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.WikiDescription"></string>
+    <!-- Outcast team intro (IOutcastRole) -->
+    <string name="launchpad.outcast">Outcast</string>
+    <string name="launchpad.outcast.group">Outcast Roles</string>
+    <string name="launchpad.outcast.roleTitle">OUTCAST</string>
+    <string name="launchpad.outcast.teamIntroDescription">You are an Outcast. You do not have a team.</string>
+    <!-- Buttons (MiraAPI uppercases button text itself) -->
+    <string name="launchpad.button.seal">Seal</string>
+    <string name="launchpad.button.shoot">Shoot</string>
+    <string name="launchpad.button.call">Call</string>
+    <string name="launchpad.button.revive">Revive</string>
+    <string name="launchpad.button.zoom">Zoom</string>
+    <string name="launchpad.button.instinct">Instinct</string>
+    <string name="launchpad.button.investigate">Investigate</string>
+    <string name="launchpad.button.freeze">Freeze</string>
+    <string name="launchpad.button.gamble">Gamble</string>
+    <string name="launchpad.button.drag">Drag</string>
+    <string name="launchpad.button.collect">Collect Soul</string>
+    <string name="launchpad.button.mark">Mark</string>
+    <string name="launchpad.button.dig">Dig Vent</string>
+    <string name="launchpad.button.hide">Hide</string>
+    <string name="launchpad.button.inject">Inject</string>
+    <string name="launchpad.button.swap">Swap</string>
+    <string name="launchpad.button.hack">Hack</string>
+    <string name="launchpad.button.dissect">Dissect</string>
+    <string name="launchpad.button.deadlock">Deadlock</string>
+    <!-- Modifiers -->
+    <string name="launchpad.modifier.giant">Giant</string>
+    <string name="launchpad.modifier.giant.TabDescription">You are larger than
+the average player.</string>
+    <string name="launchpad.modifier.smol">Smol</string>
+    <string name="launchpad.modifier.smol.TabDescription">You are smaller than
+the average player.</string>
+    <string name="launchpad.modifier.gravity">Gravity Field</string>
+    <string name="launchpad.modifier.gravity.TabDescription">You slow down players near you.</string>
+    <string name="launchpad.modifier.vendetta">Vendetta</string>
+    <string name="launchpad.modifier.vendetta.TabDescription">You can mark {uses} {unit} per round
+If they vote you in the next meeting,
+they will die in the next round.</string>
+    <string name="launchpad.modifier.vendetta.unit.one">player</string>
+    <string name="launchpad.modifier.vendetta.unit.other">players</string>
+    <string name="launchpad.modifier.torch">Torch</string>
+    <string name="launchpad.modifier.torch.TabDescription.flashlight">You will have a flashlight
+if lights are sabotaged.</string>
+    <string name="launchpad.modifier.torch.TabDescription.maxVision">You have max vision
+if lights are sabotaged.</string>
+    <string name="launchpad.modifier.mayor">Mayor</string>
+    <string name="launchpad.modifier.mayor.TabDescription">You have an additional 
+{votes} votes every meeting.</string>
+    <string name="launchpad.modifier.hacked">Hacked</string>
+    <string name="launchpad.modifier.poisoned">Poisoned</string>
+    <string name="launchpad.modifier.dragBody">Drag Body</string>
+    <string name="launchpad.modifier.revealed">Revealed</string>
+    <string name="launchpad.modifier.revived">Revived</string>
+    <string name="launchpad.modifier.footsteps">Footsteps</string>
+    <string name="launchpad.modifier.gravityVictim">Victim of Gravity</string>
+    <string name="launchpad.modifier.vendettaMark">Vendetta</string>
+    <!-- Option groups and options -->
+    <string name="launchpad.options.battleRoyaleOptions">Battle Royale Options</string>
+    <string name="launchpad.options.battleRoyaleOptions.useSeekerCharacter">Use Seeker Character</string>
+    <string name="launchpad.options.battleRoyaleOptions.showKnife">Show Knife</string>
+    <string name="launchpad.options.funOptions">Fun Options</string>
+    <string name="launchpad.options.funOptions.friendlyFire">Friendly Fire</string>
+    <string name="launchpad.options.funOptions.uniqueColors">Unique Colors</string>
+    <string name="launchpad.options.funOptions.character">Character</string>
+    <string name="launchpad.options.general">General</string>
+    <string name="launchpad.options.general.banCheaters">Ban Cheaters</string>
+    <string name="launchpad.options.general.disableMeetingTeleport">Disable Meeting Teleport</string>
+    <string name="launchpad.options.general.notepad">Notepad</string>
+    <string name="launchpad.options.mayor">Mayor</string>
+    <string name="launchpad.options.mayor.extraVotes">Extra Votes</string>
+    <string name="launchpad.options.mayor.allowMultipleVotesOnSamePlayer">Allow Multiple Votes on Same Player</string>
+    <string name="launchpad.options.torch">Torch</string>
+    <string name="launchpad.options.torch.useHideNSeekFlashlight">Use Hide N Seek Flashlight</string>
+    <string name="launchpad.options.torch.flashlightSize">Flashlight Size</string>
+    <string name="launchpad.options.vendetta">Vendetta</string>
+    <string name="launchpad.options.vendetta.markCooldown">Mark Cooldown</string>
+    <string name="launchpad.options.vendetta.marksPerRound">Marks Per Round</string>
+    <string name="launchpad.options.crewmateModifiers">Crewmate Modifiers</string>
+    <string name="launchpad.options.crewmateModifiers.mayorChance">Mayor Chance</string>
+    <string name="launchpad.options.crewmateModifiers.torchChance">Torch Chance</string>
+    <string name="launchpad.options.crewmateModifiers.vendettaChance">Vendetta Chance</string>
+    <string name="launchpad.options.modifierOptions">Modifier Options</string>
+    <string name="launchpad.options.modifierOptions.playerModifierLimit">Player Modifier Limit</string>
+    <string name="launchpad.options.gravityField">Gravity Field</string>
+    <string name="launchpad.options.gravityField.gravityFieldRadius">Gravity Field Radius</string>
+    <string name="launchpad.options.universalModifiers">Universal Modifiers</string>
+    <string name="launchpad.options.universalModifiers.giantChance">Giant Chance</string>
+    <string name="launchpad.options.universalModifiers.smolChance">Smol Chance</string>
+    <string name="launchpad.options.universalModifiers.gravityFieldChance">Gravity Field Chance</string>
+    <string name="launchpad.options.captain">Captain</string>
+    <string name="launchpad.options.captain.meetingCooldown">Meeting Cooldown</string>
+    <string name="launchpad.options.captain.meetingUses">Meeting Uses</string>
+    <string name="launchpad.options.captain.zoomCooldown">Zoom Cooldown</string>
+    <string name="launchpad.options.captain.zoomDuration">Zoom Duration</string>
+    <string name="launchpad.options.captain.zoomDistance">Zoom Distance</string>
+    <string name="launchpad.options.coroner">Coroner</string>
+    <string name="launchpad.options.coroner.freezeCooldown">Freeze Cooldown</string>
+    <string name="launchpad.options.coroner.freezeUses">Freeze Uses</string>
+    <string name="launchpad.options.detective">Detective</string>
+    <string name="launchpad.options.detective.hideSuspects">Hide Suspects</string>
+    <string name="launchpad.options.detective.suspectCount">Suspect Count</string>
+    <string name="launchpad.options.detective.footstepsDuration">Footsteps Duration</string>
+    <string name="launchpad.options.detective.instinctDuration">Instinct Duration</string>
+    <string name="launchpad.options.detective.instinctUses">Instinct Uses</string>
+    <string name="launchpad.options.detective.instinctCooldown">Instinct Cooldown</string>
+    <string name="launchpad.options.gambler">Gambler</string>
+    <string name="launchpad.options.gambler.gambleCooldown">Gamble Cooldown</string>
+    <string name="launchpad.options.gambler.gambleUses">Gamble Uses</string>
+    <string name="launchpad.options.medic">Medic</string>
+    <string name="launchpad.options.medic.onlyAllowRevivingInMedBayLaboratory">Only Allow Reviving in MedBay/Laboratory</string>
+    <string name="launchpad.options.medic.canDragBodies">Can Drag Bodies</string>
+    <string name="launchpad.options.medic.maxRevives">Max Revives</string>
+    <string name="launchpad.options.medic.reviveCooldown">Revive Cooldown</string>
+    <string name="launchpad.options.sealer">Sealer</string>
+    <string name="launchpad.options.sealer.sealVentCooldown">Seal Vent Cooldown</string>
+    <string name="launchpad.options.sealer.sealVentUses">Seal Vent Uses</string>
+    <string name="launchpad.options.sealer.sealRevealsBodies">Seal Reveals Bodies</string>
+    <string name="launchpad.options.sheriff">Sheriff</string>
+    <string name="launchpad.options.sheriff.shotCooldown">Shot Cooldown</string>
+    <string name="launchpad.options.sheriff.shotsPerGame">Shots Per Game</string>
+    <string name="launchpad.options.sheriff.shouldCrewmateDie">Should Crewmate Die</string>
+    <string name="launchpad.options.burrower">Burrower</string>
+    <string name="launchpad.options.burrower.ventDigCooldown">Vent Dig Cooldown</string>
+    <string name="launchpad.options.burrower.ventDigUses">Vent Dig Uses</string>
+    <string name="launchpad.options.burrower.minVentDistance">Min Vent Distance</string>
+    <string name="launchpad.options.hacker">Hacker</string>
+    <string name="launchpad.options.hacker.hackCooldown">Hack Cooldown</string>
+    <string name="launchpad.options.hacker.hackDuration">Hack Duration</string>
+    <string name="launchpad.options.hacker.hacksPerGame">Hacks Per Game</string>
+    <string name="launchpad.options.hacker.mapCooldown">Map Cooldown</string>
+    <string name="launchpad.options.hacker.mapDuration">Map Duration</string>
+    <string name="launchpad.options.hitman">Hitman</string>
+    <string name="launchpad.options.hitman.deadlockCooldown">Deadlock Cooldown</string>
+    <string name="launchpad.options.hitman.deadlockUses">Deadlock Uses</string>
+    <string name="launchpad.options.hitman.deadlockMarkLimit">Deadlock Mark Limit</string>
+    <string name="launchpad.options.hitman.deadlockDuration">Deadlock Duration</string>
+    <string name="launchpad.options.janitor">Janitor</string>
+    <string name="launchpad.options.janitor.hideBodiesCooldown">Hide Bodies Cooldown</string>
+    <string name="launchpad.options.janitor.dragBodySpeed">Drag Body Speed</string>
+    <string name="launchpad.options.janitor.hideBodiesUses">Hide Bodies Uses</string>
+    <string name="launchpad.options.janitor.cleanInsteadOfHide">Clean Instead Of Hide</string>
+    <string name="launchpad.options.surgeon">Surgeon</string>
+    <string name="launchpad.options.surgeon.injectCooldown">Inject Cooldown</string>
+    <string name="launchpad.options.surgeon.injectUses">Inject Uses</string>
+    <string name="launchpad.options.surgeon.dissectCooldown">Dissect Cooldown</string>
+    <string name="launchpad.options.surgeon.dissectUses">Dissect Uses</string>
+    <string name="launchpad.options.surgeon.poisonDeathDelay">Poison Death Delay</string>
+    <string name="launchpad.options.surgeon.canUseStandardKill">Can Use Standard Kill</string>
+    <string name="launchpad.options.swapshifter">Swapshifter</string>
+    <string name="launchpad.options.swapshifter.swapCooldown">Swap Cooldown</string>
+    <string name="launchpad.options.swapshifter.swapDuration">Swap Duration</string>
+    <string name="launchpad.options.swapshifter.swapUses">Swap Uses</string>
+    <string name="launchpad.options.swapshifter.canSwapWithImpostors">Can Swap with Impostors</string>
+    <string name="launchpad.options.executioner">Executioner</string>
+    <string name="launchpad.options.executioner.canCallMeeting">Can Call Meeting</string>
+    <string name="launchpad.options.executioner.onTargetDeathExecutionerBecomes">On Target Death, Executioner Becomes</string>
+    <string name="launchpad.options.jester">Jester</string>
+    <string name="launchpad.options.jester.canUseVents">Can Use Vents</string>
+    <string name="launchpad.options.reaper">Reaper</string>
+    <string name="launchpad.options.reaper.collectionsToWin">Collections To Win</string>
+    <string name="launchpad.options.reaper.collectCooldown">Collect Cooldown</string>
+    <string name="launchpad.options.votingType">Voting Type</string>
+    <string name="launchpad.options.votingType.votingType">Voting Type</string>
+    <string name="launchpad.options.votingType.maxVotes">Max Votes</string>
+    <string name="launchpad.options.votingType.allowMultipleVotesOnSamePlayer">Allow Multiple Votes on Same Player</string>
+    <string name="launchpad.options.votingType.allowConfirmingVotes">Allow Confirming Votes</string>
+    <string name="launchpad.options.votingType.hideVotingIcons">Hide Voting Icons</string>
+    <string name="launchpad.options.votingType.showPercentages">Show Percentages</string>
+    <!-- Game over screens -->
+    <string name="launchpad.gameover.jester.win">Jester Wins!</string>
+    <string name="launchpad.gameover.reaper.win">Reaper Wins!</string>
+    <string name="launchpad.gameover.executioner.win">Executioner Wins!</string>
+    <!-- Battle Royale -->
+    <string name="launchpad.gamemode.battleRoyale">Battle Royale</string>
+    <string name="launchpad.gamemode.battleRoyale.Description">Everyone can kill.
+[b][i]Last one standing wins.[/b][/i]</string>
+    <string name="launchpad.gamemode.battleRoyale.death">Death</string>
+    <string name="launchpad.gamemode.battleRoyale.playerDied">{player} has [b]DIED.[/b]</string>
+    <string name="launchpad.gamemode.battleRoyale.playersRemaining">Battle Royale
+{count} Players Remaining.</string>
+</resources>

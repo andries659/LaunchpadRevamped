@@ -8,7 +8,7 @@ using LaunchpadReloaded.Modifiers;
 using LaunchpadReloaded.Options.Roles.Crewmate;
 using LaunchpadReloaded.Roles.Crewmate;
 using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Roles.Outcast;
+using LaunchpadReloaded.Roles.Neutral;
 using LaunchpadReloaded.Utilities;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;

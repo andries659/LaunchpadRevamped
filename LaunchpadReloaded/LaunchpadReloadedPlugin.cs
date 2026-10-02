@@ -7,6 +7,7 @@ using LaunchpadReloaded.Patches;
 using MiraAPI;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
+using MiraAPI.Translation;
 using Reactor;
 using Reactor.Networking;
 using Reactor.Networking.Attributes;
@@ -26,6 +27,11 @@ public partial class LaunchpadReloadedPlugin : BasePlugin, IMiraPlugin
     public ConfigFile GetConfigFile()
     {
         return Config;
+    }
+
+    public LaunchpadReloadedPlugin()
+    {
+        MiraLocaleManager.Register(Id);
     }
 
     public string OptionsTitleText => "Launchpad";

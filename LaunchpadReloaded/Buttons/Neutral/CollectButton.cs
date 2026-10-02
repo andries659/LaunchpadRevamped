@@ -1,7 +1,7 @@
 ﻿using LaunchpadReloaded.Features;
 using LaunchpadReloaded.Networking.Roles;
 using LaunchpadReloaded.Options.Roles.Neutral;
-using LaunchpadReloaded.Roles.Outcast;
+using LaunchpadReloaded.Roles.Neutral;
 using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
