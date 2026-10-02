@@ -2,7 +2,7 @@ using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Options.Modifiers;
+namespace LaunchpadRevamped.Options.Modifiers;
 
 public class LpModifierOptions : AbstractOptionGroup
 {

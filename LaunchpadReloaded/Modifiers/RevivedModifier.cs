@@ -1,13 +1,13 @@
 ﻿using AmongUs.GameOptions;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Modifiers;
 using System.Linq;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class RevivedModifier : BaseModifier
 {

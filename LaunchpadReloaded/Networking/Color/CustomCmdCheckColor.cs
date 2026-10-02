@@ -1,16 +1,16 @@
 ﻿using System.Linq;
 using Hazel;
-using LaunchpadReloaded.Features.Managers;
-using LaunchpadReloaded.Options;
+using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 using Reactor.Networking.Attributes;
 using Reactor.Networking.Rpc;
 using Reactor.Utilities;
 
-namespace LaunchpadReloaded.Networking.Color;
+namespace LaunchpadRevamped.Networking.Color;
 
 [RegisterCustomRpc((uint)LaunchpadRpc.CustomCheckColor)]
-public class CustomCmdCheckColor(LaunchpadReloadedPlugin plugin, uint id) : PlayerCustomRpc<LaunchpadReloadedPlugin, CustomColorData>(plugin, id)
+public class CustomCmdCheckColor(LaunchpadRevampedPlugin plugin, uint id) : PlayerCustomRpc<LaunchpadRevampedPlugin, CustomColorData>(plugin, id)
 {
     public override RpcLocalHandling LocalHandling => RpcLocalHandling.None;
 
@@ -66,7 +66,7 @@ public class CustomCmdCheckColor(LaunchpadReloadedPlugin plugin, uint id) : Play
 
         if (!GradientManager.TryGetColor(playerId, out var gradColor))
         {
-            Logger<LaunchpadReloadedPlugin>.Error($"Error getting gradient for player {data.PlayerName}");
+            Logger<LaunchpadRevampedPlugin>.Error($"Error getting gradient for player {data.PlayerName}");
             if (requestedColor == data.DefaultOutfit.ColorId)
             {
                 return false;

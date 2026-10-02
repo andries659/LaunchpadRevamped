@@ -1,11 +1,11 @@
-using LaunchpadReloaded.Buttons.Crewmate;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Buttons.Crewmate;
+using LaunchpadRevamped.Features;
 using MiraAPI.Hud;
 using MiraAPI.Roles;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Crewmate;
+namespace LaunchpadRevamped.Roles.Crewmate;
 
 public class LpDetectiveRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {

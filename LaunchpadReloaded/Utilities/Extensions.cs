@@ -1,7 +1,7 @@
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Options;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using PowerTools;
@@ -10,7 +10,7 @@ using System.Linq;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace LaunchpadReloaded.Utilities;
+namespace LaunchpadRevamped.Utilities;
 
 public static class Extensions
 {

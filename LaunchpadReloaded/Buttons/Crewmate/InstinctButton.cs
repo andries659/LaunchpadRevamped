@@ -1,14 +1,14 @@
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities.Assets;
 using System.Linq;
 using MiraAPI.Modifiers;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Crewmate;
+namespace LaunchpadRevamped.Buttons.Crewmate;
 
 public class InstinctButton : BaseLaunchpadButton
 {

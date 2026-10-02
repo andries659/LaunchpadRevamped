@@ -3,7 +3,7 @@ using Discord;
 using HarmonyLib;
 using UnityEngine.SceneManagement;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 /// <summary>
 /// Custom Discord RPC

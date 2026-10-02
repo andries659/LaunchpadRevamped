@@ -1,18 +1,18 @@
-﻿using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Networking;
-using LaunchpadReloaded.Networking.Roles;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Networking;
+using LaunchpadRevamped.Networking.Roles;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Keybinds;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
-using Helpers = LaunchpadReloaded.Utilities.Helpers;
+using Helpers = LaunchpadRevamped.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Buttons.Impostor;
+namespace LaunchpadRevamped.Buttons.Impostor;
 
 public class HideButton : BaseLaunchpadButton<DeadBody>
 {

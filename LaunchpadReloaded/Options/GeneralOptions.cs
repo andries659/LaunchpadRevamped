@@ -2,10 +2,10 @@ using MiraAPI.GameModes;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using System;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.GameOptions.OptionTypes;
 
-namespace LaunchpadReloaded.Options;
+namespace LaunchpadRevamped.Options;
 
 public class GeneralOptions : AbstractOptionGroup
 {

@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(PlayerParticles),nameof(PlayerParticles.PlacePlayer))]
 public static class MainMenuPlayerParticlePatch

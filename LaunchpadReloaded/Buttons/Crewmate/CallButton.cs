@@ -1,14 +1,14 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Hud;
 using MiraAPI.Keybinds;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Crewmate;
+namespace LaunchpadRevamped.Buttons.Crewmate;
 
 public class CallButton : BaseLaunchpadButton
 {

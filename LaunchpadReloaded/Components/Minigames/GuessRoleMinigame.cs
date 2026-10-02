@@ -1,5 +1,5 @@
 ﻿using Il2CppInterop.Runtime.Attributes;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.Roles;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
@@ -9,7 +9,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public sealed class GuessRoleMinigame(IntPtr ptr) : Minigame(ptr)

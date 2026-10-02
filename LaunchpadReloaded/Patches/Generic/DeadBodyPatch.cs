@@ -1,6 +1,6 @@
 ﻿using HarmonyLib;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(DeadBody))]
 public static class DeadBodyPatch

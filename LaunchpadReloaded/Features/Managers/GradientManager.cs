@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
 using BepInEx.Configuration;
-using LaunchpadReloaded.Components;
+using LaunchpadRevamped.Components;
 using Reactor.Utilities;
 using Random = UnityEngine.Random;
 
-namespace LaunchpadReloaded.Features.Managers;
+namespace LaunchpadRevamped.Features.Managers;
 
 
 public static class GradientManager
@@ -16,11 +16,11 @@ public static class GradientManager
     {
         try
         {
-            GradientConfig = PluginSingleton<LaunchpadReloadedPlugin>.Instance.Config.Bind("Gradient", "Secondary", 0, "Gradient ID");
+            GradientConfig = PluginSingleton<LaunchpadRevampedPlugin>.Instance.Config.Bind("Gradient", "Secondary", 0, "Gradient ID");
         }
         catch (Exception e)
         {
-            Logger<LaunchpadReloadedPlugin>.Warning(e.ToString());
+            Logger<LaunchpadRevampedPlugin>.Warning(e.ToString());
         }
     }
 
@@ -39,7 +39,7 @@ public static class GradientManager
             }
             catch (Exception e)
             {
-                Logger<LaunchpadReloadedPlugin>.Warning(e.ToString());
+                Logger<LaunchpadRevampedPlugin>.Warning(e.ToString());
             }
         }
     }

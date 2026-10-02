@@ -1,9 +1,9 @@
 ﻿using Il2CppSystem;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Networking;
@@ -11,7 +11,7 @@ using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Crewmate;
+namespace LaunchpadRevamped.Buttons.Crewmate;
 
 public class GambleButton : BaseLaunchpadButton<PlayerControl>
 {

@@ -1,15 +1,15 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Networking.Roles;
-using LaunchpadReloaded.Options.Roles.Neutral;
-using LaunchpadReloaded.Roles.Neutral;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Networking.Roles;
+using LaunchpadRevamped.Options.Roles.Neutral;
+using LaunchpadRevamped.Roles.Neutral;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
-using Helpers = LaunchpadReloaded.Utilities.Helpers;
+using Helpers = LaunchpadRevamped.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Buttons.Neutral;
+namespace LaunchpadRevamped.Buttons.Neutral;
 
 public class CollectButton : BaseLaunchpadButton<DeadBody>
 {

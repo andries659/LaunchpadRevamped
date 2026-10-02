@@ -1,10 +1,10 @@
 ﻿using System.Linq;
-using LaunchpadReloaded.Features.Voting;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Modifiers.Game.Crewmate;
-using LaunchpadReloaded.Options;
-using LaunchpadReloaded.Options.Modifiers.Crewmate;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Features.Voting;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Modifiers.Game.Crewmate;
+using LaunchpadRevamped.Options;
+using LaunchpadRevamped.Options.Modifiers.Crewmate;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Meeting;
 using MiraAPI.Events.Vanilla.Meeting.Voting;
@@ -12,7 +12,7 @@ using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Events;
+namespace LaunchpadRevamped.Events;
 
 public static class MeetingEvents
 {

@@ -3,7 +3,7 @@ using MiraAPI.Translation;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class GravityVictimModifier(PlayerControl gravityGuy) : BaseModifier
 {

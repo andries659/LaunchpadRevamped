@@ -1,7 +1,7 @@
 ﻿using MiraAPI.Roles;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Neutral;
+namespace LaunchpadRevamped.Roles.Neutral;
 
 public interface INeutralRole : ICustomRole
 {

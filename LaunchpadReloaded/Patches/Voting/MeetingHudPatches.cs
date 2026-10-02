@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Features.Voting;
-using LaunchpadReloaded.Options;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Features.Voting;
+using LaunchpadRevamped.Options;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using Reactor.Utilities.Extensions;
 using System.Linq;
@@ -11,7 +11,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace LaunchpadReloaded.Patches.Voting;
+namespace LaunchpadRevamped.Patches.Voting;
 
 [HarmonyPatch(typeof(MeetingHud))]
 public static class MeetingHudPatches

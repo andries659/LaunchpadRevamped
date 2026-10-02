@@ -1,9 +1,9 @@
-﻿using LaunchpadReloaded.Features;
+﻿using LaunchpadRevamped.Features;
 using MiraAPI.Roles;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Crewmate;
+namespace LaunchpadRevamped.Roles.Crewmate;
 
 public class GamblerRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {

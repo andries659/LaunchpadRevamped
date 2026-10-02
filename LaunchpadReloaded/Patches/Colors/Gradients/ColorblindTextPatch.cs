@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Utilities;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(CosmeticsLayer), nameof(CosmeticsLayer.GetColorBlindText))]
 public static class ColorblindTextPatch

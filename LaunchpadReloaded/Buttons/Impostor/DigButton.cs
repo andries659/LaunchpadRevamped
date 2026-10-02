@@ -1,14 +1,14 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Networking.Roles;
-using LaunchpadReloaded.Options.Roles.Impostor;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Networking.Roles;
+using LaunchpadRevamped.Options.Roles.Impostor;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities.Assets;
 using System.Linq;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Impostor;
+namespace LaunchpadRevamped.Buttons.Impostor;
 
 public class DigButton : BaseLaunchpadButton
 {

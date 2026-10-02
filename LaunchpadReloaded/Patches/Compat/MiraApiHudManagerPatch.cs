@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using HarmonyLib;
 
-namespace LaunchpadReloaded.Patches.Compat;
+namespace LaunchpadRevamped.Patches.Compat;
 
 [HarmonyPatch]
 public static class MiraApiHudManagerPatch

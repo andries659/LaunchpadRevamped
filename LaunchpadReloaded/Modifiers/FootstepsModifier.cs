@@ -1,7 +1,7 @@
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using Reactor.Utilities;
@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class FootstepsModifier : BaseModifier
 {

@@ -1,13 +1,13 @@
-﻿using LaunchpadReloaded.Features.Managers;
-using LaunchpadReloaded.Networking.Color;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Networking.Color;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.GameOptions.OptionTypes;
 using Reactor.Networking.Rpc;
 using System.Collections.Generic;
 
-namespace LaunchpadReloaded.Options;
+namespace LaunchpadRevamped.Options;
 
 public class FunOptions : AbstractOptionGroup
 {

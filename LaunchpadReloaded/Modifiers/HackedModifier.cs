@@ -1,9 +1,9 @@
-﻿using LaunchpadReloaded.Components;
+﻿using LaunchpadRevamped.Components;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Features.Managers;
-using LaunchpadReloaded.Options.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Options.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers.Types;
 using MiraAPI.Networking;
@@ -13,10 +13,10 @@ using System.Collections;
 using BepInEx.Unity.IL2CPP.Utils.Collections;
 using TMPro;
 using UnityEngine;
-using Helpers = LaunchpadReloaded.Utilities.Helpers;
+using Helpers = LaunchpadRevamped.Utilities.Helpers;
 using Random = System.Random;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class HackedModifier : TimedModifier
 {

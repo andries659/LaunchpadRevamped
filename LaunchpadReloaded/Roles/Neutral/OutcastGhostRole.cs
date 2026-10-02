@@ -1,9 +1,9 @@
 ﻿using System;
-using LaunchpadReloaded.Roles.Afterlife;
+using LaunchpadRevamped.Roles.Afterlife;
 using MiraAPI.Roles;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Neutral;
+namespace LaunchpadRevamped.Roles.Neutral;
 
 public class NeutralGhostRole(IntPtr ptr) : RoleBehaviour(ptr), INeutralRole, IAfterlifeRole
 {

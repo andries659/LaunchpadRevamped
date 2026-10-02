@@ -1,18 +1,18 @@
 using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Features.Managers;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Networking.Color;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Networking.Color;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using Reactor.Networking.Rpc;
 using System.Linq;
 using MiraAPI.Modifiers;
 using UnityEngine;
 using Action = System.Action;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(PlayerControl))]
 public static class PlayerControlPatches

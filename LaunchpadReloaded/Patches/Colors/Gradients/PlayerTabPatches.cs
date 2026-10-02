@@ -1,10 +1,10 @@
 ﻿using AmongUs.Data;
 using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Features.Managers;
-using LaunchpadReloaded.Networking.Color;
-using LaunchpadReloaded.Options;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Networking.Color;
+using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 using Reactor.Networking.Rpc;
 using Reactor.Utilities.Extensions;
@@ -13,7 +13,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(PlayerTab))]
 public static class PlayerTabPatches

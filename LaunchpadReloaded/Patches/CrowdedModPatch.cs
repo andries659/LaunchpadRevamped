@@ -4,7 +4,7 @@ using System.Reflection;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 
-namespace LaunchpadReloaded.Patches;
+namespace LaunchpadRevamped.Patches;
 
 //[HarmonyPatch]
 public static class CrowdedModPatch

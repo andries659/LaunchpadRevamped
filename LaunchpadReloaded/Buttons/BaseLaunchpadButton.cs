@@ -1,12 +1,12 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Hud;
 using MiraAPI.Keybinds;
 using MiraAPI.LocalSettings;
 using MiraAPI.PluginLoading;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons;
+namespace LaunchpadRevamped.Buttons;
 
 [MiraIgnore]
 public abstract class BaseLaunchpadButton : CustomActionButton

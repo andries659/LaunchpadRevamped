@@ -1,10 +1,10 @@
 using System.Linq;
 using MiraAPI.Translation;
 using AmongUs.GameOptions;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.GameOver;
-using LaunchpadReloaded.Options.Roles.Neutral;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.GameOver;
+using LaunchpadRevamped.Options.Roles.Neutral;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.Events.Vanilla.Player;
@@ -16,12 +16,12 @@ using MiraAPI.Utilities;
 using Reactor.Utilities.Extensions;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Neutral;
+namespace LaunchpadRevamped.Roles.Neutral;
 
 public class ExecutionerRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public string RoleDescription => MiraLocaleManager.GetParsed(
-        "LaunchpadReloaded.Roles.Neutral.ExecutionerRole.IntroBlurb",
+        "LaunchpadRevamped.Roles.Neutral.ExecutionerRole.IntroBlurb",
         new() { ["{target}"] = target ? target!.Data.PlayerName : MiraLocaleManager.Get("launchpad.role.executioner.noTarget") });
     public string RoleLongDescription => RoleDescription;
     public Color RoleColor => LaunchpadPalette.ExecutionerColor;

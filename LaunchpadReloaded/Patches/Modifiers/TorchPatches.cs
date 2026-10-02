@@ -1,11 +1,11 @@
 ﻿using AmongUs.GameOptions;
 using HarmonyLib;
-using LaunchpadReloaded.Modifiers.Game.Crewmate;
-using LaunchpadReloaded.Options.Modifiers.Crewmate;
+using LaunchpadRevamped.Modifiers.Game.Crewmate;
+using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 
-namespace LaunchpadReloaded.Patches.Modifiers;
+namespace LaunchpadRevamped.Patches.Modifiers;
 
 [HarmonyPatch(typeof(AirshipStatus), nameof(AirshipStatus.CalculateLightRadius))]
 [HarmonyPatch(typeof(ShipStatus), nameof(ShipStatus.CalculateLightRadius))]

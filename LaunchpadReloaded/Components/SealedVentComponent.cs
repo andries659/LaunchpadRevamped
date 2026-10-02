@@ -2,7 +2,7 @@
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class SealedVentComponent(IntPtr ptr) : MonoBehaviour(ptr)

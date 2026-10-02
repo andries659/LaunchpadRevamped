@@ -1,10 +1,10 @@
 ﻿using System;
-using LaunchpadReloaded.Modifiers.Game.Universal;
+using LaunchpadRevamped.Modifiers.Game.Universal;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Options.Modifiers.Universal;
+namespace LaunchpadRevamped.Options.Modifiers.Universal;
 
 public class GravityFieldOptions : AbstractOptionGroup<GravityModifier>
 {

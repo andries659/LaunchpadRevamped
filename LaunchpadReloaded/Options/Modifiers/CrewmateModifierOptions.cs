@@ -3,7 +3,7 @@ using MiraAPI.GameOptions.Attributes;
 using MiraAPI.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Options.Modifiers;
+namespace LaunchpadRevamped.Options.Modifiers;
 
 public class CrewmateModifierOptions : AbstractOptionGroup
 {

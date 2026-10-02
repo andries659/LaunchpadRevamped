@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace LaunchpadReloaded.Features;
+namespace LaunchpadRevamped.Features;
 public static class LaunchpadPalette
 {
     // Crewmates

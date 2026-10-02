@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class ModifierStorageComponent(IntPtr ptr) : MonoBehaviour(ptr)

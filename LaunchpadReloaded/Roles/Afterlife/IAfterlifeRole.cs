@@ -1,4 +1,4 @@
-﻿namespace LaunchpadReloaded.Roles.Afterlife;
+﻿namespace LaunchpadRevamped.Roles.Afterlife;
 
 public interface IAfterlifeRole
 {

@@ -1,14 +1,14 @@
 ﻿using Il2CppSystem;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Networking;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Crewmate;
+namespace LaunchpadRevamped.Buttons.Crewmate;
 
 public class ShootButton : BaseLaunchpadButton<PlayerControl>
 {

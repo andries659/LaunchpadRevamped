@@ -1,17 +1,17 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Neutral;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Neutral;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities;
 using System.Collections;
-using LaunchpadReloaded.GameOver;
-using LaunchpadReloaded.Roles.Neutral;
+using LaunchpadRevamped.GameOver;
+using LaunchpadRevamped.Roles.Neutral;
 using MiraAPI.GameEnd;
 using MiraAPI.Utilities;
 using Helpers = MiraAPI.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Networking.Roles;
+namespace LaunchpadRevamped.Networking.Roles;
 public static class ReaperRpc
 {
     public static IEnumerator CoCollectEffects(DeadBody body)

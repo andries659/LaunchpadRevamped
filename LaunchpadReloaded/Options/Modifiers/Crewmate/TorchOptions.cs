@@ -1,11 +1,11 @@
 ﻿using System;
-using LaunchpadReloaded.Modifiers.Game.Crewmate;
+using LaunchpadRevamped.Modifiers.Game.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.GameOptions.OptionTypes;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Options.Modifiers.Crewmate;
+namespace LaunchpadRevamped.Options.Modifiers.Crewmate;
 
 public class TorchOptions : AbstractOptionGroup<TorchModifier>
 {

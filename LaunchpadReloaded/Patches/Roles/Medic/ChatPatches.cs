@@ -1,10 +1,10 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
 using MiraAPI.Modifiers;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Roles.Medic;
+namespace LaunchpadRevamped.Patches.Roles.Medic;
 
 /// <summary>
 /// Disable chat if revived

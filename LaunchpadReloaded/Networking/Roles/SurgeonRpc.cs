@@ -1,12 +1,12 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Roles.Impostor;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Roles.Impostor;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities;
 using System.Collections;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Networking.Roles;
+namespace LaunchpadRevamped.Networking.Roles;
 public static class SurgeonRpc
 {
     public static IEnumerator FadeOutBody(DeadBody body, PlayerControl? plr)
@@ -46,7 +46,7 @@ public static class SurgeonRpc
         }
         else
         {
-            Logger<LaunchpadReloadedPlugin>.Warning($"Body for id {bodyId} not found");
+            Logger<LaunchpadRevampedPlugin>.Warning($"Body for id {bodyId} not found");
         }
     }
 }

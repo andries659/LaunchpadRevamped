@@ -1,4 +1,4 @@
-﻿using LaunchpadReloaded.Options;
+﻿using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 using Reactor.Utilities.Extensions;
 using System;
@@ -11,7 +11,7 @@ using Helpers = MiraAPI.Utilities.Helpers;
 using Object = UnityEngine.Object;
 using Random = System.Random;
 
-namespace LaunchpadReloaded.Features.Voting;
+namespace LaunchpadRevamped.Features.Voting;
 public static class VotingTypesManager
 {
     public static VotingTypes SelectedType => OptionGroupSingleton<VotingOptions>.Instance.VotingType;

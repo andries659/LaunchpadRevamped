@@ -1,4 +1,4 @@
-using LaunchpadReloaded.Modifiers;
+using LaunchpadRevamped.Modifiers;
 using Reactor.Utilities.Attributes;
 using System;
 using System.Linq;
@@ -7,7 +7,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class JournalMinigame(nint ptr) : Minigame(ptr)

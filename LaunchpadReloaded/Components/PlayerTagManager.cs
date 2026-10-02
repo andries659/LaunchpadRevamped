@@ -1,4 +1,4 @@
-﻿using LaunchpadReloaded.Features;
+﻿using LaunchpadRevamped.Features;
 using MiraAPI.Utilities;
 using MonoMod.Utils;
 using Reactor.Utilities.Attributes;
@@ -11,7 +11,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)

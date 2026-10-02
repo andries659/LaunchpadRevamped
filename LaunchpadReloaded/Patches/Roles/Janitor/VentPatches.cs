@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Components;
+using LaunchpadRevamped.Components;
 
-namespace LaunchpadReloaded.Patches.Roles.Janitor;
+namespace LaunchpadRevamped.Patches.Roles.Janitor;
 
 [HarmonyPatch(typeof(Vent))]
 public static class VentPatches

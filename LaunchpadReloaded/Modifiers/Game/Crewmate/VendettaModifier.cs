@@ -1,7 +1,7 @@
-﻿using LaunchpadReloaded.Buttons.Modifiers;
+﻿using LaunchpadRevamped.Buttons.Modifiers;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Options.Modifiers;
-using LaunchpadReloaded.Options.Modifiers.Crewmate;
+using LaunchpadRevamped.Options.Modifiers;
+using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.GameOptions;
@@ -11,7 +11,7 @@ using MiraAPI.Networking;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Modifiers.Game.Crewmate;
+namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
 [MiraIgnore]
 public sealed class VendettaModifier : LPModifier

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using HarmonyLib;
-using LaunchpadReloaded.Features.Managers;
+using LaunchpadRevamped.Features.Managers;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(PlayerControl), nameof(PlayerControl.Shapeshift))]
 public static class ShapeshiftPatch

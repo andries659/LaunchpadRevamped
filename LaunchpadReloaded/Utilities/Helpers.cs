@@ -1,11 +1,11 @@
-﻿using LaunchpadReloaded.Modifiers;
+﻿using LaunchpadRevamped.Modifiers;
 using System.Collections;
 using System.Globalization;
 using MiraAPI.Modifiers;
 using UnityEngine;
 using Random = System.Random;
 
-namespace LaunchpadReloaded.Utilities;
+namespace LaunchpadRevamped.Utilities;
 
 public static class Helpers
 {

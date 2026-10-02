@@ -1,6 +1,6 @@
-﻿using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
+﻿using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
 using MiraAPI.Modifiers;
 using Reactor.Utilities.Attributes;
 using Reactor.Utilities.Extensions;

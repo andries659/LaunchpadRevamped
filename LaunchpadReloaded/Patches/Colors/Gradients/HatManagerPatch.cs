@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(HatManager),nameof(HatManager.Initialize))]
 public static class HatManagerPatch

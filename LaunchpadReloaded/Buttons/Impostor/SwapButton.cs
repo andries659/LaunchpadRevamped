@@ -1,12 +1,12 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Impostor;
-using LaunchpadReloaded.Roles.Impostor;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Impostor;
+using LaunchpadRevamped.Roles.Impostor;
 using MiraAPI.GameOptions;
 using MiraAPI.Hud;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Impostor;
+namespace LaunchpadRevamped.Buttons.Impostor;
 
 public class SwapButton : BaseLaunchpadButton
 {

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 // this exists for performance purposes.
 // it is a lot quicker to loop over the AllBodies list than to do an Object.FindObjectsOfType every frame (or fixed update)
@@ -41,7 +41,7 @@ public class DeadBodyCacheComponent(IntPtr ptr) : MonoBehaviour(ptr)
     {
         if (!TryGetComponent(out body))
         {
-            Logger<LaunchpadReloadedPlugin>.Error("No dead body found for component! Destroying!");
+            Logger<LaunchpadRevampedPlugin>.Error("No dead body found for component! Destroying!");
             this.Destroy();
             return;
         }

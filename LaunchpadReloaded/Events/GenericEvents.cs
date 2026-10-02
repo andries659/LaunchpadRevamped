@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Linq;
-using LaunchpadReloaded.Buttons.Impostor;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.GameOver;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Roles.Neutral;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Buttons.Impostor;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.GameOver;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Roles.Neutral;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Events;
 using MiraAPI.Events.Vanilla.Gameplay;
 using MiraAPI.Events.Vanilla.Meeting;
@@ -20,7 +20,7 @@ using MiraAPI.Hud;
 using MiraAPI.Modifiers;
 using MiraAPI.Roles;
 
-namespace LaunchpadReloaded.Events;
+namespace LaunchpadRevamped.Events;
 
 public static class GenericEvents
 {

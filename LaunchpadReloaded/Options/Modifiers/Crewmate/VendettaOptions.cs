@@ -1,11 +1,11 @@
 ﻿using System;
-using LaunchpadReloaded.Modifiers.Game.Crewmate;
+using LaunchpadRevamped.Modifiers.Game.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Options.Modifiers.Crewmate;
+namespace LaunchpadRevamped.Options.Modifiers.Crewmate;
 
 [MiraIgnore]
 public class VendettaOptions : AbstractOptionGroup<VendettaModifier>

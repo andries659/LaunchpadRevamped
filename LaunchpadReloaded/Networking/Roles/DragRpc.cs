@@ -1,12 +1,12 @@
-﻿using LaunchpadReloaded.Buttons;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Impostor;
+﻿using LaunchpadRevamped.Buttons;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Impostor;
 using MiraAPI.Hud;
 using MiraAPI.Modifiers;
 using Reactor.Networking.Attributes;
 
-namespace LaunchpadReloaded.Networking.Roles;
+namespace LaunchpadRevamped.Networking.Roles;
 
 public static class DragRpc
 {

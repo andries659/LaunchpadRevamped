@@ -3,7 +3,7 @@ using MiraAPI.Utilities;
 using Reactor.Utilities.Attributes;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class GradientColorComponent(IntPtr ptr) : MonoBehaviour(ptr)

@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Utilities;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(MapBehaviour))]
 public class MapBehaviourPatches

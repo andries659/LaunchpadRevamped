@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(MapBehaviour),nameof(MapBehaviour.Awake))]
 public static class MapBehaviourPatch

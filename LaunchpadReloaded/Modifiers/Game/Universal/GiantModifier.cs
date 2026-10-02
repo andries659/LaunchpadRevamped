@@ -1,9 +1,9 @@
-﻿using LaunchpadReloaded.Options.Modifiers;
+﻿using LaunchpadRevamped.Options.Modifiers;
 using MiraAPI.Translation;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 
-namespace LaunchpadReloaded.Modifiers.Game.Universal;
+namespace LaunchpadRevamped.Modifiers.Game.Universal;
 
 public sealed class GiantModifier : LPModifier
 {

@@ -1,12 +1,12 @@
 ﻿using Hazel;
-using LaunchpadReloaded.Features.Managers;
+using LaunchpadRevamped.Features.Managers;
 using Reactor.Networking.Attributes;
 using Reactor.Networking.Rpc;
 
-namespace LaunchpadReloaded.Networking.Color;
+namespace LaunchpadRevamped.Networking.Color;
 
 [RegisterCustomRpc((uint)LaunchpadRpc.CustomSetColor)]
-public class CustomRpcSetColor(LaunchpadReloadedPlugin plugin, uint id) : PlayerCustomRpc<LaunchpadReloadedPlugin, CustomColorData>(plugin, id)
+public class CustomRpcSetColor(LaunchpadRevampedPlugin plugin, uint id) : PlayerCustomRpc<LaunchpadRevampedPlugin, CustomColorData>(plugin, id)
 {
     public override RpcLocalHandling LocalHandling => RpcLocalHandling.Before;
 

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchpadRevamped", "LaunchpadRevamped\LaunchpadRevamped.csproj", "{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchpadRevamped", "LaunchpadReloaded\LaunchpadRevamped.csproj", "{6D5E183D-401E-47EB-8EF8-364D9F57B42C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D5E183D-401E-47EB-8EF8-364D9F57B42C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D5E183D-401E-47EB-8EF8-364D9F57B42C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D5E183D-401E-47EB-8EF8-364D9F57B42C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D5E183D-401E-47EB-8EF8-364D9F57B42C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

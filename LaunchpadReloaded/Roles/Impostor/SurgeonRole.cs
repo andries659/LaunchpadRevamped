@@ -1,9 +1,9 @@
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.Roles;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Impostor;
+namespace LaunchpadRevamped.Roles.Impostor;
 
 public class SurgeonRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {

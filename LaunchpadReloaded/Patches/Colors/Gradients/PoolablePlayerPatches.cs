@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(PoolablePlayer))]
 public static class PoolablePlayerPatches

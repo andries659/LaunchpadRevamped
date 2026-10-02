@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Roles.Impostor;
+using LaunchpadRevamped.Roles.Impostor;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch]
 public static class AnimatorPatch

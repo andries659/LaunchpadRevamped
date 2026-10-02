@@ -1,10 +1,10 @@
 ﻿using AmongUs.Data;
 using HarmonyLib;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.LocalSettings;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(FollowerCamera), nameof(FollowerCamera.Update))]
 public static class FollowerCameraUpdatePatch

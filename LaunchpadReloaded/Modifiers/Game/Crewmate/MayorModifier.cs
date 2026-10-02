@@ -1,10 +1,10 @@
-﻿using LaunchpadReloaded.Options.Modifiers;
+﻿using LaunchpadRevamped.Options.Modifiers;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Options.Modifiers.Crewmate;
+using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Modifiers.Game.Crewmate;
+namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
 public sealed class MayorModifier : LPModifier
 {

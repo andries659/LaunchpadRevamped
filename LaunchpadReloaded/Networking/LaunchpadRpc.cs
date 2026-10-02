@@ -1,4 +1,4 @@
-namespace LaunchpadReloaded.Networking;
+namespace LaunchpadRevamped.Networking;
 public enum LaunchpadRpc : uint
 {
     StartDrag,

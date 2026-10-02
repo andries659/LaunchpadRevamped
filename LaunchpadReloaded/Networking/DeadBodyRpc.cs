@@ -1,12 +1,12 @@
-﻿using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using Reactor.Networking.Attributes;
 using System.Linq;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Networking;
+namespace LaunchpadRevamped.Networking;
 
 public static class DeadBodyRpc
 {

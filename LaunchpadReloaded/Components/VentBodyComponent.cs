@@ -1,10 +1,10 @@
-﻿using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Utilities;
 using Reactor.Utilities.Attributes;
 using Reactor.Utilities.Extensions;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class VentBodyComponent(IntPtr ptr) : MonoBehaviour(ptr)

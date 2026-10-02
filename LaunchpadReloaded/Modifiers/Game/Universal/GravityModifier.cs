@@ -1,12 +1,12 @@
-﻿using LaunchpadReloaded.Components;
+﻿using LaunchpadRevamped.Components;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Options.Modifiers;
-using LaunchpadReloaded.Options.Modifiers.Universal;
+using LaunchpadRevamped.Options.Modifiers;
+using LaunchpadRevamped.Options.Modifiers.Universal;
 using MiraAPI.GameOptions;
 using Reactor.Utilities.Extensions;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Modifiers.Game.Universal;
+namespace LaunchpadRevamped.Modifiers.Game.Universal;
 
 public sealed class GravityModifier : LPModifier
 {

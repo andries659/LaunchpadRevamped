@@ -1,6 +1,6 @@
-﻿using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
+﻿using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Utilities;
+namespace LaunchpadRevamped.Utilities;
 
 public static class HackerUtilities
 {

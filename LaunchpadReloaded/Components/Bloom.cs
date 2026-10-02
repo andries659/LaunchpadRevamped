@@ -23,12 +23,12 @@
 //
 
 using System;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.LocalSettings;
 using Reactor.Utilities.Attributes;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class Bloom(IntPtr cppPtr) : MonoBehaviour(cppPtr)

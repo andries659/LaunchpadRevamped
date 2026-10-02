@@ -1,9 +1,9 @@
-﻿using LaunchpadReloaded.Roles.Impostor;
+﻿using LaunchpadRevamped.Roles.Impostor;
 using Reactor.Networking.Attributes;
 using System.Linq;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Networking.Roles;
+namespace LaunchpadRevamped.Networking.Roles;
 public static class BurrowerRpc
 {
     [MethodRpc((uint)LaunchpadRpc.DigVent)]

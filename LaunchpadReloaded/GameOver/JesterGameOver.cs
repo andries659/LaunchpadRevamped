@@ -1,10 +1,10 @@
-﻿using LaunchpadReloaded.Features;
+﻿using LaunchpadRevamped.Features;
 using MiraAPI.Translation;
-using LaunchpadReloaded.Roles.Neutral;
+using LaunchpadRevamped.Roles.Neutral;
 using MiraAPI.GameEnd;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.GameOver;
+namespace LaunchpadRevamped.GameOver;
 
 public sealed class JesterGameOver : CustomGameOver
 {

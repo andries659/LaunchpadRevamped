@@ -1,112 +1,112 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- Roles (default ICustomRole keys: &lt;namespace&gt;.&lt;ClassName&gt;[.suffix]) -->
-    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole">Captain</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.IntroBlurb">Protect the crew with your abilities</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.MedDescription">Protect the crew with your abilities</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.TabDescription">Use your zoom ability to keep an eye on the crew
+    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole">Captain</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.IntroBlurb">Protect the crew with your abilities</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.MedDescription">Protect the crew with your abilities</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.TabDescription">Use your zoom ability to keep an eye on the crew
  And call meetings from any location!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.WikiDescription">Use your zoom ability to keep an eye on the crew
+    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.WikiDescription">Use your zoom ability to keep an eye on the crew
  And call meetings from any location!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole">Coroner</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.IntroBlurb">Freeze bodies to prevent them from disappearing.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.MedDescription">Freeze bodies to prevent them from disappearing.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.TabDescription">Freeze bodies to prevent them from disappearing.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.CoronerRole.WikiDescription">Freeze bodies to prevent them from disappearing.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole">Gambler</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.IntroBlurb">Guess a player's role to reveal it!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.MedDescription">Guess a player's role to reveal it!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.TabDescription">Guess a player's role to reveal it!
+    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole">Coroner</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.IntroBlurb">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.MedDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.TabDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.WikiDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole">Gambler</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.IntroBlurb">Guess a player's role to reveal it!</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.MedDescription">Guess a player's role to reveal it!</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.TabDescription">Guess a player's role to reveal it!
 However, if you get it incorrect, you will die.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.GamblerRole.WikiDescription">Guess a player's role to reveal it!
+    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.WikiDescription">Guess a player's role to reveal it!
 However, if you get it incorrect, you will die.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole">Detective</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.IntroBlurb">Investigate and find clues on murders.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.MedDescription">Investigate and find clues on murders.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.TabDescription">Investigate bodies to get clues and use your instinct ability
+    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole">Detective</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.IntroBlurb">Investigate and find clues on murders.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.MedDescription">Investigate and find clues on murders.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.TabDescription">Investigate bodies to get clues and use your instinct ability
 to see recent footsteps around you!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.LpDetectiveRole.WikiDescription">Investigate bodies to get clues and use your instinct ability
+    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.WikiDescription">Investigate bodies to get clues and use your instinct ability
 to see recent footsteps around you!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole">Medic</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.IntroBlurb">Help the crewmates by reviving dead players.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.MedDescription">Help the crewmates by reviving dead players.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.TabDescription">Use your revive ability to bring dead bodies
+    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole">Medic</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.IntroBlurb">Help the crewmates by reviving dead players.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.MedDescription">Help the crewmates by reviving dead players.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.TabDescription">Use your revive ability to bring dead bodies
 back to life!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.MedicRole.WikiDescription">Use your revive ability to bring dead bodies
+    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.WikiDescription">Use your revive ability to bring dead bodies
 back to life!</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole">Sealer</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.IntroBlurb">Seal vents around the map.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.MedDescription">Seal vents around the map.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.TabDescription">Seal vents around the map.
+    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole">Sealer</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.IntroBlurb">Seal vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.MedDescription">Seal vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.TabDescription">Seal vents around the map.
 This will prevent anyone from entering the vent.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SealerRole.WikiDescription">Seal vents around the map.
+    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.WikiDescription">Seal vents around the map.
 This will prevent anyone from entering the vent.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole">Sheriff</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.IntroBlurb">Take your chance by shooting a player.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.MedDescription">Take your chance by shooting a player.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.TabDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
+    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole">Sheriff</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.IntroBlurb">Take your chance by shooting a player.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.MedDescription">Take your chance by shooting a player.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.TabDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
 but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
-    <string name="LaunchpadReloaded.Roles.Crewmate.SheriffRole.WikiDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
+    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.WikiDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
 but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole">Burrower</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.IntroBlurb">Create vents around the map.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.MedDescription">Create vents around the map.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.TabDescription">Move around the map easier
+    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole">Burrower</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.IntroBlurb">Create vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.MedDescription">Create vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.TabDescription">Move around the map easier
 By digging new vents.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.BurrowerRole.WikiDescription">Move around the map easier
+    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.WikiDescription">Move around the map easier
 By digging new vents.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole">Hacker</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.IntroBlurb">Hack meetings and sabotage the crewmates</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.MedDescription">Hack meetings and sabotage the crewmates</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.TabDescription">Hack crewmates and make them unable to do tasks
+    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole">Hacker</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.IntroBlurb">Hack meetings and sabotage the crewmates</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.MedDescription">Hack meetings and sabotage the crewmates</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.TabDescription">Hack crewmates and make them unable to do tasks
 And view the admin map from anywhere!</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HackerRole.WikiDescription">Hack crewmates and make them unable to do tasks
+    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.WikiDescription">Hack crewmates and make them unable to do tasks
 And view the admin map from anywhere!</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole">Hitman</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.IntroBlurb">Slow down time and kill the Crewmates.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.MedDescription">Slow down time and kill the Crewmates.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.TabDescription">Slow down time and kill the Crewmates.
+    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole">Hitman</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.IntroBlurb">Slow down time and kill the Crewmates.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.MedDescription">Slow down time and kill the Crewmates.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.TabDescription">Slow down time and kill the Crewmates.
 You can kill multiple players at once.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.HitmanRole.WikiDescription">Slow down time and kill the Crewmates.
+    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.WikiDescription">Slow down time and kill the Crewmates.
 You can kill multiple players at once.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole">Janitor</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.IntroBlurb">Drag bodies and hide them in vents</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.MedDescription">Drag bodies and hide them in vents</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.TabDescription">You can drag bodies and hide them in vents
+    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole">Janitor</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.IntroBlurb">Drag bodies and hide them in vents</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.MedDescription">Drag bodies and hide them in vents</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.TabDescription">You can drag bodies and hide them in vents
 Which will cause them to disappear unless the vent is used.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.JanitorRole.WikiDescription">You can drag bodies and hide them in vents
+    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.WikiDescription">You can drag bodies and hide them in vents
 Which will cause them to disappear unless the vent is used.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole">Surgeon</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.IntroBlurb">Poison other players and dissect bodies</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.MedDescription">Poison other players and dissect bodies</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.TabDescription">You can poison players resulting in their death
+    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole">Surgeon</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.IntroBlurb">Poison other players and dissect bodies</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.MedDescription">Poison other players and dissect bodies</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.TabDescription">You can poison players resulting in their death
 and you can dissect bodies to make them unreportable.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SurgeonRole.WikiDescription">You can poison players resulting in their death
+    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.WikiDescription">You can poison players resulting in their death
 and you can dissect bodies to make them unreportable.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole">Swapshifter</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.IntroBlurb">Shift and swap into other players.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.MedDescription">Shift and swap into other players.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.TabDescription">Shift and swap into other players.
+    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole">Swapshifter</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.IntroBlurb">Shift and swap into other players.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.MedDescription">Shift and swap into other players.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.TabDescription">Shift and swap into other players.
 This can help you frame players and disguise kills.</string>
-    <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.WikiDescription">Shift and swap into other players.
+    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.WikiDescription">Shift and swap into other players.
 This can help you frame players and disguise kills.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole">Executioner</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.TabDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.WikiDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole">Jester</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.IntroBlurb">Get ejected to win</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.MedDescription">Get ejected to win</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.TabDescription">Convince the crew to vote you out by being suspicious.
+    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole">Executioner</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.TabDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.WikiDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole">Jester</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.IntroBlurb">Get ejected to win</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.MedDescription">Get ejected to win</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.TabDescription">Convince the crew to vote you out by being suspicious.
 If you get voted out, you win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.WikiDescription">Convince the crew to vote you out by being suspicious.
+    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.WikiDescription">Convince the crew to vote you out by being suspicious.
 If you get voted out, you win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole">Reaper</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.IntroBlurb">Collect souls to win</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.MedDescription">Collect souls to win</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole">Reaper</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.IntroBlurb">Collect souls to win</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.MedDescription">Collect souls to win</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
     <string name="launchpad.role.executioner.noTarget">your target</string>
     <!-- Neutral team -->
     <string name="launchpad.neutral.group">Neutral Roles</string>

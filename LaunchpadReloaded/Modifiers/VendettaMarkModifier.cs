@@ -2,7 +2,7 @@
 using MiraAPI.Translation;
 using MiraAPI.PluginLoading;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 [MiraIgnore]
 public class VendettaMarkModifier(byte vendettaPlayer) : BaseModifier

@@ -1,11 +1,11 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Options;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Options;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(ShipStatus))]
 public static class ShipStatusPatch

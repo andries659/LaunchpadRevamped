@@ -1,9 +1,9 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features.Managers;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features.Managers;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(PlayerMaterial), nameof(PlayerMaterial.SetColors), typeof(int), typeof(Renderer))]
 public static class PlayerMaterialPatch

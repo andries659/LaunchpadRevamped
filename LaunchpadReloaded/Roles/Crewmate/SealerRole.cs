@@ -1,12 +1,12 @@
 ﻿using Il2CppInterop.Runtime.Attributes;
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
 using MiraAPI.Roles;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Crewmate;
+namespace LaunchpadRevamped.Roles.Crewmate;
 
 public class SealerRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {

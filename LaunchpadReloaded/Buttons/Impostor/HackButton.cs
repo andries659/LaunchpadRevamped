@@ -1,16 +1,16 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Networking;
-using LaunchpadReloaded.Options.Roles.Impostor;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Networking;
+using LaunchpadRevamped.Options.Roles.Impostor;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities.Assets;
 using Reactor.Networking.Attributes;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Impostor;
+namespace LaunchpadRevamped.Buttons.Impostor;
 
 public class HackButton : BaseLaunchpadButton
 {

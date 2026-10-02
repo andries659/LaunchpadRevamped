@@ -2,7 +2,7 @@
 using Reactor.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Features;
+namespace LaunchpadRevamped.Features;
 
 public static class LaunchpadAssets
 {

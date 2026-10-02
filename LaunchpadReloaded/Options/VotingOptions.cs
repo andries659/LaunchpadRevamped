@@ -1,4 +1,4 @@
-﻿using LaunchpadReloaded.Features.Voting;
+﻿using LaunchpadRevamped.Features.Voting;
 using MiraAPI.GameModes;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
@@ -6,7 +6,7 @@ using MiraAPI.GameOptions.OptionTypes;
 using MiraAPI.Utilities;
 using System;
 
-namespace LaunchpadReloaded.Options;
+namespace LaunchpadRevamped.Options;
 
 public class VotingOptions : AbstractOptionGroup
 {

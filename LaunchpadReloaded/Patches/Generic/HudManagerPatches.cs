@@ -1,11 +1,11 @@
 ﻿using HarmonyLib;
 using InnerNet;
-using LaunchpadReloaded.Buttons.Crewmate;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Buttons.Crewmate;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Hud;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(HudManager))]
 public static class HudManagerPatches

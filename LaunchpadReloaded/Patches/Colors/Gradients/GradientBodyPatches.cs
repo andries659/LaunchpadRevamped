@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(LongBoiPlayerBody),nameof(LongBoiPlayerBody.Start))]
 public static class LongBoiPatch

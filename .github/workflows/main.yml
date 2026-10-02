@@ -31,11 +31,11 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: LaunchpadReloaded.dll
-          path: LaunchpadReloaded/bin/Release/LaunchpadReloaded.dll
+          name: LaunchpadRevamped.dll
+          path: LaunchpadRevamped/bin/Release/LaunchpadRevamped.dll
 
       - uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
           draft: true
-          files: LaunchpadReloaded/bin/Release/LaunchpadReloaded.dll
+          files: LaunchpadRevamped/bin/Release/LaunchpadRevamped.dll

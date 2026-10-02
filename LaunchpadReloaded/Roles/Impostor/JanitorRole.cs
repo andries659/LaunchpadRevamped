@@ -1,11 +1,11 @@
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
 using MiraAPI.Roles;
 using System;
 using MiraAPI.Modifiers;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Impostor;
+namespace LaunchpadRevamped.Roles.Impostor;
 
 public class JanitorRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {

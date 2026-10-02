@@ -1,9 +1,9 @@
 ﻿using AmongUs.GameOptions;
 using HarmonyLib;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Features;
 using MiraAPI.LocalSettings;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(DummyBehaviour))]
 public static class DummyBehaviourPatches

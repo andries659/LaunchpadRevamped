@@ -1,14 +1,14 @@
 using AmongUs.GameOptions;
 using Il2CppSystem.Text;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.GameOver;
-using LaunchpadReloaded.Options.Roles.Neutral;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.GameOver;
+using LaunchpadRevamped.Options.Roles.Neutral;
 using MiraAPI.GameEnd;
 using MiraAPI.GameOptions;
 using MiraAPI.Roles;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Neutral;
+namespace LaunchpadRevamped.Roles.Neutral;
 
 public class JesterRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {

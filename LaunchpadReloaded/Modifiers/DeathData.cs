@@ -2,7 +2,7 @@ using MiraAPI.Modifiers;
 using System;
 using System.Collections.Generic;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class DeathData(DateTime deathTime, PlayerControl killer, IEnumerable<PlayerControl> suspects)
     : BaseModifier

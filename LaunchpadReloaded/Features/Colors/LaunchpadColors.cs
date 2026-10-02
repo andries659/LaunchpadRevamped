@@ -2,7 +2,7 @@
 using MiraAPI.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Features.Colors;
+namespace LaunchpadRevamped.Features.Colors;
 
 [RegisterCustomColors]
 public static class LaunchpadColors

@@ -1,11 +1,11 @@
 ﻿using System;
-using LaunchpadReloaded.Features.Managers;
+using LaunchpadRevamped.Features.Managers;
 using Reactor.Utilities;
 using Reactor.Utilities.Attributes;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class PlayerGradientData(IntPtr ptr) : MonoBehaviour(ptr)
@@ -38,7 +38,7 @@ public class PlayerGradientData(IntPtr ptr) : MonoBehaviour(ptr)
                 return data.GradientEnabled;
             }
 
-            Logger<LaunchpadReloadedPlugin>.Warning($"No gradient data found for id {playerId}, player: {(bool)player}!");
+            Logger<LaunchpadRevampedPlugin>.Warning($"No gradient data found for id {playerId}, player: {(bool)player}!");
             return _gradientEnabled;
         }
         set => _gradientEnabled = value;
@@ -64,7 +64,7 @@ public class PlayerGradientData(IntPtr ptr) : MonoBehaviour(ptr)
                 return data.GradientColor;
             }
 
-            Logger<LaunchpadReloadedPlugin>.Error($"No gradient color found for id {playerId}, player: {(bool)player}!");
+            Logger<LaunchpadRevampedPlugin>.Error($"No gradient color found for id {playerId}, player: {(bool)player}!");
 
             return _gradientColor;
         }

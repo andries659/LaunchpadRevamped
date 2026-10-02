@@ -1,13 +1,13 @@
 ﻿using Il2CppSystem;
 using System.Linq;
 using BepInEx.Configuration;
-using LaunchpadReloaded.Components;
+using LaunchpadRevamped.Components;
 using MiraAPI.Hud;
 using MiraAPI.LocalSettings;
 using MiraAPI.LocalSettings.Attributes;
 using Object = Il2CppSystem.Object;
 
-namespace LaunchpadReloaded.Features;
+namespace LaunchpadRevamped.Features;
 
 public class LaunchpadSettings : LocalSettingsTab
 {
@@ -52,7 +52,7 @@ public class LaunchpadSettings : LocalSettingsTab
         ButtonLocation = config.Bind("General", "Button Location", MiraAPI.Hud.ButtonLocation.BottomRight);
         ButtonLocation.SettingChanged += (_, _) =>
         {
-            foreach (var button in MiraAPI.PluginLoading.MiraPluginManager.GetPluginByGuid(LaunchpadReloadedPlugin.Id)!.Buttons)
+            foreach (var button in MiraAPI.PluginLoading.MiraPluginManager.GetPluginByGuid(LaunchpadRevampedPlugin.Id)!.Buttons)
             {
                 button.SetButtonLocation(ButtonLocation.Value);
             }

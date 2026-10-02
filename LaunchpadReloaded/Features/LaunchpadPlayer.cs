@@ -2,7 +2,7 @@ using Reactor.Utilities.Attributes;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Features;
+namespace LaunchpadRevamped.Features;
 
 [RegisterInIl2Cpp]
 public class LaunchpadPlayer(IntPtr ptr) : MonoBehaviour(ptr)

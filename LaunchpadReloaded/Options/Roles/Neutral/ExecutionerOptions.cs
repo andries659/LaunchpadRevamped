@@ -1,8 +1,8 @@
-﻿using LaunchpadReloaded.Roles.Neutral;
+﻿using LaunchpadRevamped.Roles.Neutral;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 
-namespace LaunchpadReloaded.Options.Roles.Neutral;
+namespace LaunchpadRevamped.Options.Roles.Neutral;
 
 public class ExecutionerOptions : AbstractOptionGroup<ExecutionerRole>
 {

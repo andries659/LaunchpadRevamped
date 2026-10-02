@@ -1,13 +1,13 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities.Assets;
 using Reactor.Utilities;
 using System.Collections;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Crewmate;
+namespace LaunchpadRevamped.Buttons.Crewmate;
 
 public class ZoomButton : BaseLaunchpadButton
 {

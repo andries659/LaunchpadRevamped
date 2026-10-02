@@ -1,9 +1,9 @@
 ﻿using System;
-using LaunchpadReloaded.Modifiers.Game.Crewmate;
+using LaunchpadRevamped.Modifiers.Game.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 
-namespace LaunchpadReloaded.Options.Modifiers.Crewmate;
+namespace LaunchpadRevamped.Options.Modifiers.Crewmate;
 
 public class MayorOptions : AbstractOptionGroup<MayorModifier>
 {

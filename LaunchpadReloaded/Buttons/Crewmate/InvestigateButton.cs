@@ -1,14 +1,14 @@
-using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Keybinds;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
-using Helpers = LaunchpadReloaded.Utilities.Helpers;
+using Helpers = LaunchpadRevamped.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Buttons.Crewmate;
+namespace LaunchpadRevamped.Buttons.Crewmate;
 
 public class InvestigateButton : BaseLaunchpadButton<DeadBody>
 {

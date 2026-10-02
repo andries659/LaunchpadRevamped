@@ -1,11 +1,11 @@
-﻿using LaunchpadReloaded.Options.Roles.Impostor;
+﻿using LaunchpadRevamped.Options.Roles.Impostor;
 using MiraAPI.Translation;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class DragBodyModifier : BaseModifier
 {

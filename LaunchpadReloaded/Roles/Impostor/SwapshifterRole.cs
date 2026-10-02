@@ -1,11 +1,11 @@
-using LaunchpadReloaded.Buttons.Impostor;
-using LaunchpadReloaded.Features;
+using LaunchpadRevamped.Buttons.Impostor;
+using LaunchpadRevamped.Features;
 using MiraAPI.Hud;
 using MiraAPI.Roles;
 using System;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Impostor;
+namespace LaunchpadRevamped.Roles.Impostor;
 
 public class SwapshifterRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {

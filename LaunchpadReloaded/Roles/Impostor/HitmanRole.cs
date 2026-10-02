@@ -1,6 +1,6 @@
-﻿using LaunchpadReloaded.Buttons.Impostor;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Buttons.Impostor;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.Hud;
 using MiraAPI.Roles;
 using Reactor.Utilities;
@@ -9,7 +9,7 @@ using System.Collections;
 using Il2CppInterop.Runtime.Attributes;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Roles.Impostor;
+namespace LaunchpadRevamped.Roles.Impostor;
 
 public class HitmanRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {

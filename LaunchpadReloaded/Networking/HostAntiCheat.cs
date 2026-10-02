@@ -1,7 +1,7 @@
-﻿using LaunchpadReloaded.Options;
+﻿using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 
-namespace LaunchpadReloaded.Networking;
+namespace LaunchpadRevamped.Networking;
 
 public static class HostAntiCheat
 {

@@ -1,10 +1,10 @@
-﻿using LaunchpadReloaded.Modifiers;
+﻿using LaunchpadRevamped.Modifiers;
 using Reactor.Utilities.Attributes;
 using System;
 using MiraAPI.Modifiers;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Components;
+namespace LaunchpadRevamped.Components;
 
 [RegisterInIl2Cpp]
 public class GravityComponent(IntPtr ptr) : MonoBehaviour(ptr)

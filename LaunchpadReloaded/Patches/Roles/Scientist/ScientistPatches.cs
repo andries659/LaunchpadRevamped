@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Utilities;
 
-namespace LaunchpadReloaded.Patches.Roles.Scientist;
+namespace LaunchpadRevamped.Patches.Roles.Scientist;
 
 [HarmonyPatch(typeof(ScientistRole))]
 public static class ScientistPatches

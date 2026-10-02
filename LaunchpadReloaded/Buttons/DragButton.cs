@@ -1,18 +1,18 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Networking.Roles;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Networking.Roles;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
-using Helpers = LaunchpadReloaded.Utilities.Helpers;
+using Helpers = LaunchpadRevamped.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Buttons;
+namespace LaunchpadRevamped.Buttons;
 
 public class DragButton : BaseLaunchpadButton<DeadBody>
 {

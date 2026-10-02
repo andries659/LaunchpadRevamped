@@ -1,7 +1,7 @@
 ﻿using MiraAPI.Modifiers;
 using MiraAPI.Translation;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 public class RevealedModifier : BaseModifier
 {

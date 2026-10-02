@@ -1,10 +1,10 @@
-﻿using LaunchpadReloaded.Options;
+﻿using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 using Reactor.Utilities.Extensions;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace LaunchpadReloaded.Features;
+namespace LaunchpadRevamped.Features;
 
 public class NotepadHud
 {

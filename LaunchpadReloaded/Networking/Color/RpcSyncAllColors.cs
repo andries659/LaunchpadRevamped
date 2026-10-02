@@ -3,10 +3,10 @@ using Hazel;
 using Reactor.Networking.Attributes;
 using Reactor.Networking.Rpc;
 
-namespace LaunchpadReloaded.Networking.Color;
+namespace LaunchpadRevamped.Networking.Color;
 
 [RegisterCustomRpc((uint)LaunchpadRpc.SyncAllColors)]
-public class RpcSyncAllColors(LaunchpadReloadedPlugin plugin, uint id) : PlayerCustomRpc<LaunchpadReloadedPlugin, Dictionary<byte, CustomColorData>>(plugin, id)
+public class RpcSyncAllColors(LaunchpadRevampedPlugin plugin, uint id) : PlayerCustomRpc<LaunchpadRevampedPlugin, Dictionary<byte, CustomColorData>>(plugin, id)
 {
     public override RpcLocalHandling LocalHandling => RpcLocalHandling.None;
 

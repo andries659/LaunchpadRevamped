@@ -1,16 +1,16 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Networking.Roles;
-using LaunchpadReloaded.Options.Roles.Impostor;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Networking.Roles;
+using LaunchpadRevamped.Options.Roles.Impostor;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Keybinds;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
-using Helpers = LaunchpadReloaded.Utilities.Helpers;
+using Helpers = LaunchpadRevamped.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Buttons.Impostor;
+namespace LaunchpadRevamped.Buttons.Impostor;
 
 public class DissectButton : BaseLaunchpadButton<DeadBody>
 {

@@ -1,7 +1,7 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Utilities;
 
-namespace LaunchpadReloaded.Patches.Colors.Gradients;
+namespace LaunchpadRevamped.Patches.Colors.Gradients;
 
 [HarmonyPatch(typeof(PlayerVoteArea),nameof(PlayerVoteArea.SetCosmetics))]
 public static class PlayerVoteAreaSetCosmeticsPatch

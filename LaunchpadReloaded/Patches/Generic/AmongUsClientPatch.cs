@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using HarmonyLib;
 using InnerNet;
-using LaunchpadReloaded.Features.Managers;
-using LaunchpadReloaded.Networking.Color;
+using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Networking.Color;
 using Reactor.Networking.Rpc;
 using Reactor.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 [HarmonyPatch(typeof(AmongUsClient), nameof(AmongUsClient.CreatePlayer))]
 public static class AmongUsClientPatch

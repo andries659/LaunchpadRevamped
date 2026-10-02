@@ -2,9 +2,9 @@
 using System.Linq;
 using System.Reflection;
 using HarmonyLib;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Utilities;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 /// <summary>
 /// Cancel clicking of any action buttons in Among Us (if should cancel click)

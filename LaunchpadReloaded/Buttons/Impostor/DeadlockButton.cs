@@ -1,14 +1,14 @@
 ﻿using AmongUs.Data;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Impostor;
-using LaunchpadReloaded.Roles.Impostor;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Impostor;
+using LaunchpadRevamped.Roles.Impostor;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities.Assets;
 using Reactor.Utilities;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Impostor;
+namespace LaunchpadRevamped.Buttons.Impostor;
 
 public class DeadlockButton : BaseLaunchpadButton
 {

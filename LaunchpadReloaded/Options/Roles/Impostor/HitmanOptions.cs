@@ -1,9 +1,9 @@
-﻿using LaunchpadReloaded.Roles.Impostor;
+﻿using LaunchpadRevamped.Roles.Impostor;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Options.Roles.Impostor;
+namespace LaunchpadRevamped.Options.Roles.Impostor;
 
 public class HitmanOptions : AbstractOptionGroup<HitmanRole>
 {

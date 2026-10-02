@@ -1,20 +1,20 @@
 /*
 using AmongUs.GameOptions;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Utilities;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Utilities;
 using Reactor.Utilities;
 using Reactor.Utilities.Extensions;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using InnerNet;
-using LaunchpadReloaded.Options;
+using LaunchpadRevamped.Options;
 using MiraAPI.GameModes;
 using MiraAPI.GameOptions;
 using TMPro;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Gamemodes;
+namespace LaunchpadRevamped.Gamemodes;
 
 [RegisterGameMode]
 public class BattleRoyale : CustomGameMode

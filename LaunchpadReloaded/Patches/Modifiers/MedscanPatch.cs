@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Modifiers.Game.Universal;
+using LaunchpadRevamped.Modifiers.Game.Universal;
 using MiraAPI.Modifiers;
 
-namespace LaunchpadReloaded.Patches.Modifiers;
+namespace LaunchpadRevamped.Patches.Modifiers;
 
 [HarmonyPatch(typeof(MedScanMinigame))]
 public static class MedscanPatch

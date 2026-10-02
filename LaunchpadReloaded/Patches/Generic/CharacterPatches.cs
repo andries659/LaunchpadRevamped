@@ -1,12 +1,12 @@
 ﻿using HarmonyLib;
 using InnerNet;
 using System;
-using LaunchpadReloaded.Options;
+using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 using Reactor.Utilities;
 using static CosmeticsLayer;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 /// <summary>
 /// Credit to Pietro for helping, and some code for this class
 /// https://github.com/0xDrMoe/TownofHost-Enhanced/pull/784/files#diff-f347fffd3b0ec57eb94d7c80b0327474b4b2574e31bb09005e4c2407bc7471b7
@@ -70,7 +70,7 @@ public static class CharacterPatches
     [HarmonyPatch(typeof(LongBoiPlayerBody), nameof(LongBoiPlayerBody.Start))]
     public static bool LongBodyStartPatch(LongBoiPlayerBody __instance)
     {
-        Logger<LaunchpadReloadedPlugin>.Info("hello there should longer");
+        Logger<LaunchpadRevampedPlugin>.Info("hello there should longer");
         __instance.ShouldLongAround = true;
         __instance.skipNeckAnim = true;
         if (__instance.hideCosmeticsQC)

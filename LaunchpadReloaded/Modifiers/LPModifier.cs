@@ -1,11 +1,11 @@
-﻿using LaunchpadReloaded.Options.Modifiers;
+﻿using LaunchpadRevamped.Options.Modifiers;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers.Types;
 using MiraAPI.PluginLoading;
 using System.Linq;
 using MiraAPI.Modifiers;
 
-namespace LaunchpadReloaded.Modifiers;
+namespace LaunchpadRevamped.Modifiers;
 
 [MiraIgnore]
 public abstract class LPModifier : GameModifier

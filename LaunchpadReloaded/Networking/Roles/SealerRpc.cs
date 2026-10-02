@@ -1,13 +1,13 @@
-﻿using LaunchpadReloaded.Components;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Options.Roles.Crewmate;
-using LaunchpadReloaded.Roles.Crewmate;
+﻿using LaunchpadRevamped.Components;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using Reactor.Networking.Attributes;
 using System.Linq;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Networking.Roles;
+namespace LaunchpadRevamped.Networking.Roles;
 public static class SealerRpc
 {
     [MethodRpc((uint)LaunchpadRpc.SealVent)]

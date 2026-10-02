@@ -1,7 +1,7 @@
 ﻿using AmongUs.Data;
-using LaunchpadReloaded.Buttons.Impostor;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Roles.Impostor;
+using LaunchpadRevamped.Buttons.Impostor;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Roles.Impostor;
 using MiraAPI.Hud;
 using MiraAPI.Networking;
 using Reactor.Utilities.Extensions;
@@ -9,7 +9,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Utilities;
+namespace LaunchpadRevamped.Utilities;
 public static class HitmanUtilities
 {
     private static float LastMarkTime;

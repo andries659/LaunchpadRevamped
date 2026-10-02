@@ -1,8 +1,8 @@
 ﻿using HarmonyLib;
-using LaunchpadReloaded.Options;
+using LaunchpadRevamped.Options;
 using MiraAPI.GameOptions;
 
-namespace LaunchpadReloaded.Patches.Generic;
+namespace LaunchpadRevamped.Patches.Generic;
 
 /// <summary>
 /// Allow Impostors to kill each other if can kill is enabled in gamemode or friendly fire is toggled on

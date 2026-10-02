@@ -3,7 +3,7 @@ using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.GameOptions.OptionTypes;
 
-namespace LaunchpadReloaded.Options;
+namespace LaunchpadRevamped.Options;
 
 public class BattleRoyaleOptions : AbstractOptionGroup
 {

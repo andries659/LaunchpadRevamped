@@ -1,11 +1,11 @@
-﻿using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Utilities;
 using Reactor.Networking.Attributes;
 using UnityEngine;
 using Helpers = MiraAPI.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Networking.Roles;
+namespace LaunchpadRevamped.Networking.Roles;
 public static class CoronerRpc
 {
     [MethodRpc((uint)LaunchpadRpc.FreezeBody)]

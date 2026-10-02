@@ -1,9 +1,9 @@
-﻿using LaunchpadReloaded.Roles.Crewmate;
+﻿using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.GameOptions.Attributes;
 using MiraAPI.Utilities;
 
-namespace LaunchpadReloaded.Options.Roles.Crewmate;
+namespace LaunchpadRevamped.Options.Roles.Crewmate;
 
 public class SheriffOptions : AbstractOptionGroup<SheriffRole>
 {

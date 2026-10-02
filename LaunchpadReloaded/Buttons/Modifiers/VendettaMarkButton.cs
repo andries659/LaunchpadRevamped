@@ -1,7 +1,7 @@
 ﻿using Il2CppSystem;
-using LaunchpadReloaded.Features;
-using LaunchpadReloaded.Modifiers;
-using LaunchpadReloaded.Options.Modifiers.Crewmate;
+using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.PluginLoading;
@@ -9,7 +9,7 @@ using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
-namespace LaunchpadReloaded.Buttons.Modifiers;
+namespace LaunchpadRevamped.Buttons.Modifiers;
 
 [MiraIgnore]
 public class VendettaMarkButton : BaseLaunchpadButton<PlayerControl>

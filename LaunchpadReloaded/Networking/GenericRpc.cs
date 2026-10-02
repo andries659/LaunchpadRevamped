@@ -1,10 +1,10 @@
-﻿using LaunchpadReloaded.Roles.Crewmate;
-using LaunchpadReloaded.Utilities;
+﻿using LaunchpadRevamped.Roles.Crewmate;
+using LaunchpadRevamped.Utilities;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities;
 using Helpers = MiraAPI.Utilities.Helpers;
 
-namespace LaunchpadReloaded.Networking;
+namespace LaunchpadRevamped.Networking;
 public static class GenericRpc
 {
     [MethodRpc((uint)LaunchpadRpc.Revive)]
@@ -23,7 +23,7 @@ public static class GenericRpc
         }
         else
         {
-            Logger<LaunchpadReloadedPlugin>.Warning($"Body for id {bodyId} not found");
+            Logger<LaunchpadRevampedPlugin>.Warning($"Body for id {bodyId} not found");
         }
     }
 }

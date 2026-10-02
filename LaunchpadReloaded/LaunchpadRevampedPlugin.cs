@@ -1,9 +1,9 @@
-﻿global using static Reactor.Utilities.Logger<LaunchpadReloaded.LaunchpadReloadedPlugin>;
+﻿global using static Reactor.Utilities.Logger<LaunchpadRevamped.LaunchpadRevampedPlugin>;
 using BepInEx;
 using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
-using LaunchpadReloaded.Patches;
+using LaunchpadRevamped.Patches;
 using MiraAPI;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
@@ -13,15 +13,15 @@ using Reactor.Networking;
 using Reactor.Networking.Attributes;
 using Reactor.Utilities;
 
-namespace LaunchpadReloaded;
+namespace LaunchpadRevamped;
 
-[BepInAutoPlugin("dev.xtracube.launchpad", "LaunchpadReloaded")]
+[BepInAutoPlugin("dev.andriess.launchpad", "LaunchpadRevamped")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
 [BepInDependency(MiraApiPlugin.Id)]
 [BepInDependency(CrowdedModPatch.CrowdedId, BepInDependency.DependencyFlags.SoftDependency)]
 [ReactorModFlags(ModFlags.RequireOnAllClients)]
-public partial class LaunchpadReloadedPlugin : BasePlugin, IMiraPlugin
+public partial class LaunchpadRevampedPlugin : BasePlugin, IMiraPlugin
 {
     private Harmony Harmony { get; } = new(Id);
     public ConfigFile GetConfigFile()
@@ -29,7 +29,7 @@ public partial class LaunchpadReloadedPlugin : BasePlugin, IMiraPlugin
         return Config;
     }
 
-    public LaunchpadReloadedPlugin()
+    public LaunchpadRevampedPlugin()
     {
         MiraLocaleManager.Register(Id);
     }
