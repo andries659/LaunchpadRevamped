@@ -16,7 +16,7 @@ namespace LaunchpadReloaded.Buttons;
 
 public class DragButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "DRAG";
+    public override string Name => "launchpad.button.drag";
     public override float Cooldown => 0;
     public override float EffectDuration => 0;
     public override int MaxUses => 0;

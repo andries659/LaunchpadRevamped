@@ -7,20 +7,20 @@ namespace LaunchpadReloaded.Options.Roles.Crewmate;
 
 public class CaptainOptions : AbstractOptionGroup<CaptainRole>
 {
-    public override string GroupName => "Captain";
+    public override string GroupName => "launchpad.options.captain";
 
-    [ModdedNumberOption("Meeting Cooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.captain.meetingCooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
     public float CaptainMeetingCooldown { get; set; } = 45;
 
-    [ModdedNumberOption("Meeting Uses", 1, 5)]
+    [ModdedNumberOption("launchpad.options.captain.meetingUses", 1, 5)]
     public float CaptainMeetingCount { get; set; } = 3;
 
-    [ModdedNumberOption("Zoom Cooldown", 5, 60, 2.5f, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.captain.zoomCooldown", 5, 60, 2.5f, MiraNumberSuffixes.Seconds)]
     public float ZoomCooldown { get; set; } = 30;
 
-    [ModdedNumberOption("Zoom Duration", 5, 25, 1, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.captain.zoomDuration", 5, 25, 1, MiraNumberSuffixes.Seconds)]
     public float ZoomDuration { get; set; } = 10;
 
-    [ModdedNumberOption("Zoom Distance", 4, 15)]
+    [ModdedNumberOption("launchpad.options.captain.zoomDistance", 4, 15)]
     public float ZoomDistance { get; set; } = 6;
 }

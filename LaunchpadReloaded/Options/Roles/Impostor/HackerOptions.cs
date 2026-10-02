@@ -7,20 +7,20 @@ namespace LaunchpadReloaded.Options.Roles.Impostor;
 
 public class HackerOptions : AbstractOptionGroup<HackerRole>
 {
-    public override string GroupName => "Hacker";
+    public override string GroupName => "launchpad.options.hacker";
 
-    [ModdedNumberOption("Hack Cooldown", 10, 300, 10, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.hacker.hackCooldown", 10, 300, 10, MiraNumberSuffixes.Seconds)]
     public float HackCooldown { get; set; } = 60;
 
-    [ModdedNumberOption("Hack Duration", 10, 500, 10, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.hacker.hackDuration", 10, 500, 10, MiraNumberSuffixes.Seconds)]
     public float HackDuration { get; set; } = 90;
 
-    [ModdedNumberOption("Hacks Per Game", 1, 8)]
+    [ModdedNumberOption("launchpad.options.hacker.hacksPerGame", 1, 8)]
     public float HackUses { get; set; } = 2;
 
-    [ModdedNumberOption("Map Cooldown", 0, 40, 3, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.hacker.mapCooldown", 0, 40, 3, MiraNumberSuffixes.Seconds)]
     public float MapCooldown { get; set; } = 10;
 
-    [ModdedNumberOption("Map Duration", 1, 30, 3, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.hacker.mapDuration", 1, 30, 3, MiraNumberSuffixes.Seconds)]
     public float MapDuration { get; set; } = 3;
 }

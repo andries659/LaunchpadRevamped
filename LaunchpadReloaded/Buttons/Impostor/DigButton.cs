@@ -12,7 +12,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class DigButton : BaseLaunchpadButton
 {
-    public override string Name => "Dig Vent";
+    public override string Name => "launchpad.button.dig";
     public override float Cooldown => OptionGroupSingleton<BurrowerOptions>.Instance.VentDigCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => (int)OptionGroupSingleton<BurrowerOptions>.Instance.VentDigUses;

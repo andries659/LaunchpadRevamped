@@ -13,7 +13,7 @@ namespace LaunchpadReloaded.Buttons.Neutral;
 
 public class CollectButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "Collect Soul";
+    public override string Name => "launchpad.button.collect";
     public override float Cooldown => OptionGroupSingleton<ReaperOptions>.Instance.CollectCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => 0;

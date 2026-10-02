@@ -7,11 +7,11 @@ namespace LaunchpadReloaded.Options.Roles.Crewmate;
 
 public class GamblerOptions : AbstractOptionGroup<GamblerRole>
 {
-    public override string GroupName => "Gambler";
+    public override string GroupName => "launchpad.options.gambler";
 
-    [ModdedNumberOption("Gamble Cooldown", 0, 60, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.gambler.gambleCooldown", 0, 60, 5, MiraNumberSuffixes.Seconds)]
     public float GambleCooldown { get; set; } = 25;
 
-    [ModdedNumberOption("Gamble Uses", 0, 10, zeroInfinity: true)]
+    [ModdedNumberOption("launchpad.options.gambler.gambleUses", 0, 10, zeroInfinity: true)]
     public float GambleUses { get; set; } = 0;
 }

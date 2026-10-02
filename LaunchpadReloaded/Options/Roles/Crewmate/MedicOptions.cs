@@ -7,17 +7,17 @@ namespace LaunchpadReloaded.Options.Roles.Crewmate;
 
 public class MedicOptions : AbstractOptionGroup<MedicRole>
 {
-    public override string GroupName => "Medic";
+    public override string GroupName => "launchpad.options.medic";
 
-    [ModdedToggleOption("Only Allow Reviving in MedBay/Laboratory")]
+    [ModdedToggleOption("launchpad.options.medic.onlyAllowRevivingInMedBayLaboratory")]
     public bool OnlyAllowInMedbay { get; set; } = false;
 
-    [ModdedToggleOption("Can Drag Bodies")]
+    [ModdedToggleOption("launchpad.options.medic.canDragBodies")]
     public bool DragBodies { get; set; } = false;
 
-    [ModdedNumberOption("Max Revives", 1, 9)]
+    [ModdedNumberOption("launchpad.options.medic.maxRevives", 1, 9)]
     public float MaxRevives { get; set; } = 2;
 
-    [ModdedNumberOption("Revive Cooldown", 1, 50, 2, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.medic.reviveCooldown", 1, 50, 2, MiraNumberSuffixes.Seconds)]
     public float ReviveCooldown { get; set; } = 20;
 }

@@ -12,7 +12,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class ShootButton : BaseLaunchpadButton<PlayerControl>
 {
-    public override string Name => "Shoot";
+    public override string Name => "launchpad.button.shoot";
     public override float Cooldown => OptionGroupSingleton<SheriffOptions>.Instance.ShotCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => (int)OptionGroupSingleton<SheriffOptions>.Instance.ShotsPerGame;

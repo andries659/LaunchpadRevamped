@@ -7,17 +7,17 @@ namespace LaunchpadReloaded.Options.Roles.Impostor;
 
 public class SwapshifterOptions : AbstractOptionGroup<SwapshifterRole>
 {
-    public override string GroupName => "Swapshifter";
+    public override string GroupName => "launchpad.options.swapshifter";
 
-    [ModdedNumberOption("Swap Cooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.swapshifter.swapCooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
     public float SwapCooldown { get; set; } = 30;
 
-    [ModdedNumberOption("Swap Duration", 0, 70, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.swapshifter.swapDuration", 0, 70, 5, MiraNumberSuffixes.Seconds)]
     public float SwapDuration { get; set; } = 15;
 
-    [ModdedNumberOption("Swap Uses", 0, 8, zeroInfinity: true)]
+    [ModdedNumberOption("launchpad.options.swapshifter.swapUses", 0, 8, zeroInfinity: true)]
     public float SwapUses { get; set; } = 3;
 
-    [ModdedToggleOption("Can Swap with Impostors")]
+    [ModdedToggleOption("launchpad.options.swapshifter.canSwapWithImpostors")]
     public bool CanSwapImpostors { get; set; } = true;
 }

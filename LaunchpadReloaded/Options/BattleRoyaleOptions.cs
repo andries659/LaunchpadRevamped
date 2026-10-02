@@ -7,13 +7,13 @@ namespace LaunchpadReloaded.Options;
 
 public class BattleRoyaleOptions : AbstractOptionGroup
 {
-    public override string GroupName => "Battle Royale Options";
+    public override string GroupName => "launchpad.options.battleRoyaleOptions";
 
     public override Func<bool> GroupVisible => () => false; //CustomGameModeManager.ActiveMode?.GetType() == typeof(BattleRoyale);
 
-    [ModdedToggleOption("Use Seeker Character")] public bool SeekerCharacter { get; set; } = true;
+    [ModdedToggleOption("launchpad.options.battleRoyaleOptions.useSeekerCharacter")] public bool SeekerCharacter { get; set; } = true;
     
-    public ModdedToggleOption ShowKnife { get; } = new("Show Knife", true)
+    public ModdedToggleOption ShowKnife { get; } = new("launchpad.options.battleRoyaleOptions.showKnife", true)
     {
         Visible = () => OptionGroupSingleton<BattleRoyaleOptions>.Instance.SeekerCharacter
     };

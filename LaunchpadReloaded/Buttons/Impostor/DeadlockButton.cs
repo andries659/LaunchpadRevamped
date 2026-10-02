@@ -12,7 +12,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class DeadlockButton : BaseLaunchpadButton
 {
-    public override string Name => "Deadlock";
+    public override string Name => "launchpad.button.deadlock";
     public override float Cooldown => (int)OptionGroupSingleton<HitmanOptions>.Instance.DeadlockCooldown;
     public override float EffectDuration => OptionGroupSingleton<HitmanOptions>.Instance.DeadlockDuration;
     public override int MaxUses => (int)OptionGroupSingleton<HitmanOptions>.Instance.DeadlockUses;

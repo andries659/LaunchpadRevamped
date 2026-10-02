@@ -9,9 +9,6 @@ namespace LaunchpadReloaded.Roles.Crewmate;
 
 public class CaptainRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {
-    public string RoleName => "Captain";
-    public string RoleDescription => "Protect the crew with your abilities";
-    public string RoleLongDescription => "Use your zoom ability to keep an eye on the crew\n And call meetings from any location!";
     public Color RoleColor => LaunchpadPalette.CaptainColor;
     public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
     public CustomRoleConfiguration Configuration => new(this)

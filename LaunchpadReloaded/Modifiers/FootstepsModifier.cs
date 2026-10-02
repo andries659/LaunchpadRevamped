@@ -1,4 +1,5 @@
 using LaunchpadReloaded.Features;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Options.Roles.Crewmate;
 using LaunchpadReloaded.Utilities;
 using MiraAPI.GameOptions;
@@ -13,7 +14,7 @@ namespace LaunchpadReloaded.Modifiers;
 
 public class FootstepsModifier : BaseModifier
 {
-    public override string ModifierName => "Footsteps";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.footsteps");
 
     public override bool HideOnUi => true;
 

@@ -14,7 +14,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class HackButton : BaseLaunchpadButton
 {
-    public override string Name => "HACK";
+    public override string Name => "launchpad.button.hack";
     public override float Cooldown => (int)OptionGroupSingleton<HackerOptions>.Instance.HackCooldown;
     public override float EffectDuration => OptionGroupSingleton<HackerOptions>.Instance.HackDuration;
     public override int MaxUses => (int)OptionGroupSingleton<HackerOptions>.Instance.HackUses;

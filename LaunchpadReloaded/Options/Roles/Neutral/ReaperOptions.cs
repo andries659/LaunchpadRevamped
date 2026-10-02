@@ -7,11 +7,11 @@ namespace LaunchpadReloaded.Options.Roles.Neutral;
 
 public class ReaperOptions : AbstractOptionGroup<ReaperRole>
 {
-    public override string GroupName => "Reaper";
+    public override string GroupName => "launchpad.options.reaper";
 
-    [ModdedNumberOption("Collections To Win", 2, 8)]
+    [ModdedNumberOption("launchpad.options.reaper.collectionsToWin", 2, 8)]
     public float SoulCollections { get; set; } = 3;
 
-    [ModdedNumberOption("Collect Cooldown", 0, 60, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.reaper.collectCooldown", 0, 60, 5, MiraNumberSuffixes.Seconds)]
     public float CollectCooldown { get; set; } = 20;
 }

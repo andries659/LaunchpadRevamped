@@ -11,12 +11,12 @@ namespace LaunchpadReloaded.Options;
 
 public class FunOptions : AbstractOptionGroup
 {
-    public override string GroupName => "Fun Options";
+    public override string GroupName => "launchpad.options.funOptions";
 
-    [ModdedToggleOption("Friendly Fire")]
+    [ModdedToggleOption("launchpad.options.funOptions.friendlyFire")]
     public bool FriendlyFire { get; set; } = false;
 
-    public ModdedToggleOption UniqueColors { get; } = new("Unique Colors", true)
+    public ModdedToggleOption UniqueColors { get; } = new("launchpad.options.funOptions.uniqueColors", true)
     {
         ChangedEvent = value =>
         {
@@ -35,7 +35,7 @@ public class FunOptions : AbstractOptionGroup
         }
     };
 
-    public ModdedEnumOption Character { get; } = new("Character", 0, typeof(BodyTypes))
+    public ModdedEnumOption Character { get; } = new("launchpad.options.funOptions.character", 0, typeof(BodyTypes))
     {
         ChangedEvent = value =>
         {

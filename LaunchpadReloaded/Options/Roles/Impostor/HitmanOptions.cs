@@ -7,17 +7,17 @@ namespace LaunchpadReloaded.Options.Roles.Impostor;
 
 public class HitmanOptions : AbstractOptionGroup<HitmanRole>
 {
-    public override string GroupName => "Hitman";
+    public override string GroupName => "launchpad.options.hitman";
 
-    [ModdedNumberOption("Deadlock Cooldown", 20, 120, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.hitman.deadlockCooldown", 20, 120, 5, MiraNumberSuffixes.Seconds)]
     public float DeadlockCooldown { get; set; } = 40;
 
-    [ModdedNumberOption("Deadlock Uses", 0, 12, 2, zeroInfinity: true)]
+    [ModdedNumberOption("launchpad.options.hitman.deadlockUses", 0, 12, 2, zeroInfinity: true)]
     public float DeadlockUses { get; set; } = 3;
 
-    [ModdedNumberOption("Deadlock Mark Limit", 1, 12, 1, zeroInfinity: false)]
+    [ModdedNumberOption("launchpad.options.hitman.deadlockMarkLimit", 1, 12, 1, zeroInfinity: false)]
     public float MarkLimit { get; set; } = 2;
 
-    [ModdedNumberOption("Deadlock Duration", 15, 50, 2.5f)]
+    [ModdedNumberOption("launchpad.options.hitman.deadlockDuration", 15, 50, 2.5f)]
     public float DeadlockDuration { get; set; } = 20;
 }

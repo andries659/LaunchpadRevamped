@@ -10,14 +10,14 @@ namespace LaunchpadReloaded.Options.Modifiers.Crewmate;
 [MiraIgnore]
 public class VendettaOptions : AbstractOptionGroup<VendettaModifier>
 {
-    public override string GroupName => "Vendetta";
+    public override string GroupName => "launchpad.options.vendetta";
 
     public override Func<bool> GroupVisible =>
         () => OptionGroupSingleton<CrewmateModifierOptions>.Instance.VendettaChance > 0;
 
-    [ModdedNumberOption("Mark Cooldown", 5, 40, 2.5f, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.vendetta.markCooldown", 5, 40, 2.5f, MiraNumberSuffixes.Seconds)]
     public float MarkCooldown { get; set; } = 15;
     
-    [ModdedNumberOption("Marks Per Round", 1, 3, 1f)]
+    [ModdedNumberOption("launchpad.options.vendetta.marksPerRound", 1, 3, 1f)]
     public float MarkUses { get; set; } = 1;
 }

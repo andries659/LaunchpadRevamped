@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Features;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Roles.Neutral;
 using MiraAPI.GameEnd;
 using MiraAPI.Utilities;
@@ -14,7 +15,7 @@ public sealed class ExecutionerGameOver : CustomGameOver
 
     public override void AfterEndGameSetup(EndGameManager endGameManager)
     {
-        endGameManager.WinText.text = "<size=80%>Executioner Wins!</size>";
+        endGameManager.WinText.text = $"<size=80%>{MiraLocaleManager.Get("launchpad.gameover.executioner.win")}</size>";
         endGameManager.WinText.color = LaunchpadPalette.ExecutionerColor;
         endGameManager.BackgroundBar.material.SetColor(ShaderID.Color, LaunchpadPalette.ExecutionerColor);
     }

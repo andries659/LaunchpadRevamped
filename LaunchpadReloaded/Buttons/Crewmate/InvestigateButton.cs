@@ -12,7 +12,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class InvestigateButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "INVESTIGATE";
+    public override string Name => "launchpad.button.investigate";
     public override float Cooldown => 1;
     public override float EffectDuration => 0;
     public override int MaxUses => 0;

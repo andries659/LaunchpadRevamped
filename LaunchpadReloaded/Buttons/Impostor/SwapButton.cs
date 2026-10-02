@@ -10,7 +10,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class SwapButton : BaseLaunchpadButton
 {
-    public override string Name => "Swap";
+    public override string Name => "launchpad.button.swap";
     public override float Cooldown => OptionGroupSingleton<SwapshifterOptions>.Instance.SwapCooldown;
     public override float EffectDuration => OptionGroupSingleton<SwapshifterOptions>.Instance.SwapDuration;
     public override int MaxUses => (int)OptionGroupSingleton<SwapshifterOptions>.Instance.SwapUses;

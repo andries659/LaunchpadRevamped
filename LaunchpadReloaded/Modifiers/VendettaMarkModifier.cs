@@ -1,4 +1,5 @@
 ﻿using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using MiraAPI.PluginLoading;
 
 namespace LaunchpadReloaded.Modifiers;
@@ -6,7 +7,7 @@ namespace LaunchpadReloaded.Modifiers;
 [MiraIgnore]
 public class VendettaMarkModifier(byte vendettaPlayer) : BaseModifier
 {
-    public override string ModifierName => "Vendetta";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.vendettaMark");
     public override bool HideOnUi => true;
     public PlayerControl Vendetta { get; private set; } = GameData.Instance.GetPlayerById(vendettaPlayer).Object;
 

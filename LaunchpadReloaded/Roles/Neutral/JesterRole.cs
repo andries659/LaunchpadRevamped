@@ -12,9 +12,6 @@ namespace LaunchpadReloaded.Roles.Neutral;
 
 public class JesterRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
-    public string RoleName => "Jester";
-    public string RoleDescription => "Get ejected to win";
-    public string RoleLongDescription => "Convince the crew to vote you out by being suspicious.\nIf you get voted out, you win the game.";
     public Color RoleColor => LaunchpadPalette.JesterColor;
     public override bool IsDead => false;
 

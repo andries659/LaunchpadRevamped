@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <!-- Roles (keys follow ICustomRole defaults: <namespace>.<ClassName>) -->
+    <!-- Roles (default ICustomRole keys: &lt;namespace&gt;.&lt;ClassName&gt;[.suffix]) -->
     <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole">Captain</string>
     <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.IntroBlurb">Protect the crew with your abilities</string>
     <string name="LaunchpadReloaded.Roles.Crewmate.CaptainRole.MedDescription">Protect the crew with your abilities</string>
@@ -90,34 +90,29 @@ and you can dissect bodies to make them unreportable.</string>
 This can help you frame players and disguise kills.</string>
     <string name="LaunchpadReloaded.Roles.Impostor.SwapshifterRole.WikiDescription">Shift and swap into other players.
 This can help you frame players and disguise kills.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole">Executioner</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.TabDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ExecutionerRole.WikiDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole">Jester</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.IntroBlurb">Get ejected to win</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.MedDescription">Get ejected to win</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.TabDescription">Convince the crew to vote you out by being suspicious.
+    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole">Executioner</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.TabDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ExecutionerRole.WikiDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole">Jester</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.IntroBlurb">Get ejected to win</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.MedDescription">Get ejected to win</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.TabDescription">Convince the crew to vote you out by being suspicious.
 If you get voted out, you win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.JesterRole.WikiDescription">Convince the crew to vote you out by being suspicious.
+    <string name="LaunchpadReloaded.Roles.Neutral.JesterRole.WikiDescription">Convince the crew to vote you out by being suspicious.
 If you get voted out, you win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole">Reaper</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.IntroBlurb">Collect souls to win</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.MedDescription">Collect souls to win</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole">Outcast Ghost</string>
-    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.IntroBlurb"></string>
-    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.MedDescription"></string>
-    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.TabDescription"></string>
-    <string name="LaunchpadReloaded.Roles.Outcast.OutcastGhostRole.WikiDescription"></string>
-    <!-- Outcast team intro (IOutcastRole) -->
-    <string name="launchpad.outcast">Outcast</string>
-    <string name="launchpad.outcast.group">Outcast Roles</string>
-    <string name="launchpad.outcast.roleTitle">OUTCAST</string>
-    <string name="launchpad.outcast.teamIntroDescription">You are an Outcast. You do not have a team.</string>
-    <!-- Buttons (MiraAPI uppercases button text itself) -->
+    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole">Reaper</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.IntroBlurb">Collect souls to win</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.MedDescription">Collect souls to win</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="LaunchpadReloaded.Roles.Neutral.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="launchpad.role.executioner.noTarget">your target</string>
+    <!-- Neutral team -->
+    <string name="launchpad.neutral.group">Neutral Roles</string>
+    <string name="launchpad.neutral.roleTitle">Neutral</string>
+    <string name="launchpad.neutral.teamIntroDescription">You are a Neutral. You do not have a team.</string>
+    <!-- Buttons (MiraAPI uppercases button text) -->
     <string name="launchpad.button.seal">Seal</string>
     <string name="launchpad.button.shoot">Shoot</string>
     <string name="launchpad.button.call">Call</string>
@@ -139,27 +134,11 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.deadlock">Deadlock</string>
     <!-- Modifiers -->
     <string name="launchpad.modifier.giant">Giant</string>
-    <string name="launchpad.modifier.giant.TabDescription">You are larger than
-the average player.</string>
     <string name="launchpad.modifier.smol">Smol</string>
-    <string name="launchpad.modifier.smol.TabDescription">You are smaller than
-the average player.</string>
     <string name="launchpad.modifier.gravity">Gravity Field</string>
-    <string name="launchpad.modifier.gravity.TabDescription">You slow down players near you.</string>
     <string name="launchpad.modifier.vendetta">Vendetta</string>
-    <string name="launchpad.modifier.vendetta.TabDescription">You can mark {uses} {unit} per round
-If they vote you in the next meeting,
-they will die in the next round.</string>
-    <string name="launchpad.modifier.vendetta.unit.one">player</string>
-    <string name="launchpad.modifier.vendetta.unit.other">players</string>
     <string name="launchpad.modifier.torch">Torch</string>
-    <string name="launchpad.modifier.torch.TabDescription.flashlight">You will have a flashlight
-if lights are sabotaged.</string>
-    <string name="launchpad.modifier.torch.TabDescription.maxVision">You have max vision
-if lights are sabotaged.</string>
     <string name="launchpad.modifier.mayor">Mayor</string>
-    <string name="launchpad.modifier.mayor.TabDescription">You have an additional 
-{votes} votes every meeting.</string>
     <string name="launchpad.modifier.hacked">Hacked</string>
     <string name="launchpad.modifier.poisoned">Poisoned</string>
     <string name="launchpad.modifier.dragBody">Drag Body</string>
@@ -168,6 +147,22 @@ if lights are sabotaged.</string>
     <string name="launchpad.modifier.footsteps">Footsteps</string>
     <string name="launchpad.modifier.gravityVictim">Victim of Gravity</string>
     <string name="launchpad.modifier.vendettaMark">Vendetta</string>
+    <string name="launchpad.modifier.giant.TabDescription">You are larger than
+the average player.</string>
+    <string name="launchpad.modifier.smol.TabDescription">You are smaller than
+the average player.</string>
+    <string name="launchpad.modifier.gravity.TabDescription">You slow down players near you.</string>
+    <string name="launchpad.modifier.vendetta.TabDescription">You can mark {uses} {unit} per round
+If they vote you in the next meeting,
+they will die in the next round.</string>
+    <string name="launchpad.modifier.vendetta.unit.one">player</string>
+    <string name="launchpad.modifier.vendetta.unit.other">players</string>
+    <string name="launchpad.modifier.torch.TabDescription.flashlight">You will have a flashlight
+if lights are sabotaged.</string>
+    <string name="launchpad.modifier.torch.TabDescription.maxVision">You have max vision
+if lights are sabotaged.</string>
+    <string name="launchpad.modifier.mayor.TabDescription">You have an additional 
+{votes} votes every meeting.</string>
     <!-- Option groups and options -->
     <string name="launchpad.options.battleRoyaleOptions">Battle Royale Options</string>
     <string name="launchpad.options.battleRoyaleOptions.useSeekerCharacter">Use Seeker Character</string>
@@ -280,16 +275,8 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.votingType.allowConfirmingVotes">Allow Confirming Votes</string>
     <string name="launchpad.options.votingType.hideVotingIcons">Hide Voting Icons</string>
     <string name="launchpad.options.votingType.showPercentages">Show Percentages</string>
-    <!-- Game over screens -->
+    <!-- Game over -->
     <string name="launchpad.gameover.jester.win">Jester Wins!</string>
     <string name="launchpad.gameover.reaper.win">Reaper Wins!</string>
     <string name="launchpad.gameover.executioner.win">Executioner Wins!</string>
-    <!-- Battle Royale -->
-    <string name="launchpad.gamemode.battleRoyale">Battle Royale</string>
-    <string name="launchpad.gamemode.battleRoyale.Description">Everyone can kill.
-[b][i]Last one standing wins.[/b][/i]</string>
-    <string name="launchpad.gamemode.battleRoyale.death">Death</string>
-    <string name="launchpad.gamemode.battleRoyale.playerDied">{player} has [b]DIED.[/b]</string>
-    <string name="launchpad.gamemode.battleRoyale.playersRemaining">Battle Royale
-{count} Players Remaining.</string>
 </resources>

@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Features;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Roles.Neutral;
 using MiraAPI.GameEnd;
 using MiraAPI.Utilities;
@@ -14,7 +15,7 @@ public sealed class ReaperGameOver : CustomGameOver
 
     public override void AfterEndGameSetup(EndGameManager endGameManager)
     {
-        endGameManager.WinText.text = "Reaper Wins!";
+        endGameManager.WinText.text = MiraLocaleManager.Get("launchpad.gameover.reaper.win");
         endGameManager.WinText.color = LaunchpadPalette.ReaperColor;
         endGameManager.BackgroundBar.material.SetColor(ShaderID.Color, LaunchpadPalette.ReaperColor);
     }

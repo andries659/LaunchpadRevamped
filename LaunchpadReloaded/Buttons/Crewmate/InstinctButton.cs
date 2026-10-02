@@ -12,7 +12,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class InstinctButton : BaseLaunchpadButton
 {
-    public override string Name => "INSTINCT";
+    public override string Name => "launchpad.button.instinct";
     public override float Cooldown => OptionGroupSingleton<DetectiveOptions>.Instance.InstinctCooldown;
     public override float EffectDuration => OptionGroupSingleton<DetectiveOptions>.Instance.InstinctDuration;
     public override int MaxUses => (int)OptionGroupSingleton<DetectiveOptions>.Instance.InstinctUses;

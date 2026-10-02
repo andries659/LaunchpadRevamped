@@ -6,12 +6,12 @@ namespace LaunchpadReloaded.Options.Roles.Neutral;
 
 public class ExecutionerOptions : AbstractOptionGroup<ExecutionerRole>
 {
-    public override string GroupName => "Executioner";
+    public override string GroupName => "launchpad.options.executioner";
 
-    [ModdedToggleOption("Can Call Meeting")]
+    [ModdedToggleOption("launchpad.options.executioner.canCallMeeting")]
     public bool CanCallMeeting { get; set; } = false;
 
-    [ModdedEnumOption("On Target Death, Executioner Becomes", typeof(ExecutionerBecomes))]
+    [ModdedEnumOption("launchpad.options.executioner.onTargetDeathExecutionerBecomes", typeof(ExecutionerBecomes))]
     public ExecutionerBecomes TargetDeathNewRole { get; set; } = ExecutionerBecomes.Jester;
 
     public enum ExecutionerBecomes

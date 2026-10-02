@@ -1,4 +1,5 @@
 ﻿using AmongUs.GameOptions;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Components;
 using LaunchpadReloaded.Features;
 using LaunchpadReloaded.Utilities;
@@ -10,7 +11,7 @@ namespace LaunchpadReloaded.Modifiers;
 
 public class RevivedModifier : BaseModifier
 {
-    public override string ModifierName => "Revived";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.revived");
     private readonly int _visorColor = Shader.PropertyToID("_VisorColor");
     private Color _ogVisorColor;
 

@@ -1,4 +1,5 @@
 using System.Linq;
+using MiraAPI.Translation;
 using AmongUs.GameOptions;
 using LaunchpadReloaded.Components;
 using LaunchpadReloaded.Features;
@@ -19,8 +20,9 @@ namespace LaunchpadReloaded.Roles.Neutral;
 
 public class ExecutionerRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
-    public string RoleName => "Executioner";
-    public string RoleDescription => $"Get <b>{(target ? target!.Data.PlayerName : "your target")}</b> voted out to win.";
+    public string RoleDescription => MiraLocaleManager.GetParsed(
+        "LaunchpadReloaded.Roles.Neutral.ExecutionerRole.IntroBlurb",
+        new() { ["{target}"] = target ? target!.Data.PlayerName : MiraLocaleManager.Get("launchpad.role.executioner.noTarget") });
     public string RoleLongDescription => RoleDescription;
     public Color RoleColor => LaunchpadPalette.ExecutionerColor;
     public override bool IsDead => false;

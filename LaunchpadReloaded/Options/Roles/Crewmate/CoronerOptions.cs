@@ -7,11 +7,11 @@ namespace LaunchpadReloaded.Options.Roles.Crewmate;
 
 public class CoronerOptions : AbstractOptionGroup<CoronerRole>
 {
-    public override string GroupName => "Coroner";
+    public override string GroupName => "launchpad.options.coroner";
 
-    [ModdedNumberOption("Freeze Cooldown", 0, 50, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.coroner.freezeCooldown", 0, 50, 5, MiraNumberSuffixes.Seconds)]
     public float FreezeCooldown { get; set; } = 15;
 
-    [ModdedNumberOption("Freeze Uses", 0, 10, zeroInfinity: true)]
+    [ModdedNumberOption("launchpad.options.coroner.freezeUses", 0, 10, zeroInfinity: true)]
     public float FreezeUses { get; set; } = 0;
 }

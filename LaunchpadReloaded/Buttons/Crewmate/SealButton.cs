@@ -13,7 +13,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class SealButton : BaseLaunchpadButton<Vent>
 {
-    public override string Name => "Seal";
+    public override string Name => "launchpad.button.seal";
     public override float Cooldown => OptionGroupSingleton<SealerOptions>.Instance.SealVentCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => (int)OptionGroupSingleton<SealerOptions>.Instance.SealVentUses;

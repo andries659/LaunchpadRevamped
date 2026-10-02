@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Options.Roles.Impostor;
+using MiraAPI.Translation;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 using MiraAPI.Utilities;
@@ -8,7 +9,7 @@ namespace LaunchpadReloaded.Modifiers;
 
 public class DragBodyModifier : BaseModifier
 {
-    public override string ModifierName => "Drag Body";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.dragBody");
 
     public override bool HideOnUi => true;
 

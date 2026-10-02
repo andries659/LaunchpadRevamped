@@ -13,7 +13,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class FreezeButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "Freeze";
+    public override string Name => "launchpad.button.freeze";
     public override float Cooldown => OptionGroupSingleton<CoronerOptions>.Instance.FreezeCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => (int)OptionGroupSingleton<CoronerOptions>.Instance.FreezeUses;

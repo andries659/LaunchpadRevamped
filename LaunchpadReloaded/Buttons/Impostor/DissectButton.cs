@@ -14,7 +14,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class DissectButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "Dissect";
+    public override string Name => "launchpad.button.dissect";
     public override float Cooldown => OptionGroupSingleton<SurgeonOptions>.Instance.DissectCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => (int)OptionGroupSingleton<SurgeonOptions>.Instance.DissectUses;

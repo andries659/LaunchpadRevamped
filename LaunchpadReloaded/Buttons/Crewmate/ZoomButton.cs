@@ -11,7 +11,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class ZoomButton : BaseLaunchpadButton
 {
-    public override string Name => "ZOOM";
+    public override string Name => "launchpad.button.zoom";
 
     public override float Cooldown => OptionGroupSingleton<CaptainOptions>.Instance.ZoomCooldown;
 

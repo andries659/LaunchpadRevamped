@@ -6,6 +6,6 @@ namespace LaunchpadReloaded.Roles.Neutral;
 public interface INeutralRole : ICustomRole
 {
     ModdedRoleTeams ICustomRole.Team => ModdedRoleTeams.Custom;
-    RoleOptionsGroup ICustomRole.RoleOptionsGroup => new("Neutral Roles", Color.gray);
-    TeamIntroConfiguration? ICustomRole.IntroConfiguration => new(Color.gray, "Neutral", "You are an Neutral. You do not have a team.");
+    RoleOptionsGroup ICustomRole.RoleOptionsGroup => new("launchpad.neutral.group", Color.gray);
+    TeamIntroConfiguration? ICustomRole.IntroConfiguration => new(Color.gray, "launchpad.neutral.roleTitle", "launchpad.neutral.teamIntroDescription");
 }

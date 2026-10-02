@@ -7,17 +7,17 @@ namespace LaunchpadReloaded.Options.Roles.Impostor;
 
 public class JanitorOptions : AbstractOptionGroup<JanitorRole>
 {
-    public override string GroupName => "Janitor";
+    public override string GroupName => "launchpad.options.janitor";
 
-    [ModdedNumberOption("Hide Bodies Cooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.janitor.hideBodiesCooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
     public float HideCooldown { get; set; } = 5f;
 
-    [ModdedNumberOption("Drag Body Speed", 0.5f, 2.5f, 0.25f, MiraNumberSuffixes.None)]
+    [ModdedNumberOption("launchpad.options.janitor.dragBodySpeed", 0.5f, 2.5f, 0.25f, MiraNumberSuffixes.None)]
     public float DragSpeed { get; set; } = 1.75f;
 
-    [ModdedNumberOption("Hide Bodies Uses", 0, 10, zeroInfinity: true)]
+    [ModdedNumberOption("launchpad.options.janitor.hideBodiesUses", 0, 10, zeroInfinity: true)]
     public float HideUses { get; set; } = 3;
 
-    [ModdedToggleOption("Clean Instead Of Hide")]
+    [ModdedToggleOption("launchpad.options.janitor.cleanInsteadOfHide")]
     public bool CleanInsteadOfHide { get; set; } = false;
 }

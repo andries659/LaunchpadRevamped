@@ -12,7 +12,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class CallButton : BaseLaunchpadButton
 {
-    public override string Name => "CALL";
+    public override string Name => "launchpad.button.call";
     public override float Cooldown => OptionGroupSingleton<CaptainOptions>.Instance.CaptainMeetingCooldown;
     public override float EffectDuration => 0;
     public override int MaxUses => (int)OptionGroupSingleton<CaptainOptions>.Instance.CaptainMeetingCount;

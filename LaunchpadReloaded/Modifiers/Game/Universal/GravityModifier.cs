@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Components;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Options.Modifiers;
 using LaunchpadReloaded.Options.Modifiers.Universal;
 using MiraAPI.GameOptions;
@@ -9,8 +10,8 @@ namespace LaunchpadReloaded.Modifiers.Game.Universal;
 
 public sealed class GravityModifier : LPModifier
 {
-    public override string ModifierName => "Gravity Field";
-    public override string GetDescription() => "You slow down players near you.";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.gravity");
+    public override string GetDescription() => MiraLocaleManager.Get("launchpad.modifier.gravity.TabDescription");
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.GravityChance;
     public override int GetAmountPerGame() => 1;
 

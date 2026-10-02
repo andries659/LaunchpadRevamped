@@ -15,7 +15,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class InjectButton : BaseLaunchpadButton<PlayerControl>
 {
-    public override string Name => "Inject";
+    public override string Name => "launchpad.button.inject";
     public override float Cooldown => OptionGroupSingleton<SurgeonOptions>.Instance.InjectCooldown;
     public override float EffectDuration => OptionGroupSingleton<SurgeonOptions>.Instance.PoisonDelay;
     public override int MaxUses => (int)OptionGroupSingleton<SurgeonOptions>.Instance.InjectUses;

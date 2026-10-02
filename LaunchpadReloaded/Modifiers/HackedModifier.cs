@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Components;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Features;
 using LaunchpadReloaded.Features.Managers;
 using LaunchpadReloaded.Options.Roles.Impostor;
@@ -19,7 +20,7 @@ namespace LaunchpadReloaded.Modifiers;
 
 public class HackedModifier : TimedModifier
 {
-    public override string ModifierName => "Hacked";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.hacked");
 
     public override bool HideOnUi => false;
     public override bool AutoStart => true;

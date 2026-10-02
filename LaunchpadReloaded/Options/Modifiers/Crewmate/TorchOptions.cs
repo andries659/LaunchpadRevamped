@@ -9,15 +9,15 @@ namespace LaunchpadReloaded.Options.Modifiers.Crewmate;
 
 public class TorchOptions : AbstractOptionGroup<TorchModifier>
 {
-    public override string GroupName => "Torch";
+    public override string GroupName => "launchpad.options.torch";
 
     public override Func<bool> GroupVisible =>
         () => OptionGroupSingleton<CrewmateModifierOptions>.Instance.TorchChance > 0;
 
-    [ModdedToggleOption("Use Hide N Seek Flashlight")]
+    [ModdedToggleOption("launchpad.options.torch.useHideNSeekFlashlight")]
     public bool UseFlashlight { get; set; } = true;
 
-    public ModdedNumberOption TorchFlashlightSize { get; } = new("Flashlight Size", .25f, 0.1f, .5f, 0.05f, MiraNumberSuffixes.Multiplier)
+    public ModdedNumberOption TorchFlashlightSize { get; } = new("launchpad.options.torch.flashlightSize", .25f, 0.1f, .5f, 0.05f, MiraNumberSuffixes.Multiplier)
     {
         Visible = () => OptionGroupSingleton<TorchOptions>.Instance.UseFlashlight,
     };

@@ -1,4 +1,5 @@
 ﻿using MiraAPI.Modifiers;
+using MiraAPI.Translation;
 using System;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ namespace LaunchpadReloaded.Modifiers;
 
 public class GravityVictimModifier(PlayerControl gravityGuy) : BaseModifier
 {
-    public override string ModifierName => "Victim of Gravity";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.gravityVictim");
     public override bool HideOnUi => false;
 
     private float ogSpeed;

@@ -16,7 +16,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class ReviveButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "REVIVE";
+    public override string Name => "launchpad.button.revive";
 
     public override float Cooldown => OptionGroupSingleton<MedicOptions>.Instance.ReviveCooldown;
 

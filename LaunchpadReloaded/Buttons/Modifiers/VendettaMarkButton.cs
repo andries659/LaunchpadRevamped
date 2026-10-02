@@ -14,7 +14,7 @@ namespace LaunchpadReloaded.Buttons.Modifiers;
 [MiraIgnore]
 public class VendettaMarkButton : BaseLaunchpadButton<PlayerControl>
 {
-    public override string Name => "Mark";
+    public override string Name => "launchpad.button.mark";
     public override float Cooldown => OptionGroupSingleton<VendettaOptions>.Instance.MarkCooldown;
     public override int MaxUses => (int)OptionGroupSingleton<VendettaOptions>.Instance.MarkUses;
 

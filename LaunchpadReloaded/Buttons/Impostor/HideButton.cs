@@ -16,7 +16,7 @@ namespace LaunchpadReloaded.Buttons.Impostor;
 
 public class HideButton : BaseLaunchpadButton<DeadBody>
 {
-    public override string Name => "HIDE";
+    public override string Name => "launchpad.button.hide";
     public override float Cooldown => 5;
     public override float EffectDuration => 0;
     public override int MaxUses => 3;

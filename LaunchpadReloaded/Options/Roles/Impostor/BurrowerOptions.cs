@@ -7,14 +7,14 @@ namespace LaunchpadReloaded.Options.Roles.Impostor;
 
 public class BurrowerOptions : AbstractOptionGroup<BurrowerRole>
 {
-    public override string GroupName => "Burrower";
+    public override string GroupName => "launchpad.options.burrower";
 
-    [ModdedNumberOption("Vent Dig Cooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
+    [ModdedNumberOption("launchpad.options.burrower.ventDigCooldown", 0, 120, 5, MiraNumberSuffixes.Seconds)]
     public float VentDigCooldown { get; set; } = 35;
 
-    [ModdedNumberOption("Vent Dig Uses", 0, 12, 2, zeroInfinity: true)]
+    [ModdedNumberOption("launchpad.options.burrower.ventDigUses", 0, 12, 2, zeroInfinity: true)]
     public float VentDigUses { get; set; } = 0;
 
-    [ModdedNumberOption("Min Vent Distance", 0, 10, 0.5f)]
+    [ModdedNumberOption("launchpad.options.burrower.minVentDistance", 0, 10, 0.5f)]
     public float VentDist { get; set; } = 1.5f;
 }

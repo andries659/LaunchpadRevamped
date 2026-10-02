@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Options.Modifiers;
+using MiraAPI.Translation;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
 
@@ -6,8 +7,8 @@ namespace LaunchpadReloaded.Modifiers.Game.Universal;
 
 public sealed class SmolModifier : LPModifier
 {
-    public override string ModifierName => "Smol";
-    public override string GetDescription() => "You are smaller than\nthe average player.";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.smol");
+    public override string GetDescription() => MiraLocaleManager.Get("launchpad.modifier.smol.TabDescription");
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<UniversalModifierOptions>.Instance.SmolChance;
     public override int GetAmountPerGame() => 1;
     public override bool IsModifierValidOn(RoleBehaviour role) => base.IsModifierValidOn(role) && !role.Player.HasModifier<GiantModifier>();

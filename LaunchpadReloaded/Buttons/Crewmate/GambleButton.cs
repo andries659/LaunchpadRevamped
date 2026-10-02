@@ -15,7 +15,7 @@ namespace LaunchpadReloaded.Buttons.Crewmate;
 
 public class GambleButton : BaseLaunchpadButton<PlayerControl>
 {
-    public override string Name => "Gamble";
+    public override string Name => "launchpad.button.gamble";
     public override float Cooldown => OptionGroupSingleton<GamblerOptions>.Instance.GambleCooldown;
     public override int MaxUses => (int)OptionGroupSingleton<GamblerOptions>.Instance.GambleUses;
     public override LoadableAsset<Sprite> Sprite => LaunchpadAssets.GambleButton;

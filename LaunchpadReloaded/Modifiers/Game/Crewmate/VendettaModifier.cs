@@ -1,4 +1,5 @@
 ﻿using LaunchpadReloaded.Buttons.Modifiers;
+using MiraAPI.Translation;
 using LaunchpadReloaded.Options.Modifiers;
 using LaunchpadReloaded.Options.Modifiers.Crewmate;
 using MiraAPI.Events;
@@ -15,11 +16,16 @@ namespace LaunchpadReloaded.Modifiers.Game.Crewmate;
 [MiraIgnore]
 public sealed class VendettaModifier : LPModifier
 {
-    public override string ModifierName => "Vendetta";
-    public override string GetDescription() =>
-        $"You can mark " +
-        $"{OptionGroupSingleton<VendettaOptions>.Instance.MarkUses} player{(OptionGroupSingleton<VendettaOptions>.Instance.MarkUses > 1 ? "s" : "")} per round\n" +
-        $"If they vote you in the next meeting,\nthey will die in the next round.";
+    public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.vendetta");
+    public override string GetDescription()
+    {
+        var uses = OptionGroupSingleton<VendettaOptions>.Instance.MarkUses;
+        return MiraLocaleManager.GetParsed("launchpad.modifier.vendetta.TabDescription", new()
+        {
+            ["{uses}"] = uses.ToString(),
+            ["{unit}"] = MiraLocaleManager.Get(uses > 1 ? "launchpad.modifier.vendetta.unit.other" : "launchpad.modifier.vendetta.unit.one"),
+        });
+    }
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.VendettaChance;
     public override int GetAmountPerGame() => 1;
