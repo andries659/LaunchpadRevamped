@@ -48,6 +48,20 @@ This will prevent anyone from entering the vent.</string>
 but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.WikiDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
 but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole">Lucky</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.IntroBlurb">Luck is on your side.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.MedDescription">Luck is on your side.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.TabDescription">When an Impostor tries to kill you,
+you have a chance to survive.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.WikiDescription">When an Impostor tries to kill you,
+you have a chance to survive.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole">Bomber</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.IntroBlurb">Plant bombs and blow up the crew.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.MedDescription">Plant bombs and blow up the crew.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.TabDescription">Place bombs that explode after a short fuse
+and kill everyone nearby.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.WikiDescription">Place bombs that explode after a short fuse
+and kill everyone nearby.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole">Burrower</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.IntroBlurb">Create vents around the map.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.MedDescription">Create vents around the map.</string>
@@ -55,6 +69,13 @@ but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</st
 By digging new vents.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.WikiDescription">Move around the map easier
 By digging new vents.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole">Grenadier</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.IntroBlurb">Blind the crew with your grenades.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.MedDescription">Blind the crew with your grenades.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.TabDescription">Blind nearby players so they
+cannot see what you are doing.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.WikiDescription">Blind nearby players so they
+cannot see what you are doing.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole">Hacker</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.IntroBlurb">Hack meetings and sabotage the crewmates</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.MedDescription">Hack meetings and sabotage the crewmates</string>
@@ -90,6 +111,13 @@ and you can dissect bodies to make them unreportable.</string>
 This can help you frame players and disguise kills.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.WikiDescription">Shift and swap into other players.
 This can help you frame players and disguise kills.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole">Arsonist</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.IntroBlurb">Douse everyone, then burn them all.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.MedDescription">Douse everyone, then burn them all.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.TabDescription">Douse players, then burn them all.
+Be the last one standing to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.WikiDescription">Douse players, then burn them all.
+Be the last one standing to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole">Executioner</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
@@ -132,6 +160,10 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.hack">Hack</string>
     <string name="launchpad.button.dissect">Dissect</string>
     <string name="launchpad.button.deadlock">Deadlock</string>
+    <string name="launchpad.button.douse">Douse</string>
+    <string name="launchpad.button.burn">Burn</string>
+    <string name="launchpad.button.blind">Blind</string>
+    <string name="launchpad.button.placeBomb">Place Bomb</string>
     <!-- Modifiers -->
     <string name="launchpad.modifier.chameleon">Chameleon</string>
     <string name="launchpad.modifier.giant">Giant</string>
@@ -148,6 +180,8 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.modifier.footsteps">Footsteps</string>
     <string name="launchpad.modifier.gravityVictim">Victim of Gravity</string>
     <string name="launchpad.modifier.vendettaMark">Vendetta</string>
+    <string name="launchpad.modifier.doused">Doused</string>
+    <string name="launchpad.modifier.blinded">Blinded</string>
     <string name="launchpad.modifier.chameleon.TabDescription">You turn invisible when you stand still.</string>
     <string name="launchpad.modifier.giant.TabDescription">You are larger than
 the average player.</string>
@@ -218,6 +252,9 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.gambler">Gambler</string>
     <string name="launchpad.options.gambler.gambleCooldown">Gamble Cooldown</string>
     <string name="launchpad.options.gambler.gambleUses">Gamble Uses</string>
+    <string name="launchpad.options.lucky">Lucky</string>
+    <string name="launchpad.options.lucky.dodgeChance">Dodge Chance</string>
+    <string name="launchpad.options.lucky.maxDodges">Max Dodges</string>
     <string name="launchpad.options.medic">Medic</string>
     <string name="launchpad.options.medic.onlyAllowRevivingInMedBayLaboratory">Only Allow Reviving in MedBay/Laboratory</string>
     <string name="launchpad.options.medic.canDragBodies">Can Drag Bodies</string>
@@ -263,6 +300,18 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.swapshifter.swapDuration">Swap Duration</string>
     <string name="launchpad.options.swapshifter.swapUses">Swap Uses</string>
     <string name="launchpad.options.swapshifter.canSwapWithImpostors">Can Swap with Impostors</string>
+    <string name="launchpad.options.grenadier">Grenadier</string>
+    <string name="launchpad.options.grenadier.blindCooldown">Blind Cooldown</string>
+    <string name="launchpad.options.grenadier.blindDuration">Blind Duration</string>
+    <string name="launchpad.options.grenadier.blindRadius">Blind Radius</string>
+    <string name="launchpad.options.grenadier.blindUses">Blind Uses</string>
+    <string name="launchpad.options.grenadier.blindImpostors">Blind Impostors</string>
+    <string name="launchpad.options.bomber">Bomber</string>
+    <string name="launchpad.options.bomber.bombCooldown">Bomb Cooldown</string>
+    <string name="launchpad.options.bomber.bombFuse">Bomb Fuse Time</string>
+    <string name="launchpad.options.bomber.bombRadius">Bomb Radius</string>
+    <string name="launchpad.options.bomber.bombUses">Bomb Uses</string>
+    <string name="launchpad.options.bomber.bombKillsImpostors">Bomb Kills Impostors</string>
     <string name="launchpad.options.executioner">Executioner</string>
     <string name="launchpad.options.executioner.canCallMeeting">Can Call Meeting</string>
     <string name="launchpad.options.executioner.onTargetDeathExecutionerBecomes">On Target Death, Executioner Becomes</string>
@@ -271,6 +320,10 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.reaper">Reaper</string>
     <string name="launchpad.options.reaper.collectionsToWin">Collections To Win</string>
     <string name="launchpad.options.reaper.collectCooldown">Collect Cooldown</string>
+    <string name="launchpad.options.arsonist">Arsonist</string>
+    <string name="launchpad.options.arsonist.douseCooldown">Douse Cooldown</string>
+    <string name="launchpad.options.arsonist.burnCooldown">Burn Cooldown</string>
+    <string name="launchpad.options.arsonist.dousedNeededToBurn">Doused Needed To Burn</string>
     <string name="launchpad.options.votingType">Voting Type</string>
     <string name="launchpad.options.votingType.votingType">Voting Type</string>
     <string name="launchpad.options.votingType.maxVotes">Max Votes</string>
@@ -281,5 +334,6 @@ if lights are sabotaged.</string>
     <!-- Game over -->
     <string name="launchpad.gameover.jester.win">Jester Wins!</string>
     <string name="launchpad.gameover.reaper.win">Reaper Wins!</string>
+    <string name="launchpad.gameover.arsonist.win">Arsonist Wins!</string>
     <string name="launchpad.gameover.executioner.win">Executioner Wins!</string>
 </resources>

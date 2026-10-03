@@ -38,6 +38,18 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> GambleButton = new LoadableBundleAsset<Sprite>("Gamble.png", Bundle);
     public static readonly LoadableAsset<Sprite> DeadlockButton = new LoadableBundleAsset<Sprite>("Deadlock.png", Bundle);
 
+    // Embedded PNGs (Resources/**/*.png are embedded by the csproj, so no asset bundle rebuild needed)
+    public static readonly LoadableAsset<Sprite> DouseButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Douse.png");
+    public static readonly LoadableAsset<Sprite> BurnButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Burn.png");
+    public static readonly LoadableAsset<Sprite> BlindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Blind.png");
+    public static readonly LoadableAsset<Sprite> BombButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Bomb.png");
+
+    // Role icons
+    public static readonly LoadableAsset<Sprite> ArsonistIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Arsonist.png");
+    public static readonly LoadableAsset<Sprite> BomberIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Bomber.png");
+    public static readonly LoadableAsset<Sprite> GrenadierIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Grenadier.png");
+    public static readonly LoadableAsset<Sprite> LuckyIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Lucky.png");
+
     public static readonly LoadableAsset<Sprite> NotepadSprite = new LoadableBundleAsset<Sprite>("NotepadButton.png", Bundle);
     public static readonly LoadableAsset<Sprite> NotepadActiveSprite = new LoadableBundleAsset<Sprite>("NotepadButtonActive.png", Bundle);
 
