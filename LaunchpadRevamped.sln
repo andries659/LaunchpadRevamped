@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # 
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchpadRevamped", "LaunchpadRevamped\LaunchpadRevamped.csproj", "{11FBC798-BAF5-4EE5-9511-BE6DB0592F99}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaunchpadRevamped", "LaunchpadReloaded\LaunchpadRevamped.csproj", "{6D5E183D-401E-47EB-8EF8-364D9F57B42C}"
 EndProject
 Global

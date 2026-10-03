@@ -133,6 +133,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.dissect">Dissect</string>
     <string name="launchpad.button.deadlock">Deadlock</string>
     <!-- Modifiers -->
+    <string name="launchpad.modifier.chameleon">Chameleon</string>
     <string name="launchpad.modifier.giant">Giant</string>
     <string name="launchpad.modifier.smol">Smol</string>
     <string name="launchpad.modifier.gravity">Gravity Field</string>
@@ -147,6 +148,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.modifier.footsteps">Footsteps</string>
     <string name="launchpad.modifier.gravityVictim">Victim of Gravity</string>
     <string name="launchpad.modifier.vendettaMark">Vendetta</string>
+    <string name="launchpad.modifier.chameleon.TabDescription">You turn invisible when you stand still.</string>
     <string name="launchpad.modifier.giant.TabDescription">You are larger than
 the average player.</string>
     <string name="launchpad.modifier.smol.TabDescription">You are smaller than
@@ -185,6 +187,7 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.vendetta.markCooldown">Mark Cooldown</string>
     <string name="launchpad.options.vendetta.marksPerRound">Marks Per Round</string>
     <string name="launchpad.options.crewmateModifiers">Crewmate Modifiers</string>
+    <string name="launchpad.options.crewmateModifiers.chameleonChance">Chameleon Chance</string>
     <string name="launchpad.options.crewmateModifiers.mayorChance">Mayor Chance</string>
     <string name="launchpad.options.crewmateModifiers.torchChance">Torch Chance</string>
     <string name="launchpad.options.crewmateModifiers.vendettaChance">Vendetta Chance</string>
