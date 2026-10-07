@@ -17,5 +17,6 @@ public enum LaunchpadRpc : uint
     ArsonistCheckWin,
     Blind,
     PlaceBomb,
-    LuckyDodge
+    LuckyDodge,
+    Rewind
 }

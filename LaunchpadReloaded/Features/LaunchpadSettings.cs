@@ -33,6 +33,9 @@ public class LaunchpadSettings : LocalSettingsTab
     [LocalToggleSetting]
     public ConfigEntry<bool> UniqueDummies { get; }
 
+    [LocalToggleSetting]
+    public ConfigEntry<bool> RoleCategoryButtons { get; }
+
     [LocalEnumSetting(names:["Bottom Left", "Bottom Right"])]
     public ConfigEntry<ButtonLocation> ButtonLocation { get; }
 
@@ -57,6 +60,8 @@ public class LaunchpadSettings : LocalSettingsTab
                 button.SetButtonLocation(ButtonLocation.Value);
             }
         };
+
+        RoleCategoryButtons = config.Bind("General", "Role Category Buttons", true);
 
         UniqueDummies = config.Bind("General", "Unique Freeplay Dummies", false);
         UniqueDummies.SettingChanged += (_, _) =>

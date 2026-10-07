@@ -49,6 +49,9 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> BomberIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Bomber.png");
     public static readonly LoadableAsset<Sprite> GrenadierIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Grenadier.png");
     public static readonly LoadableAsset<Sprite> LuckyIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Lucky.png");
+    public static readonly LoadableAsset<Sprite> SnitchIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Snitch.png");
+    public static readonly LoadableAsset<Sprite> TimeRewinderIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.TimeRewinder.png");
+    public static readonly LoadableAsset<Sprite> RewindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Rewind.png");
 
     public static readonly LoadableAsset<Sprite> NotepadSprite = new LoadableBundleAsset<Sprite>("NotepadButton.png", Bundle);
     public static readonly LoadableAsset<Sprite> NotepadActiveSprite = new LoadableBundleAsset<Sprite>("NotepadButtonActive.png", Bundle);
