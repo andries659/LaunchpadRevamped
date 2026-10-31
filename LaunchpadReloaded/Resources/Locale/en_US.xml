@@ -71,6 +71,50 @@ the Impostors will be able to find you.</string>
 where they were a few seconds ago.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.WikiDescription">Rewind time and send players back to
 where they were a few seconds ago.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole">Coven Leader</string>
+    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.IntroBlurb">Lead the Coven. Smite the town.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.MedDescription">Lead the Coven. Smite the town.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.TabDescription">You are the Coven's only direct killer.
+You can see your fellow Coven members.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.WikiDescription">You are the Coven's only direct killer.
+You can see your fellow Coven members.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole">Poisoner</string>
+    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.IntroBlurb">Poison them. Be far away when it works.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.MedDescription">Poison them. Be far away when it works.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.TabDescription">Poison a player. They die after a delay.
+The timer pauses during meetings.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.WikiDescription">Poison a player. They die after a delay.
+The timer pauses during meetings.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole">Medusa</string>
+    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.IntroBlurb">Turn the room to stone.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.MedDescription">Turn the room to stone.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.TabDescription">Gaze at everyone in line of sight
+to freeze them in place for a few seconds.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.WikiDescription">Gaze at everyone in line of sight
+to freeze them in place for a few seconds.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole">Necromancer</string>
+    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.IntroBlurb">Death is only the beginning.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.MedDescription">Death is only the beginning.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.TabDescription">Reanimate a dead body.
+The player returns to life as a Crewmate.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.WikiDescription">Reanimate a dead body.
+The player returns to life as a Crewmate.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole">Hex Master</string>
+    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.IntroBlurb">Curse them now. They fall after the next meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.MedDescription">Curse them now. They fall after the next meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.TabDescription">Hex players. When the next meeting ends,
+every hexed player who is still alive dies.
+If you die first, the hexes break.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.WikiDescription">Hex players. When the next meeting ends,
+every hexed player who is still alive dies.
+If you die first, the hexes break.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole">Poltergeist</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.IntroBlurb">Haunt the living from beyond the grave.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.MedDescription">Haunt the living from beyond the grave.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.TabDescription">You are a ghost, but you can still help.
+Drag dead bodies around to hide the evidence.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.WikiDescription">You are a ghost, but you can still help.
+Drag dead bodies around to hide the evidence.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole">Bomber</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.IntroBlurb">Plant bombs and blow up the crew.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.MedDescription">Plant bombs and blow up the crew.</string>
@@ -134,6 +178,15 @@ This can help you frame players and disguise kills.</string>
 Be the last one standing to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.WikiDescription">Douse players, then burn them all.
 Be the last one standing to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole">Survivor</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.IntroBlurb">Stay alive. Whatever it takes.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.MedDescription">Stay alive. Whatever it takes.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.TabDescription">You win with whoever wins,
+as long as you are alive at the end.
+Use your vest to survive attacks.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.WikiDescription">You win with whoever wins,
+as long as you are alive at the end.
+Use your vest to survive attacks.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole">Executioner</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
@@ -152,10 +205,43 @@ If you get voted out, you win the game.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
     <string name="launchpad.role.executioner.noTarget">your target</string>
+    <!-- Role descriptions shown by the "?" button in the role list. Edit the text; a role without an entry here uses its .MedDescription -->
+    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.MenuRoleDesc">Protect the crew with your abilities</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.MenuRoleDesc">Freeze bodies to prevent them from disappearing.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.MenuRoleDesc">Guess a player's role to reveal it!</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.MenuRoleDesc">Investigate and find clues on murders.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.MenuRoleDesc">Help the crewmates by reviving dead players.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.MenuRoleDesc">Seal vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.MenuRoleDesc">Take your chance by shooting a player.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.MenuRoleDesc">Luck is on your side.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.SnitchRole.MenuRoleDesc">Finish your tasks to expose the Impostors.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.MenuRoleDesc">Turn back time.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.MenuRoleDesc">Plant bombs and blow up the crew.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.MenuRoleDesc">Create vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.MenuRoleDesc">Blind the crew with your grenades.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.MenuRoleDesc">Hack meetings and sabotage the crewmates</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.MenuRoleDesc">Slow down time and kill the Crewmates.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.MenuRoleDesc">Drag bodies and hide them in vents</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.MenuRoleDesc">Poison other players and dissect bodies</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.MenuRoleDesc">Shift and swap into other players.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.MenuRoleDesc">Haunt the living from beyond the grave.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.MenuRoleDesc">Douse everyone, then burn them all.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.MenuRoleDesc">Get [b]{target}[/b] voted out to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.MenuRoleDesc">Get ejected to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.MenuRoleDesc">Collect souls to win.</string>
+    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.MenuRoleDesc">Stay alive. Whatever it takes.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.MenuRoleDesc">Curse them now. They fall after the next meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.MenuRoleDesc">Death is only the beginning.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.MenuRoleDesc">Turn the room to stone.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.MenuRoleDesc">Poison them. Be far away when it works.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.MenuRoleDesc">Lead the Coven. Smite the town.</string>
     <!-- Neutral team -->
     <string name="launchpad.neutral.group">Neutral Roles</string>
     <string name="launchpad.neutral.roleTitle">Neutral</string>
     <string name="launchpad.neutral.teamIntroDescription">You are a Neutral. You do not have a team.</string>
+    <string name="launchpad.coven.group">Coven Roles</string>
+    <string name="launchpad.coven.roleTitle">Coven</string>
+    <string name="launchpad.coven.teamIntroDescription">You are part of the Coven. Eliminate everyone else together.</string>
     <!-- Buttons (MiraAPI uppercases button text) -->
     <string name="launchpad.button.seal">Seal</string>
     <string name="launchpad.button.shoot">Shoot</string>
@@ -181,6 +267,12 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.blind">Blind</string>
     <string name="launchpad.button.placeBomb">Place Bomb</string>
     <string name="launchpad.button.rewind">Rewind</string>
+    <string name="launchpad.button.smite">Smite</string>
+    <string name="launchpad.button.poison">Poison</string>
+    <string name="launchpad.button.gaze">Gaze</string>
+    <string name="launchpad.button.reanimate">Reanimate</string>
+    <string name="launchpad.button.hex">Hex</string>
+    <string name="launchpad.button.vest">Vest</string>
     <!-- Modifiers -->
     <string name="launchpad.modifier.chameleon">Chameleon</string>
     <string name="launchpad.modifier.giant">Giant</string>
@@ -199,6 +291,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.modifier.vendettaMark">Vendetta</string>
     <string name="launchpad.modifier.doused">Doused</string>
     <string name="launchpad.modifier.blinded">Blinded</string>
+    <string name="launchpad.modifier.vested">Vested</string>
     <string name="launchpad.modifier.chameleon.TabDescription">You turn invisible when you stand still.</string>
     <string name="launchpad.modifier.giant.TabDescription">You are larger than
 the average player.</string>
@@ -349,6 +442,27 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.timeRewinder.rewindDuration">Rewind Duration</string>
     <string name="launchpad.options.timeRewinder.rewindUses">Rewind Uses</string>
     <string name="launchpad.options.timeRewinder.rewindEveryone">Rewind Everyone</string>
+    <string name="launchpad.options.covenLeader">Coven Leader</string>
+    <string name="launchpad.options.covenLeader.smiteCooldown">Smite Cooldown</string>
+    <string name="launchpad.options.poisoner">Poisoner</string>
+    <string name="launchpad.options.poisoner.poisonCooldown">Poison Cooldown</string>
+    <string name="launchpad.options.poisoner.poisonDelay">Poison Delay</string>
+    <string name="launchpad.options.medusa">Medusa</string>
+    <string name="launchpad.options.medusa.gazeCooldown">Gaze Cooldown</string>
+    <string name="launchpad.options.medusa.freezeDuration">Freeze Duration</string>
+    <string name="launchpad.options.medusa.gazeRange">Gaze Range</string>
+    <string name="launchpad.options.necromancer">Necromancer</string>
+    <string name="launchpad.options.necromancer.reanimateCooldown">Reanimate Cooldown</string>
+    <string name="launchpad.options.necromancer.reanimations">Reanimations</string>
+    <string name="launchpad.options.hexMaster">Hex Master</string>
+    <string name="launchpad.options.hexMaster.hexCooldown">Hex Cooldown</string>
+    <string name="launchpad.options.hexMaster.maxHexes">Hexes Per Round</string>
+    <string name="launchpad.options.survivor">Survivor</string>
+    <string name="launchpad.options.survivor.vestCooldown">Vest Cooldown</string>
+    <string name="launchpad.options.survivor.vestDuration">Vest Duration</string>
+    <string name="launchpad.options.survivor.maxVests">Vest Uses</string>
+    <string name="launchpad.options.poltergeist">Poltergeist</string>
+    <string name="launchpad.options.poltergeist.chance">Poltergeist Chance</string>
     <string name="launchpad.options.votingType">Voting Type</string>
     <string name="launchpad.options.votingType.votingType">Voting Type</string>
     <string name="launchpad.options.votingType.maxVotes">Max Votes</string>
@@ -359,7 +473,9 @@ if lights are sabotaged.</string>
     <!-- Game over -->
     <string name="launchpad.gameover.jester.win">Jester Wins!</string>
     <string name="launchpad.gameover.reaper.win">Reaper Wins!</string>
+    <string name="launchpad.gameover.coven.win">Coven Wins!</string>
     <string name="launchpad.gameover.arsonist.win">Arsonist Wins!</string>
+    <string name="launchpad.rolecategory.label">Roles</string>
     <string name="launchpad.rolecategory.crewmate">Crewmate</string>
     <string name="launchpad.rolecategory.impostor">Impostor</string>
     <string name="launchpad.rolecategory.neutral">Neutral</string>

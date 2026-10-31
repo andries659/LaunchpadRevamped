@@ -18,5 +18,8 @@ public enum LaunchpadRpc : uint
     Blind,
     PlaceBomb,
     LuckyDodge,
-    Rewind
+    Rewind,
+    CovenFreeze,
+    CovenReanimate,
+    VestBlock
 }

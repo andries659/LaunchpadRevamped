@@ -14,7 +14,7 @@ public static class DragRpc
     public static void RpcStartDragging(this PlayerControl playerControl, byte bodyId)
     {
         var role = playerControl.Data.Role;
-        if (role is not JanitorRole && role is not MedicRole)
+        if (role is not JanitorRole && role is not MedicRole && role is not PoltergeistRole)
         {
             playerControl.KickForCheating();
             return;
