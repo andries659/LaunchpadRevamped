@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace LaunchpadRevamped.Features;
 public static class LaunchpadPalette
@@ -31,6 +31,7 @@ public static class LaunchpadPalette
     public static readonly Color HitmanColor = new Color32(182, 32, 32, 255);
     public static readonly Color GrenadierColor = new Color32(107, 142, 35, 255);
     public static readonly Color BomberColor = new Color32(200, 120, 30, 255);
+    public static readonly Color EsperColor = new Color32(110, 140, 230, 255);
 
     // Neutrals
     public static readonly Color JesterColor = new Color32(170, 51, 106, 255);

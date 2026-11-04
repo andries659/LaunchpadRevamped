@@ -129,6 +129,15 @@ and kill everyone nearby.</string>
 By digging new vents.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.WikiDescription">Move around the map easier
 By digging new vents.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole">Esper</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.IntroBlurb">Slip out of your body and hunt unseen.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.MedDescription">Project a ghost that can kill and sabotage.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.TabDescription">Project your ghost out of your body.
+Walk through walls and kill unseen,
+but die if a meeting starts while projected.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.WikiDescription">Project your ghost out of your body.
+Walk through walls and kill unseen,
+but die if a meeting starts while projected.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole">Grenadier</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.IntroBlurb">Blind the crew with your grenades.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.MedDescription">Blind the crew with your grenades.</string>
@@ -218,6 +227,7 @@ If you get voted out, you win the game.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.MenuRoleDesc">Turn back time.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.MenuRoleDesc">Plant bombs and blow up the crew.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.MenuRoleDesc">Create vents around the map.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.MenuRoleDesc">Slip out of your body and hunt unseen.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.MenuRoleDesc">Blind the crew with your grenades.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.MenuRoleDesc">Hack meetings and sabotage the crewmates</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.MenuRoleDesc">Slow down time and kill the Crewmates.</string>
@@ -256,6 +266,8 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.collect">Collect Soul</string>
     <string name="launchpad.button.mark">Mark</string>
     <string name="launchpad.button.dig">Dig Vent</string>
+    <string name="launchpad.button.esperProject">Project</string>
+    <string name="launchpad.button.esperReturn">Return</string>
     <string name="launchpad.button.hide">Hide</string>
     <string name="launchpad.button.inject">Inject</string>
     <string name="launchpad.button.swap">Swap</string>
@@ -382,6 +394,10 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.burrower.ventDigCooldown">Vent Dig Cooldown</string>
     <string name="launchpad.options.burrower.ventDigUses">Vent Dig Uses</string>
     <string name="launchpad.options.burrower.minVentDistance">Min Vent Distance</string>
+    <string name="launchpad.options.esper">Esper</string>
+    <string name="launchpad.options.esper.projectCooldown">Project Cooldown</string>
+    <string name="launchpad.options.esper.maxProjectionTime">Max Projection Time</string>
+    <string name="launchpad.options.esper.projectionVision">Projection Vision</string>
     <string name="launchpad.options.hacker">Hacker</string>
     <string name="launchpad.options.hacker.hackCooldown">Hack Cooldown</string>
     <string name="launchpad.options.hacker.hackDuration">Hack Duration</string>

@@ -21,5 +21,7 @@ public enum LaunchpadRpc : uint
     Rewind,
     CovenFreeze,
     CovenReanimate,
-    VestBlock
+    VestBlock,
+    EsperProject,
+    EsperReturn
 }
