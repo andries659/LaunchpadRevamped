@@ -7,7 +7,6 @@ namespace LaunchpadRevamped.Features;
 public static class LaunchpadAssets
 {
     public static readonly AssetBundle Bundle = AssetBundleManager.Load("launchpad-assets");
-    public static readonly AssetBundle Wiki = AssetBundleManager.Load("wiki");
 
     // Shaders
     public static readonly LoadableAsset<Shader> BloomShader = new LoadableBundleAsset<Shader>("Bloom.shader", Bundle);
@@ -44,6 +43,13 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> BurnButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Burn.png");
     public static readonly LoadableAsset<Sprite> BlindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Blind.png");
     public static readonly LoadableAsset<Sprite> BombButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Bomb.png");
+    public static readonly LoadableAsset<Sprite> RewindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Rewind.png");
+    public static readonly LoadableAsset<Sprite> SmiteButton = ShootButton;
+    public static readonly LoadableAsset<Sprite> PoisonButton = InjectButton;
+    public static readonly LoadableAsset<Sprite> GazeButton = FreezeButton;
+    public static readonly LoadableAsset<Sprite> ReanimateButton = ReviveButton;
+    public static readonly LoadableAsset<Sprite> HexButton = SealButton;
+    public static readonly LoadableAsset<Sprite> VestButton = HideButton;
 
     // Role icons
     public static readonly LoadableAsset<Sprite> ArsonistIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Arsonist.png");
@@ -52,7 +58,16 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> LuckyIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Lucky.png");
     public static readonly LoadableAsset<Sprite> SnitchIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Snitch.png");
     public static readonly LoadableAsset<Sprite> TimeRewinderIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.TimeRewinder.png");
-    public static readonly LoadableAsset<Sprite> RewindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Rewind.png");
+    public static readonly LoadableAsset<Sprite> ChameleonIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Chameleon.png");
+    public static readonly LoadableAsset<Sprite> SmolIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Smol.png");
+    public static readonly LoadableAsset<Sprite> GiantIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Giant.png");
+    public static readonly LoadableAsset<Sprite> VendettaIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Vendetta.png");
+    public static readonly LoadableAsset<Sprite> TorchIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Torch.png");
+    public static readonly LoadableAsset<Sprite> MayorIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Mayor.png");
+    public static readonly LoadableAsset<Sprite> EsperIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Esper.png");
+    public static readonly LoadableAsset<Sprite> SurvivorIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Survivor.png");
+    public static readonly LoadableAsset<Sprite> MedusaIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Medusa.png");
+    public static readonly LoadableAsset<Sprite> PoltergeistIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Poltergeist.png");
 
     // Role category art for the role settings tab (from TOHO)
     public static readonly LoadableAsset<Sprite> CategoryIconCrewmate = new LoadableResourceAsset("LaunchpadRevamped.Resources.TabIcon_CrewmateRoles.png", 120f);
@@ -70,18 +85,6 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> CategoryTextNeutral = new LoadableResourceAsset("LaunchpadRevamped.Resources.NeutralsText.png", 50f);
     public static readonly LoadableAsset<Sprite> CategoryTextCoven = new LoadableResourceAsset("LaunchpadRevamped.Resources.CovenText.png", 50f);
     public static readonly LoadableAsset<Sprite> CategoryTextModifiers = new LoadableResourceAsset("LaunchpadRevamped.Resources.ModifiersText.png", 50f);
-
-    // Placeholders for the Coven, Survivor and Poltergeist until dedicated sprites exist. To swap one in, drop the PNG into
-    // Resources/Buttons or Resources/Icons and replace the line, e.g.
-    // new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Smite.png")
-    public static readonly LoadableAsset<Sprite> SmiteButton = ShootButton;
-    public static readonly LoadableAsset<Sprite> PoisonButton = InjectButton;
-    public static readonly LoadableAsset<Sprite> GazeButton = FreezeButton;
-    public static readonly LoadableAsset<Sprite> ReanimateButton = ReviveButton;
-    public static readonly LoadableAsset<Sprite> HexButton = SealButton;
-    public static readonly LoadableAsset<Sprite> VestButton = HideButton;
-    public static readonly LoadableAsset<Sprite> PoltergeistIcon = DragButton;
-    public static readonly LoadableAsset<Sprite> SurvivorIcon = HideButton;
 
     public static readonly LoadableAsset<Sprite> NotepadSprite = new LoadableBundleAsset<Sprite>("NotepadButton.png", Bundle);
     public static readonly LoadableAsset<Sprite> NotepadActiveSprite = new LoadableBundleAsset<Sprite>("NotepadButtonActive.png", Bundle);

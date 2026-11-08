@@ -2,6 +2,8 @@ using LaunchpadRevamped.Options.Modifiers;
 using MiraAPI.GameOptions;
 using MiraAPI.Translation;
 using UnityEngine;
+using MiraAPI.Utilities.Assets;
+using LaunchpadRevamped.Features;
 
 namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
@@ -14,6 +16,7 @@ public sealed class ChameleonModifier : LPModifier
     public override string GetDescription() => MiraLocaleManager.Get("launchpad.modifier.chameleon.TabDescription");
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.ChameleonChance;
     public override int GetAmountPerGame() => 1;
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.ChameleonIcon;
 
     public override void FixedUpdate()
     {

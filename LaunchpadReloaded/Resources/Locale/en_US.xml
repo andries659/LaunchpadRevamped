@@ -1,59 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <!-- Roles (default ICustomRole keys: &lt;namespace&gt;.&lt;ClassName&gt;[.suffix]) -->
+    <!-- Roles (default ICustomRole keys: &lt;namespace&gt;.&lt;ClassName&gt;[.suffix]). The custom wiki reads &lt;ClassName without "Role"&gt;WikiDesc, e.g. CaptainWikiDesc -->
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole">Captain</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.IntroBlurb">Protect the crew with your abilities</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.MedDescription">Protect the crew with your abilities</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.TabDescription">Use your zoom ability to keep an eye on the crew
  And call meetings from any location!</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.WikiDescription">Use your zoom ability to keep an eye on the crew
+    <string name="CaptainWikiDesc">Use your zoom ability to keep an eye on the crew
  And call meetings from any location!</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole">Coroner</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.IntroBlurb">Freeze bodies to prevent them from disappearing.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.MedDescription">Freeze bodies to prevent them from disappearing.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.TabDescription">Freeze bodies to prevent them from disappearing.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.WikiDescription">Freeze bodies to prevent them from disappearing.</string>
+    <string name="CoronerWikiDesc">Freeze bodies to prevent them from disappearing.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole">Gambler</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.IntroBlurb">Guess a player's role to reveal it!</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.MedDescription">Guess a player's role to reveal it!</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.TabDescription">Guess a player's role to reveal it!
 However, if you get it incorrect, you will die.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.WikiDescription">Guess a player's role to reveal it!
+    <string name="GamblerWikiDesc">Guess a player's role to reveal it!
 However, if you get it incorrect, you will die.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole">Detective</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.IntroBlurb">Investigate and find clues on murders.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.MedDescription">Investigate and find clues on murders.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.TabDescription">Investigate bodies to get clues and use your instinct ability
 to see recent footsteps around you!</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.LpDetectiveRole.WikiDescription">Investigate bodies to get clues and use your instinct ability
+    <string name="LpDetectiveWikiDesc">Investigate bodies to get clues and use your instinct ability
 to see recent footsteps around you!</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole">Medic</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.IntroBlurb">Help the crewmates by reviving dead players.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.MedDescription">Help the crewmates by reviving dead players.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.TabDescription">Use your revive ability to bring dead bodies
 back to life!</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.MedicRole.WikiDescription">Use your revive ability to bring dead bodies
+    <string name="MedicWikiDesc">Use your revive ability to bring dead bodies
 back to life!</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole">Sealer</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.IntroBlurb">Seal vents around the map.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.MedDescription">Seal vents around the map.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.TabDescription">Seal vents around the map.
 This will prevent anyone from entering the vent.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.SealerRole.WikiDescription">Seal vents around the map.
+    <string name="SealerWikiDesc">Seal vents around the map.
 This will prevent anyone from entering the vent.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole">Sheriff</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.IntroBlurb">Take your chance by shooting a player.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.MedDescription">Take your chance by shooting a player.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.TabDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
 but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.WikiDescription">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
+    <string name="SheriffWikiDesc">You can shoot players, if you shoot an [color=#FF1919FF]Impostor[/color] you will kill him
 but if you shoot a [color=#8CFFFFFF]Crewmate[/color], you will die with him.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole">Lucky</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.IntroBlurb">Luck is on your side.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.MedDescription">Luck is on your side.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.TabDescription">When an Impostor tries to kill you,
 you have a chance to survive.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.WikiDescription">When an Impostor tries to kill you,
+    <string name="LuckyWikiDesc">When an Impostor tries to kill you,
 you have a chance to survive.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SnitchRole">Snitch</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SnitchRole.IntroBlurb">Finish your tasks to expose the Impostors.</string>
@@ -61,7 +61,7 @@ you have a chance to survive.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SnitchRole.TabDescription">Finish all your tasks to see the Impostors.
 But when you are close to finishing,
 the Impostors will be able to find you.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.SnitchRole.WikiDescription">Finish all your tasks to see the Impostors.
+    <string name="SnitchWikiDesc">Finish all your tasks to see the Impostors.
 But when you are close to finishing,
 the Impostors will be able to find you.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole">Time Rewinder</string>
@@ -69,35 +69,35 @@ the Impostors will be able to find you.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.MedDescription">Turn back time.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.TabDescription">Rewind time and send players back to
 where they were a few seconds ago.</string>
-    <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.WikiDescription">Rewind time and send players back to
+    <string name="TimeRewinderWikiDesc">Rewind time and send players back to
 where they were a few seconds ago.</string>
     <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole">Coven Leader</string>
     <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.IntroBlurb">Lead the Coven. Smite the town.</string>
     <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.MedDescription">Lead the Coven. Smite the town.</string>
     <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.TabDescription">You are the Coven's only direct killer.
 You can see your fellow Coven members.</string>
-    <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.WikiDescription">You are the Coven's only direct killer.
+    <string name="CovenLeaderWikiDesc">You are the Coven's only direct killer.
 You can see your fellow Coven members.</string>
     <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole">Poisoner</string>
     <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.IntroBlurb">Poison them. Be far away when it works.</string>
     <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.MedDescription">Poison them. Be far away when it works.</string>
     <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.TabDescription">Poison a player. They die after a delay.
 The timer pauses during meetings.</string>
-    <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.WikiDescription">Poison a player. They die after a delay.
+    <string name="PoisonerWikiDesc">Poison a player. They die after a delay.
 The timer pauses during meetings.</string>
     <string name="LaunchpadRevamped.Roles.Coven.MedusaRole">Medusa</string>
     <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.IntroBlurb">Turn the room to stone.</string>
     <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.MedDescription">Turn the room to stone.</string>
     <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.TabDescription">Gaze at everyone in line of sight
 to freeze them in place for a few seconds.</string>
-    <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.WikiDescription">Gaze at everyone in line of sight
+    <string name="MedusaWikiDesc">Gaze at everyone in line of sight
 to freeze them in place for a few seconds.</string>
     <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole">Necromancer</string>
     <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.IntroBlurb">Death is only the beginning.</string>
     <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.MedDescription">Death is only the beginning.</string>
     <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.TabDescription">Reanimate a dead body.
 The player returns to life as a Crewmate.</string>
-    <string name="LaunchpadRevamped.Roles.Coven.NecromancerRole.WikiDescription">Reanimate a dead body.
+    <string name="NecromancerWikiDesc">Reanimate a dead body.
 The player returns to life as a Crewmate.</string>
     <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole">Hex Master</string>
     <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.IntroBlurb">Curse them now. They fall after the next meeting.</string>
@@ -105,7 +105,7 @@ The player returns to life as a Crewmate.</string>
     <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.TabDescription">Hex players. When the next meeting ends,
 every hexed player who is still alive dies.
 If you die first, the hexes break.</string>
-    <string name="LaunchpadRevamped.Roles.Coven.HexMasterRole.WikiDescription">Hex players. When the next meeting ends,
+    <string name="HexMasterWikiDesc">Hex players. When the next meeting ends,
 every hexed player who is still alive dies.
 If you die first, the hexes break.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole">Poltergeist</string>
@@ -113,21 +113,21 @@ If you die first, the hexes break.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.MedDescription">Haunt the living from beyond the grave.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.TabDescription">You are a ghost, but you can still help.
 Drag dead bodies around to hide the evidence.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.PoltergeistRole.WikiDescription">You are a ghost, but you can still help.
+    <string name="PoltergeistWikiDesc">You are a ghost, but you can still help.
 Drag dead bodies around to hide the evidence.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole">Bomber</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.IntroBlurb">Plant bombs and blow up the crew.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.MedDescription">Plant bombs and blow up the crew.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.TabDescription">Place bombs that explode after a short fuse
 and kill everyone nearby.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.WikiDescription">Place bombs that explode after a short fuse
+    <string name="BomberWikiDesc">Place bombs that explode after a short fuse
 and kill everyone nearby.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole">Burrower</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.IntroBlurb">Create vents around the map.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.MedDescription">Create vents around the map.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.TabDescription">Move around the map easier
 By digging new vents.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.WikiDescription">Move around the map easier
+    <string name="BurrowerWikiDesc">Move around the map easier
 By digging new vents.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.EsperRole">Esper</string>
     <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.IntroBlurb">Slip out of your body and hunt unseen.</string>
@@ -135,7 +135,7 @@ By digging new vents.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.TabDescription">Project your ghost out of your body.
 Walk through walls and kill unseen,
 but die if a meeting starts while projected.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.EsperRole.WikiDescription">Project your ghost out of your body.
+    <string name="EsperWikiDesc">Project your ghost out of your body.
 Walk through walls and kill unseen,
 but die if a meeting starts while projected.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole">Grenadier</string>
@@ -143,49 +143,49 @@ but die if a meeting starts while projected.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.MedDescription">Blind the crew with your grenades.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.TabDescription">Blind nearby players so they
 cannot see what you are doing.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.GrenadierRole.WikiDescription">Blind nearby players so they
+    <string name="GrenadierWikiDesc">Blind nearby players so they
 cannot see what you are doing.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole">Hacker</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.IntroBlurb">Hack meetings and sabotage the crewmates</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.MedDescription">Hack meetings and sabotage the crewmates</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.TabDescription">Hack crewmates and make them unable to do tasks
 And view the admin map from anywhere!</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.HackerRole.WikiDescription">Hack crewmates and make them unable to do tasks
+    <string name="HackerWikiDesc">Hack crewmates and make them unable to do tasks
 And view the admin map from anywhere!</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole">Hitman</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.IntroBlurb">Slow down time and kill the Crewmates.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.MedDescription">Slow down time and kill the Crewmates.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.TabDescription">Slow down time and kill the Crewmates.
 You can kill multiple players at once.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.HitmanRole.WikiDescription">Slow down time and kill the Crewmates.
+    <string name="HitmanWikiDesc">Slow down time and kill the Crewmates.
 You can kill multiple players at once.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole">Janitor</string>
     <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.IntroBlurb">Drag bodies and hide them in vents</string>
     <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.MedDescription">Drag bodies and hide them in vents</string>
     <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.TabDescription">You can drag bodies and hide them in vents
 Which will cause them to disappear unless the vent is used.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.JanitorRole.WikiDescription">You can drag bodies and hide them in vents
+    <string name="JanitorWikiDesc">You can drag bodies and hide them in vents
 Which will cause them to disappear unless the vent is used.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole">Surgeon</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.IntroBlurb">Poison other players and dissect bodies</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.MedDescription">Poison other players and dissect bodies</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.TabDescription">You can poison players resulting in their death
 and you can dissect bodies to make them unreportable.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.SurgeonRole.WikiDescription">You can poison players resulting in their death
+    <string name="SurgeonWikiDesc">You can poison players resulting in their death
 and you can dissect bodies to make them unreportable.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole">Swapshifter</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.IntroBlurb">Shift and swap into other players.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.MedDescription">Shift and swap into other players.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.TabDescription">Shift and swap into other players.
 This can help you frame players and disguise kills.</string>
-    <string name="LaunchpadRevamped.Roles.Impostor.SwapshifterRole.WikiDescription">Shift and swap into other players.
+    <string name="SwapshifterWikiDesc">Shift and swap into other players.
 This can help you frame players and disguise kills.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole">Arsonist</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.IntroBlurb">Douse everyone, then burn them all.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.MedDescription">Douse everyone, then burn them all.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.TabDescription">Douse players, then burn them all.
 Be the last one standing to win.</string>
-    <string name="LaunchpadRevamped.Roles.Neutral.ArsonistRole.WikiDescription">Douse players, then burn them all.
+    <string name="ArsonistWikiDesc">Douse players, then burn them all.
 Be the last one standing to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole">Survivor</string>
     <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.IntroBlurb">Stay alive. Whatever it takes.</string>
@@ -193,26 +193,26 @@ Be the last one standing to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.TabDescription">You win with whoever wins,
 as long as you are alive at the end.
 Use your vest to survive attacks.</string>
-    <string name="LaunchpadRevamped.Roles.Neutral.SurvivorRole.WikiDescription">You win with whoever wins,
+    <string name="SurvivorWikiDesc">You win with whoever wins,
 as long as you are alive at the end.
 Use your vest to survive attacks.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole">Executioner</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.IntroBlurb">Get [b]{target}[/b] voted out to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.MedDescription">Get [b]{target}[/b] voted out to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.TabDescription">Get [b]{target}[/b] voted out to win.</string>
-    <string name="LaunchpadRevamped.Roles.Neutral.ExecutionerRole.WikiDescription">Get [b]{target}[/b] voted out to win.</string>
+    <string name="ExecutionerWikiDesc">Get [b]{target}[/b] voted out to win.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.JesterRole">Jester</string>
     <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.IntroBlurb">Get ejected to win</string>
     <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.MedDescription">Get ejected to win</string>
     <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.TabDescription">Convince the crew to vote you out by being suspicious.
 If you get voted out, you win the game.</string>
-    <string name="LaunchpadRevamped.Roles.Neutral.JesterRole.WikiDescription">Convince the crew to vote you out by being suspicious.
+    <string name="JesterWikiDesc">Convince the crew to vote you out by being suspicious.
 If you get voted out, you win the game.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole">Reaper</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.IntroBlurb">Collect souls to win</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.MedDescription">Collect souls to win</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
-    <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.WikiDescription">Collect souls from dead bodies to win the game.</string>
+    <string name="ReaperWikiDesc">Collect souls from dead bodies to win the game.</string>
     <string name="launchpad.role.executioner.noTarget">your target</string>
     <!-- Role descriptions shown by the "?" button in the role list. Edit the text; a role without an entry here uses its .MedDescription -->
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.MenuRoleDesc">Protect the crew with your abilities</string>
@@ -285,6 +285,54 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.reanimate">Reanimate</string>
     <string name="launchpad.button.hex">Hex</string>
     <string name="launchpad.button.vest">Vest</string>
+    <!-- Ability descriptions shown on a role's wiki page. Key: <button key>.WikiDesc (shared by every role that has the button) -->
+    <string name="launchpad.button.seal.WikiDesc">Seal a nearby vent so nobody can enter it. Limited uses.</string>
+    <string name="launchpad.button.shoot.WikiDesc">Shoot a nearby player. An Impostor dies if hit. If you hit a Crewmate, you die (and so do they, if the setting is enabled). Limited shots.</string>
+    <string name="launchpad.button.call.WikiDesc">Call an emergency meeting from anywhere on the map. Limited uses, and unavailable while zoomed out or while a hack is active.</string>
+    <string name="launchpad.button.revive.WikiDesc">Bring a nearby dead body back to life. Limited uses, and it may only work inside MedBay or Laboratory depending on the settings.</string>
+    <string name="launchpad.button.zoom.WikiDesc">Zoom your camera out to see far more of the map for a short time. Walls no longer block your view while it lasts.</string>
+    <string name="launchpad.button.instinct.WikiDesc">Reveal the recent footsteps of every living player for a short time. Limited uses.</string>
+    <string name="launchpad.button.investigate.WikiDesc">Examine a nearby dead body to open your journal and gather clues about the murder.</string>
+    <string name="launchpad.button.freeze.WikiDesc">Freeze a nearby dead body so it cannot disappear. Limited uses.</string>
+    <string name="launchpad.button.gamble.WikiDesc">Pick a nearby player and guess their role. A correct guess reveals their role, but a wrong guess kills you. Limited uses.</string>
+    <string name="launchpad.button.drag.WikiDesc">Pick up a nearby dead body and carry it around. Use it again to drop the body.</string>
+    <string name="launchpad.button.collect.WikiDesc">Collect the soul of a nearby dead body to get closer to winning.</string>
+    <string name="launchpad.button.mark.WikiDesc">Mark a nearby player. If they vote you in the next meeting, they die in the next round.</string>
+    <string name="launchpad.button.dig.WikiDesc">Dig a new vent where you are standing. Cannot be used too close to an existing vent. Limited uses.</string>
+    <string name="launchpad.button.esperProject.WikiDesc">Project your ghost out of your body to walk through walls, kill and sabotage unseen. Click again to return, or you return automatically when the time runs out. Your body stays behind and can still be reported. If a meeting starts while you are projected, you die.</string>
+    <string name="launchpad.button.hide.WikiDesc">Hide the body you are dragging inside a nearby vent. It disappears unless the vent is used. Limited uses.</string>
+    <string name="launchpad.button.inject.WikiDesc">Inject a nearby player with poison. They die after a short delay, unless a meeting starts first. Limited uses.</string>
+    <string name="launchpad.button.swap.WikiDesc">Choose a player and swap places with them while taking on their appearance. When it ends, you swap places again. Limited uses.</string>
+    <string name="launchpad.button.hack.WikiDesc">Hack every living player for a short time, stopping them from doing tasks and using their abilities. Limited uses.</string>
+    <string name="launchpad.button.dissect.WikiDesc">Dissect a nearby dead body so it can no longer be reported. Limited uses.</string>
+    <string name="launchpad.button.deadlock.WikiDesc">Slow down time and mark players while it lasts. When it ends, every marked player is killed at once. Limited uses.</string>
+    <string name="launchpad.button.douse.WikiDesc">Douse a nearby player. Doused players can all be burned later.</string>
+    <string name="launchpad.button.burn.WikiDesc">Burn every doused player at once, killing them. Requires enough doused players first.</string>
+    <string name="launchpad.button.blind.WikiDesc">Blind nearby players for a short time so they cannot see what you are doing. Limited uses.</string>
+    <string name="launchpad.button.placeBomb.WikiDesc">Place a bomb where you are standing. It explodes after a short fuse and kills everyone nearby. Limited uses.</string>
+    <string name="launchpad.button.rewind.WikiDesc">Rewind time and send players back to where they were a few seconds ago. Only usable once there is something to rewind. Limited uses.</string>
+    <string name="launchpad.button.smite.WikiDesc">Kill a nearby player. You are the Coven's only direct killer.</string>
+    <string name="launchpad.button.poison.WikiDesc">Poison a nearby player. They die after a delay. The timer pauses during meetings, and the poison fades if you die first.</string>
+    <string name="launchpad.button.gaze.WikiDesc">Freeze every non-Coven player in your line of sight and within range for a few seconds.</string>
+    <string name="launchpad.button.reanimate.WikiDesc">Reanimate a nearby dead body. The player returns to life as a Crewmate. Limited uses.</string>
+    <string name="launchpad.button.hex.WikiDesc">Hex a nearby player. When the next meeting ends, every hexed player who is still alive dies. You can only hold a limited number of hexes at once.</string>
+    <string name="launchpad.button.vest.WikiDesc">Put on a vest for a short time to survive attacks. Limited uses.</string>
+    <!-- Settings page of the wiki. Key: <option key>.WikiDesc (group keys describe the whole group) -->
+    <string name="launchpad.options.general.WikiDesc">Core options that apply to every game.</string>
+    <string name="launchpad.options.general.notepad.WikiDesc">Shows a notepad button on the HUD so players can jot down notes during the game.</string>
+    <string name="launchpad.options.general.banCheaters.WikiDesc">Players caught cheating by the host's anti-cheat are banned instead of only being kicked.</string>
+    <string name="launchpad.options.general.disableMeetingTeleport.WikiDesc">Players stay where they are after a meeting instead of being teleported back to their spawn point.</string>
+    <string name="launchpad.options.funOptions.WikiDesc">Optional settings that make matches a bit more chaotic.</string>
+    <string name="launchpad.options.funOptions.friendlyFire.WikiDesc">Allows Impostors to target and hurt each other with their abilities.</string>
+    <string name="launchpad.options.funOptions.uniqueColors.WikiDesc">When enabled, players cannot pick a color (or gradient) that another player already has.</string>
+    <string name="launchpad.options.funOptions.character.WikiDesc">Changes every player's character model to Normal, Horse or Long.</string>
+    <string name="launchpad.options.votingType.WikiDesc">Controls how votes are cast and counted during meetings.</string>
+    <string name="launchpad.options.votingType.votingType.WikiDesc">How voting works. Classic: one vote each. Multiple: several votes each. Chance: a random vote is picked, so more votes means a higher chance. Combined: several votes each, with the result picked by chance.</string>
+    <string name="launchpad.options.votingType.maxVotes.WikiDesc">The most votes a player can have in one meeting. Fewer votes are given when few players are alive.</string>
+    <string name="launchpad.options.votingType.allowMultipleVotesOnSamePlayer.WikiDesc">Lets a player put several of their votes on the same person.</string>
+    <string name="launchpad.options.votingType.allowConfirmingVotes.WikiDesc">Players have to confirm their vote before it locks in. Only used by Classic and Chance voting.</string>
+    <string name="launchpad.options.votingType.hideVotingIcons.WikiDesc">Hides who voted for whom in the meeting results.</string>
+    <string name="launchpad.options.votingType.showPercentages.WikiDesc">Shows each player's share of the votes as a percentage once voting ends.</string>
     <!-- Modifiers -->
     <string name="launchpad.modifier.chameleon">Chameleon</string>
     <string name="launchpad.modifier.giant">Giant</string>

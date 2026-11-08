@@ -10,6 +10,9 @@ using MiraAPI.Modifiers;
 using MiraAPI.Networking;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
+using MiraAPI.Utilities.Assets;
+using UnityEngine;
+using LaunchpadRevamped.Features;
 
 namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
@@ -26,6 +29,7 @@ public sealed class VendettaModifier : LPModifier
             ["{unit}"] = MiraLocaleManager.Get(uses > 1 ? "launchpad.modifier.vendetta.unit.other" : "launchpad.modifier.vendetta.unit.one"),
         });
     }
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.VendettaIcon;
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.VendettaChance;
     public override int GetAmountPerGame() => 1;

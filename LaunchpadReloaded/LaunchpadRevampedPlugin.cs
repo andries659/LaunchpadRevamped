@@ -4,6 +4,7 @@ using BepInEx.Configuration;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 using LaunchpadRevamped.Patches;
+using LaunchpadReloaded.Wiki;
 using MiraAPI;
 using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
@@ -39,6 +40,7 @@ public partial class LaunchpadRevampedPlugin : BasePlugin, IMiraPlugin
     public override void Load()
     {
         Harmony.PatchAll();
+        WikiBootstrap.Init();
 
         ReactorCredits.Register("Launchpad", Version, true, ReactorCredits.AlwaysShow);
 

@@ -2,6 +2,9 @@
 using MiraAPI.Translation;
 using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.GameOptions;
+using MiraAPI.Utilities.Assets;
+using UnityEngine;
+using LaunchpadRevamped.Features;
 
 namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
@@ -12,6 +15,7 @@ public sealed class TorchModifier : LPModifier
         OptionGroupSingleton<TorchOptions>.Instance.UseFlashlight
             ? "launchpad.modifier.torch.TabDescription.flashlight"
             : "launchpad.modifier.torch.TabDescription.maxVision");
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.TorchIcon;
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.TorchChance;
     public override int GetAmountPerGame() => 1;

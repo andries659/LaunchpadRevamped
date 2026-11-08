@@ -32,6 +32,7 @@
     <ItemGroup>
         <EmbeddedResource Include="Resources/launchpad-assets-win.bundle" />
         <EmbeddedResource Include="Resources/launchpad-assets-android.bundle" />
+        <EmbeddedResource Include="Resources/wiki.bundle" />
         <EmbeddedResource Include="Resources/**/*.png" />
         <EmbeddedResource Include="Resources/Announcements/*.json" />
         <EmbeddedResource Include="Resources/Locale/*.xml" />

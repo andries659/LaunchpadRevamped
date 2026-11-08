@@ -3,6 +3,9 @@ using MiraAPI.Translation;
 using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
+using MiraAPI.Utilities.Assets;
+using UnityEngine;
+using LaunchpadRevamped.Features;
 
 namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
@@ -12,6 +15,7 @@ public sealed class MayorModifier : LPModifier
     public override string GetDescription() => MiraLocaleManager.GetParsed(
         "launchpad.modifier.mayor.TabDescription",
         new() { ["{votes}"] = OptionGroupSingleton<MayorOptions>.Instance.ExtraVotes.ToString() });
+    public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.MayorIcon;
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.MayorChance;
     public override int GetAmountPerGame() => 1;
