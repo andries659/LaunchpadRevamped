@@ -12,6 +12,5 @@ public class TimeRewinderRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.TimeRewinderIcon,
-        OptionsScreenshot = LaunchpadAssets.MedicBanner,
     };
 }

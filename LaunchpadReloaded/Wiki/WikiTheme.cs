@@ -17,15 +17,14 @@ namespace LaunchpadReloaded.Wiki; // <-- change to your mod's namespace
 public static class WikiTheme
 {
     // ------------------------------------------------------------------ palette
-    public static readonly Color Ink = new(0.035f, 0.050f, 0.090f, 1f);      // window
-    public static readonly Color BarInk = new(0.024f, 0.034f, 0.066f, 1f);   // title bar
-    public static readonly Color ListInk = new(0.045f, 0.063f, 0.110f, 0.92f); // role list column
-    public static readonly Color Cyan = new(0.24f, 0.90f, 1f, 1f);           // default accent
-    public static readonly Color Muted = new(0.58f, 0.64f, 0.76f, 1f);
-    public static readonly Color Text = new(0.90f, 0.93f, 0.98f, 1f);
+    public static readonly Color Ink = new(0.105f, 0.108f, 0.130f, 1f);      // window
+    public static readonly Color BarInk = new(0.105f, 0.108f, 0.130f, 1f);   // title bar (same as the window, a thin line separates them)
+    public static readonly Color ListInk = new(0.125f, 0.128f, 0.152f, 1f);  // role list column
+    public static readonly Color Cyan = new(0.74f, 0.78f, 0.88f, 1f);        // default accent (a soft grey-blue, no neon)
+    public static readonly Color Muted = new(0.62f, 0.64f, 0.71f, 1f);
+    public static readonly Color Text = new(0.93f, 0.94f, 0.96f, 1f);
 
-    private const int WindowCut = 26;   // chamfer size of the window corners (px)
-    private const int GlowSpread = 38;  // how far the halo reaches outside the window (px)
+    private const int WindowRadius = 8; // corner radius of the window (px)
 
     // ------------------------------------------------------------------ state
     public static bool Installed { get; private set; }
@@ -72,57 +71,30 @@ public static class WikiTheme
         windowRoot.Find("Dim").GetComponent<Image>().color = new Color(0.01f, 0.02f, 0.05f, 0.80f);
 
         // window body
-        Skin(window.GetComponent<Image>(), Cut(WindowCut), Ink);
+        Skin(window.GetComponent<Image>(), Round(WindowRadius), Ink);
 
-        // soft halo behind the window
-        var glow = NewImage("Glow", windowRoot);
-        glow.sprite = Glow(GlowSpread, WindowCut);
-        glow.type = Image.Type.Sliced;
-        Center(glow.rectTransform, size + new Vector2(GlowSpread * 2f, GlowSpread * 2f));
-        glow.transform.SetSiblingIndex(window.GetSiblingIndex());
-        TrackAccent(glow, 0.30f, true);
-
-        // neon frame on top of everything in the window
+        // plain outline on top of the window
         var frame = NewImage("Frame", windowRoot);
-        frame.sprite = CutStroke(WindowCut, 2f);
+        frame.sprite = RoundStroke(WindowRadius, 2f);
         frame.type = Image.Type.Sliced;
+        frame.color = new Color(1f, 1f, 1f, 0.16f);
         Center(frame.rectTransform, size);
         frame.transform.SetSiblingIndex(window.GetSiblingIndex() + 1);
-        TrackAccent(frame, 0.85f, true);
 
-        Animated.Clear();
-        Animated.Add(glow.rectTransform);
-        Animated.Add(winRt);
-        Animated.Add(frame.rectTransform);
-
-        // faint dot grid behind the content
-        var grid = NewImage("Grid", window);
-        Stretch(grid.rectTransform, 0, 0, 0, 0);
-        grid.sprite = Dots();
-        grid.type = Image.Type.Tiled;
-        grid.color = new Color(1f, 1f, 1f, 0.045f);
-        grid.transform.SetAsFirstSibling();
+        Animated.Clear(); // fade only, no zoom
 
         // ---- title bar
         var bar = window.Find("TitleBar");
-        Skin(bar.GetComponent<Image>(), Cut(WindowCut, true, false), BarInk);
+        Skin(bar.GetComponent<Image>(), Round(WindowRadius), BarInk);
 
-        var sheen = NewImage("Sheen", bar);
-        Stretch(sheen.rectTransform, 0, 0, 0, 0);
-        sheen.sprite = VGrad();
-        sheen.color = new Color(1f, 1f, 1f, 0.05f);
-        sheen.transform.SetAsFirstSibling();
-
-        var line = NewImage("AccentLine", bar);
+        var line = NewImage("Divider", bar);
         var lrt = line.rectTransform;
         lrt.anchorMin = new Vector2(0f, 0f);
         lrt.anchorMax = new Vector2(1f, 0f);
         lrt.pivot = new Vector2(0.5f, 0f);
         lrt.anchoredPosition = Vector2.zero;
-        lrt.sizeDelta = new Vector2(0f, 3f);
-        line.sprite = HFade();
-        TrackAccent(line, 1f, false);
-        line.transform.SetSiblingIndex(1);
+        lrt.sizeDelta = new Vector2(0f, 2f);
+        line.color = new Color(1f, 1f, 1f, 0.09f);
 
         var logo = NewImage("Logo", bar);
         var lgrt = logo.rectTransform;
@@ -131,15 +103,15 @@ public static class WikiTheme
         lgrt.anchoredPosition = new Vector2(34f, 0f);
         lgrt.sizeDelta = new Vector2(40f, 40f);
         logo.sprite = LogoSprite();
-        TrackAccent(logo, 1f, false);
+        logo.color = new Color(0.86f, 0.88f, 0.94f, 1f);
 
         var title = bar.Find("Title").GetComponent<TextMeshProUGUI>();
-        title.text = "LAUNCHPAD <color=#" + ColorUtility.ToHtmlStringRGB(Cyan) + ">WIKI</color>";
-        title.characterSpacing = 10f;
+        title.text = "Launchpad Wiki";
+        title.characterSpacing = 0f;
         title.rectTransform.offsetMin = new Vector2(92f, title.rectTransform.offsetMin.y);
 
         // close button shape (colour is driven by WikiPanel hover logic)
-        Skin(bar.Find("CloseButton").GetComponent<Image>(), Cut(10), Color.white);
+        Skin(bar.Find("CloseButton").GetComponent<Image>(), Round(8), Color.white);
 
         // ---- role list column
         var body = window.Find("Body");
@@ -153,34 +125,24 @@ public static class WikiTheme
         ert.pivot = new Vector2(1f, 0.5f);
         ert.anchoredPosition = Vector2.zero;
         ert.sizeDelta = new Vector2(2f, 0f);
-        TrackAccent(edge, 0.35f, false);
+        edge.color = new Color(1f, 1f, 1f, 0.08f);
 
-        // ---- detail pane: soft coloured aura in the top-right corner
         var detail = body.Find("Detail");
-        var aura = NewImage("Aura", detail);
-        var art = aura.rectTransform;
-        art.anchorMin = art.anchorMax = new Vector2(1f, 1f);
-        art.pivot = new Vector2(1f, 1f);
-        art.anchoredPosition = Vector2.zero;
-        art.sizeDelta = new Vector2(820f, 820f);
-        aura.sprite = Radial();
-        TrackAccent(aura, 0.16f, false);
-        aura.transform.SetAsFirstSibling();
 
         // ---- detail header: icon frame + divider
         var content = detail.Find("DetailScroll/Viewport/Content");
         var header = content.Find("Header");
         _headerFill = IgnoredChild("IconFrame", header, new Vector2(0f, 0.5f), new Vector2(-12f, 0f), new Vector2(134f, 134f));
-        _headerFill.sprite = Cut(16);
+        _headerFill.sprite = Round(12);
         _headerFill.type = Image.Type.Sliced;
         _headerStroke = IgnoredChild("IconStroke", header, new Vector2(0f, 0.5f), new Vector2(-12f, 0f), new Vector2(134f, 134f));
-        _headerStroke.sprite = CutStroke(16, 2f);
+        _headerStroke.sprite = RoundStroke(12, 2f);
         _headerStroke.type = Image.Type.Sliced;
         _headerStroke.transform.SetSiblingIndex(0);
         _headerFill.transform.SetSiblingIndex(0);   // fill first, stroke second, icon after
 
         _divider = content.Find("Divider").GetComponent<Image>();
-        _divider.sprite = HFade();
+        _divider.sprite = null; // plain line
 
         Installed = true;
     }
@@ -224,7 +186,7 @@ public static class WikiTheme
         {
             _amountBg.color = new Color(c.r, c.g, c.b, 0.16f);
             _amountText.color = tint;
-            _amountText.text = label + "AMOUNT</size></color>   <b>" + amount.Value + "</b>";
+            _amountText.text = label + "Amount</size></color>   <b>" + amount.Value + "</b>";
         }
 
         _chanceChip.SetActive(chance.HasValue);
@@ -233,7 +195,7 @@ public static class WikiTheme
             float p = Mathf.Clamp01(chance.Value / 100f);
             _chanceBg.color = new Color(c.r, c.g, c.b, 0.16f);
             _chanceText.color = tint;
-            _chanceText.text = label + "CHANCE</size></color>   <b>" + chance.Value + "%</b>";
+            _chanceText.text = label + "Chance</size></color>   <b>" + chance.Value + "%</b>";
 
             // the chip doubles as a progress bar
             _chanceFill.gameObject.SetActive(p > 0.04f);
@@ -247,9 +209,9 @@ public static class WikiTheme
     {
         if (!Installed) return;
         _accentTarget = c;
-        _headerFill.color = new Color(c.r, c.g, c.b, 0.14f);
-        _headerStroke.color = new Color(c.r, c.g, c.b, 0.85f);
-        _divider.color = new Color(c.r, c.g, c.b, 0.75f);
+        _headerFill.color = new Color(c.r, c.g, c.b, 0.12f);
+        _headerStroke.color = new Color(c.r, c.g, c.b, 0.6f);
+        _divider.color = new Color(1f, 1f, 1f, 0.10f);
     }
 
     public static void ResetAccent()
@@ -262,7 +224,7 @@ public static class WikiTheme
     {
         if (!Installed) return;
 
-        Skin(row.GetComponent<Image>(), Cut(14), Color.white);
+        Skin(row.GetComponent<Image>(), Round(10), Color.white);
 
         // slim accent bar, inset so it clears the chamfered corners
         var accent = row.transform.Find("Accent").GetComponent<RectTransform>();
@@ -274,7 +236,7 @@ public static class WikiTheme
 
         // selected outline
         var hi = row.transform.Find("Highlight").GetComponent<Image>();
-        hi.sprite = CutStroke(14, 2f);
+        hi.sprite = RoundStroke(10, 2f);
         hi.type = Image.Type.Sliced;
         hi.color = new Color(c.r, c.g, c.b, 0.95f);
 
@@ -286,14 +248,14 @@ public static class WikiTheme
         frt.pivot = new Vector2(0f, 0.5f);
         frt.anchoredPosition = new Vector2(14f, 0f);
         frt.sizeDelta = new Vector2(68f, 68f);
-        frame.sprite = Cut(10);
+        frame.sprite = Round(8);
         frame.type = Image.Type.Sliced;
         frame.color = new Color(c.r, c.g, c.b, 0.16f);
         frame.transform.SetSiblingIndex(icon.GetSiblingIndex());
 
         var stroke = NewImage("Stroke", frame.transform);
         Stretch(stroke.rectTransform, 0, 0, 0, 0);
-        stroke.sprite = CutStroke(10, 1.5f);
+        stroke.sprite = RoundStroke(8, 1.5f);
         stroke.type = Image.Type.Sliced;
         stroke.color = new Color(c.r, c.g, c.b, 0.55f);
     }
@@ -304,17 +266,17 @@ public static class WikiTheme
         if (!Installed) return;
 
         var bg = row.GetComponent<Image>();
-        Skin(bg, Cut(16), new Color(0.075f, 0.100f, 0.165f, 1f));
+        Skin(bg, Round(10), new Color(0.150f, 0.153f, 0.182f, 1f));
 
         var frame = IgnoredChild("IconFrame", row.transform, new Vector2(0f, 1f), new Vector2(12f, -12f), new Vector2(92f, 92f), pivot: new Vector2(0f, 1f));
-        frame.sprite = Cut(12);
+        frame.sprite = Round(8);
         frame.type = Image.Type.Sliced;
         frame.color = new Color(c.r, c.g, c.b, 0.12f);
         frame.transform.SetAsFirstSibling();
 
         var stroke = NewImage("Stroke", frame.transform);
         Stretch(stroke.rectTransform, 0, 0, 0, 0);
-        stroke.sprite = CutStroke(12, 1.5f);
+        stroke.sprite = RoundStroke(8, 1.5f);
         stroke.type = Image.Type.Sliced;
         stroke.color = new Color(c.r, c.g, c.b, 0.5f);
 
@@ -417,7 +379,7 @@ public static class WikiTheme
 
         if (_openT < 1f)
         {
-            _openT = Mathf.Min(1f, _openT + dt / 0.24f);
+            _openT = Mathf.Min(1f, _openT + dt / 0.14f);
             float e = 1f - Mathf.Pow(1f - _openT, 3f);
             var s = Vector3.one * Mathf.Lerp(0.94f, 1f, e);
             foreach (var rt in Animated) rt.localScale = s;
@@ -543,8 +505,8 @@ public static class WikiTheme
     // ------------------------------------------------------------------ procedural sprites
     // All sprites are white with alpha, so Image.color tints them. Coordinates: pixels, origin bottom-left.
 
-    public static Sprite Pill() => Round(16);
-    public static Sprite PillStroke(float t = 2f) => RoundStroke(16, t);
+    public static Sprite Pill() => Round(10);
+    public static Sprite PillStroke(float t = 2f) => RoundStroke(10, t);
 
     public static Sprite Magnifier()
     {

@@ -18,7 +18,6 @@ public class HitmanRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.DeadlockButton,
-        OptionsScreenshot = LaunchpadAssets.JanitorBanner,
         UseVanillaKillButton = false,
     };
 

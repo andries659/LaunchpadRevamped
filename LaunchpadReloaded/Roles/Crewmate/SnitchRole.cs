@@ -12,6 +12,5 @@ public class SnitchRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.SnitchIcon,
-        OptionsScreenshot = LaunchpadAssets.DetectiveBanner,
     };
 }

@@ -2059,12 +2059,12 @@ public static class RoleCategorySwitcher
         // MiraAPI destroys the options of the page whenever it opens a role, so these are simply made again when missing.
         if (countEditable && !_detailCount)
         {
-            _detailCount = CreateNumberRow(menu, "Role Count", row!.RoleMaxCount, 0f, configuration.MaxRoleCount, 1f, false);
+            _detailCount = CreateNumberRow(menu, "Role Count", StoredCount(customRole, row!), 0f, configuration.MaxRoleCount, 1f, false);
         }
 
         if (chanceEditable && !_detailChance)
         {
-            _detailChance = CreateNumberRow(menu, "Chance", row!.RoleChance, 0f, 100f, 10f, true);
+            _detailChance = CreateNumberRow(menu, "Chance", StoredChance(customRole, row!), 0f, 100f, 10f, true);
         }
 
         var hasImage = role!.RoleScreenshot != null;
@@ -2145,7 +2145,37 @@ public static class RoleCategorySwitcher
 
         option.LabelBackground.enabled = false;
         option.Initialize();
+
+        // Initialize can reset the widget, so the stored value is put back afterwards.
+        option.Value = value;
         return option;
+    }
+
+    private static float StoredCount(ICustomRole role, RoleOptionSetting row)
+    {
+        return role.GetCount() ?? row.RoleMaxCount;
+    }
+
+    private static float StoredChance(ICustomRole role, RoleOptionSetting row)
+    {
+        return role.GetChance() ?? row.RoleChance;
+    }
+
+    /// <summary>
+    /// Puts the values MiraAPI has stored for the role back into the Role Count / Chance widgets, so that what is shown
+    /// is always what was saved.
+    /// </summary>
+    private static void SyncDetailValues(ICustomRole role, RoleOptionSetting row)
+    {
+        if (_detailCount)
+        {
+            _detailCount!.Value = StoredCount(role, row);
+        }
+
+        if (_detailChance)
+        {
+            _detailChance!.Value = StoredChance(role, row);
+        }
     }
 
     private static void OnDetailValueChanged(OptionBehaviour option)
@@ -2155,27 +2185,81 @@ public static class RoleCategorySwitcher
             return;
         }
 
+        var row = _detailRow!;
+        var customRole = row.Role as ICustomRole;
+        if (customRole is null)
+        {
+            return;
+        }
+
         if (AmongUsClient.Instance && !AmongUsClient.Instance.AmHost)
         {
+            SyncDetailValues(customRole, row);
             return;
         }
 
         var number = option.Cast<NumberOption>();
-        var value = Mathf.RoundToInt(number.Value);
-        if (_detailCount && number.Pointer == _detailCount!.Pointer)
-        {
-            _detailRow!.roleMaxCount = value;
-        }
-        else if (_detailChance && number.Pointer == _detailChance!.Pointer)
-        {
-            _detailRow!.roleChance = value;
-        }
-        else
+        var isCount = _detailCount && number.Pointer == _detailCount!.Pointer;
+        var isChance = _detailChance && number.Pointer == _detailChance!.Pointer;
+        if (!isCount && !isChance)
         {
             return;
         }
 
-        NotifyRoleChanged(_detailRow!);
+        try
+        {
+            // MiraAPI re-reads BOTH the count and the chance from the row when one of them changes, so a stale value on
+            // the other one would overwrite what was saved. Both are therefore taken from the widgets, which show the
+            // current values.
+            if (_detailCount)
+            {
+                row.roleMaxCount = Mathf.RoundToInt(_detailCount!.Value);
+            }
+
+            if (_detailChance)
+            {
+                row.roleChance = Mathf.RoundToInt(_detailChance!.Value);
+            }
+
+            if (customRole.Configuration.MaxRoleCount != 0)
+            {
+                customRole.SetCount(row.roleMaxCount);
+            }
+
+            if (customRole.Configuration.CanModifyChance)
+            {
+                customRole.SetChance(row.roleChance);
+            }
+
+            Info($"[RoleCategorySwitcher] {customRole.RoleName}: set count={row.roleMaxCount}, chance={row.roleChance}");
+        }
+        catch (Exception e)
+        {
+            Warning($"[RoleCategorySwitcher] Could not save a role setting: {e}");
+        }
+
+        // MiraAPI syncs the change to the other players and refreshes the row.
+        NotifyRoleChanged(row);
+
+        // Whatever MiraAPI did with the row, the stored values are the ones that were just chosen.
+        try
+        {
+            if (customRole.Configuration.MaxRoleCount != 0 && _detailCount)
+            {
+                customRole.SetCount(Mathf.RoundToInt(_detailCount!.Value));
+            }
+
+            if (customRole.Configuration.CanModifyChance && _detailChance)
+            {
+                customRole.SetChance(Mathf.RoundToInt(_detailChance!.Value));
+            }
+
+            Info($"[RoleCategorySwitcher] {customRole.RoleName}: stored count={customRole.GetCount()}, chance={customRole.GetChance()}");
+        }
+        catch (Exception e)
+        {
+            Warning($"[RoleCategorySwitcher] Could not confirm a role setting: {e}");
+        }
     }
 
     private static RoleOptionsGroup TeamGroup(Category category)

@@ -12,6 +12,5 @@ public class HackerRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.HackButton,
-        OptionsScreenshot = LaunchpadAssets.HackerBanner,
     };
 }

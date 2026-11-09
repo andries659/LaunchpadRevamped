@@ -25,15 +25,15 @@ public static class WikiPanel
     private const float ScrollSpeed = 70f;
     private const float DragThreshold = 14f;
 
-    private static readonly Color RowNormal = new(0.082f, 0.110f, 0.176f, 1f);
-    private static readonly Color RowHover = new(0.125f, 0.165f, 0.260f, 1f);
-    private static readonly Color RowSelected = new(0.105f, 0.145f, 0.235f, 1f);
+    private static readonly Color RowNormal = new(0.165f, 0.168f, 0.198f, 1f);
+    private static readonly Color RowHover = new(0.215f, 0.220f, 0.255f, 1f);
+    private static readonly Color RowSelected = new(0.195f, 0.200f, 0.235f, 1f);
     private static readonly Color CloseNormal = new(0.30f, 0.09f, 0.16f, 1f);
     private static readonly Color CloseHover = new(0.86f, 0.20f, 0.36f, 1f);
     private static readonly Color IconPlaceholder = new(1f, 1f, 1f, 0.12f);
-    private static readonly Color SearchNormal = new(0.075f, 0.100f, 0.165f, 1f);
-    private static readonly Color SearchFocused = new(0.105f, 0.140f, 0.225f, 1f);
-    private static readonly Color SearchHint = new(0.55f, 0.59f, 0.67f, 1f);
+    private static readonly Color SearchNormal = new(0.092f, 0.095f, 0.118f, 1f);
+    private static readonly Color SearchFocused = new(0.075f, 0.078f, 0.098f, 1f);
+    private static readonly Color SearchHint = new(0.55f, 0.57f, 0.64f, 1f);
 
     private const float SearchBarHeight = 52f;
     private const float SearchMargin = 12f;
@@ -42,8 +42,8 @@ public static class WikiPanel
     private const int SearchMaxLength = 40;
 
     // home screen + back button
-    private static readonly Color BackNormal = new(0.10f, 0.14f, 0.24f, 1f);
-    private static readonly Color BackHover = new(0.18f, 0.25f, 0.40f, 1f);
+    private static readonly Color BackNormal = new(0.19f, 0.195f, 0.23f, 1f);
+    private static readonly Color BackHover = new(0.26f, 0.265f, 0.31f, 1f);
 
     private enum Section { Home, Roles, Modifiers, Settings }
 
@@ -52,7 +52,8 @@ public static class WikiPanel
         public Section Target;
         public RectTransform Rect;
         public Image Bg, Stroke;
-        public TextMeshProUGUI Count;
+        public Image[] SlotBg, SlotIcon;
+        public TextMeshProUGUI Preview, Count;
         public Color Accent;
     }
 
@@ -186,7 +187,11 @@ public static class WikiPanel
             _detailGo = Find("WindowRoot/Window/Body/Detail").gameObject;
             _titleText = Find("WindowRoot/Window/TitleBar/Title").GetComponent<TextMeshProUGUI>();
             _abilitiesHeaderText = _abilitiesHeader.GetComponentInChildren<TextMeshProUGUI>(true);
-            if (_abilitiesHeaderText != null) _abilitiesHeaderDefault = _abilitiesHeaderText.text;
+            if (_abilitiesHeaderText != null)
+            {
+                _abilitiesHeaderDefault = _abilitiesHeaderText.text;
+                _abilitiesHeaderText.characterSpacing = 0f;
+            }
 
             BuildSearchBar();
 
@@ -438,16 +443,11 @@ public static class WikiPanel
         // Body lays its children out in a row: keep Home out of that so it covers the whole body
         _homeRoot.gameObject.AddComponent<LayoutElement>().ignoreLayout = true;
 
-        var heading = MakeText("Heading", _homeRoot, 36f, FontStyles.Bold, TextAlignmentOptions.Center, WikiTheme.Text);
-        SetAnchors(heading.rectTransform, 0f, 0.86f, 1f, 0.97f);
-        heading.characterSpacing = 4f;
-        heading.text = "WHAT DO YOU WANT TO LOOK UP?";
-
         var defs = new (Section target, string title, string blurb, Color accent)[]
         {
-            (Section.Roles, "ROLES", "Every role with its abilities, how many can spawn and how likely they are.", WikiTheme.Cyan),
-            (Section.Modifiers, "MODIFIERS", "Perks and quirks that get added on top of a player's role.", new Color(0.74f, 0.52f, 1f)),
-            (Section.Settings, "SETTINGS", "What the game options do and how they change a match.", new Color(1f, 0.74f, 0.30f)),
+            (Section.Roles, "Roles", "Every role, what its buttons do and how often it shows up.", new Color(0.55f, 0.80f, 1f)),
+            (Section.Modifiers, "Modifiers", "Extra perks and quirks that get added on top of a player's role.", new Color(0.74f, 0.52f, 1f)),
+            (Section.Settings, "Settings", "What the game options do and how they change a match.", new Color(1f, 0.74f, 0.30f)),
         };
 
         const float margin = 0.05f, width = 0.275f, gap = 0.0375f;
@@ -457,45 +457,64 @@ public static class WikiPanel
             float x = margin + i * (width + gap);
 
             var rect = NewRect("Card_" + d.title, _homeRoot);
-            SetAnchors(rect, x, 0.12f, x + width, 0.82f);
+            SetAnchors(rect, x, 0.14f, x + width, 0.86f);
             var bg = rect.gameObject.AddComponent<Image>();
-            bg.sprite = WikiTheme.Cut(18);
+            bg.sprite = WikiTheme.Round(12);
             bg.type = Image.Type.Sliced;
             bg.color = RowNormal;
             bg.raycastTarget = false;
 
-            var strokeRt = NewRect("Stroke", rect);
+            var strokeRt = NewRect("Outline", rect);
             SetAnchors(strokeRt, 0f, 0f, 1f, 1f);
             var stroke = strokeRt.gameObject.AddComponent<Image>();
-            stroke.sprite = WikiTheme.CutStroke(18, 2f);
+            stroke.sprite = WikiTheme.RoundStroke(12, 2f);
             stroke.type = Image.Type.Sliced;
             stroke.raycastTarget = false;
 
-            var bar = NewRect("AccentBar", rect);
-            bar.anchorMin = new Vector2(0.5f, 1f);
-            bar.anchorMax = new Vector2(0.5f, 1f);
-            bar.pivot = new Vector2(0.5f, 1f);
-            bar.anchoredPosition = new Vector2(0f, -22f);
-            bar.sizeDelta = new Vector2(90f, 5f);
-            var barImg = bar.gameObject.AddComponent<Image>();
-            barImg.sprite = WikiTheme.Pill();
-            barImg.type = Image.Type.Sliced;
-            barImg.color = d.accent;
-            barImg.raycastTarget = false;
+            // a row of real icons from the section (or a short text preview when there are none)
+            var slotBg = new Image[4];
+            var slotIcon = new Image[4];
+            for (int k = 0; k < 4; k++)
+            {
+                var slot = NewRect("Slot" + k, rect);
+                slot.anchorMin = slot.anchorMax = new Vector2(0.5f, 0.70f);
+                slot.pivot = new Vector2(0.5f, 0.5f);
+                slot.anchoredPosition = new Vector2((k - 1.5f) * 104f, 0f);
+                slot.sizeDelta = new Vector2(88f, 88f);
+                slotBg[k] = slot.gameObject.AddComponent<Image>();
+                slotBg[k].sprite = WikiTheme.Round(10);
+                slotBg[k].type = Image.Type.Sliced;
+                slotBg[k].color = new Color(0f, 0f, 0f, 0.28f);
+                slotBg[k].raycastTarget = false;
 
-            var count = MakeText("Count", rect, 120f, FontStyles.Bold, TextAlignmentOptions.Center, d.accent);
-            SetAnchors(count.rectTransform, 0f, 0.50f, 1f, 0.88f);
+                var icon = NewRect("Icon", slot);
+                SetAnchors(icon, 0f, 0f, 1f, 1f);
+                icon.offsetMin = new Vector2(8f, 8f);
+                icon.offsetMax = new Vector2(-8f, -8f);
+                slotIcon[k] = icon.gameObject.AddComponent<Image>();
+                slotIcon[k].preserveAspect = true;
+                slotIcon[k].raycastTarget = false;
+            }
 
-            var title = MakeText("Title", rect, 46f, FontStyles.Bold, TextAlignmentOptions.Center, WikiTheme.Text);
-            SetAnchors(title.rectTransform, 0f, 0.34f, 1f, 0.50f);
-            title.characterSpacing = 8f;
+            var preview = MakeText("Preview", rect, 28f, FontStyles.Normal, TextAlignmentOptions.Center, WikiTheme.Muted);
+            SetAnchors(preview.rectTransform, 0.08f, 0.52f, 0.92f, 0.88f);
+
+            var title = MakeText("Title", rect, 44f, FontStyles.Bold, TextAlignmentOptions.Center, WikiTheme.Text);
+            SetAnchors(title.rectTransform, 0f, 0.31f, 1f, 0.46f);
             title.text = d.title;
 
-            var blurb = MakeText("Blurb", rect, 26f, FontStyles.Normal, TextAlignmentOptions.Top, WikiTheme.Muted);
-            SetAnchors(blurb.rectTransform, 0.09f, 0.08f, 0.91f, 0.32f);
+            var blurb = MakeText("Blurb", rect, 25f, FontStyles.Normal, TextAlignmentOptions.Top, WikiTheme.Muted);
+            SetAnchors(blurb.rectTransform, 0.09f, 0.13f, 0.91f, 0.30f);
             blurb.text = d.blurb;
 
-            Cards.Add(new HomeCard { Target = d.target, Rect = rect, Bg = bg, Stroke = stroke, Count = count, Accent = d.accent });
+            var count = MakeText("Count", rect, 22f, FontStyles.Normal, TextAlignmentOptions.Center, WikiTheme.Muted);
+            SetAnchors(count.rectTransform, 0f, 0.03f, 1f, 0.10f);
+
+            Cards.Add(new HomeCard
+            {
+                Target = d.target, Rect = rect, Bg = bg, Stroke = stroke, Accent = d.accent,
+                SlotBg = slotBg, SlotIcon = slotIcon, Preview = preview, Count = count,
+            });
         }
 
         _homeRoot.gameObject.SetActive(false);
@@ -515,14 +534,13 @@ public static class WikiPanel
         _backRect.sizeDelta = new Vector2(190f, Mathf.Max(40f, _closeRect.rect.height));
 
         _backBg = _backRect.gameObject.AddComponent<Image>();
-        _backBg.sprite = WikiTheme.Cut(10);
+        _backBg.sprite = WikiTheme.Round(8);
         _backBg.type = Image.Type.Sliced;
         _backBg.color = BackNormal;
         _backBg.raycastTarget = false;
 
         var label = MakeText("Label", _backRect, 26f, FontStyles.Bold, TextAlignmentOptions.Center, WikiTheme.Text);
-        label.characterSpacing = 4f;
-        label.text = "<  BACK";
+        label.text = "<  Back";
 
         _backRect.gameObject.SetActive(false);
     }
@@ -530,10 +548,10 @@ public static class WikiPanel
     private static void SetTitle(string section)
     {
         if (_titleText == null) return;
-        string wiki = "LAUNCHPAD <color=#" + ColorUtility.ToHtmlStringRGB(WikiTheme.Cyan) + ">WIKI</color>";
+        const string wiki = "Launchpad Wiki";
         _titleText.text = string.IsNullOrEmpty(section)
             ? wiki
-            : wiki + "  <size=60%><color=#" + ColorUtility.ToHtmlStringRGB(WikiTheme.Muted) + ">/ " + section + "</color></size>";
+            : wiki + "  <size=70%><color=#" + ColorUtility.ToHtmlStringRGB(WikiTheme.Muted) + ">/ " + section + "</color></size>";
     }
 
     private static void ShowHome()
@@ -553,12 +571,29 @@ public static class WikiPanel
 
         foreach (var c in Cards)
         {
-            int n = c.Target == Section.Roles ? WikiRegistry.Roles.Count
-                : c.Target == Section.Modifiers ? WikiRegistry.Modifiers.Count
-                : WikiRegistry.Settings.Count;
-            c.Count.text = n.ToString();
+            var entries = EntriesFor(c.Target);
+            string noun = c.Target == Section.Roles ? "roles" : c.Target == Section.Modifiers ? "modifiers" : "setting groups";
+            c.Count.text = entries.Count + " " + noun;
+
+            int shown = 0;
+            foreach (var e in entries)
+            {
+                if (e.Icon == null || shown >= c.SlotIcon.Length) continue;
+                c.SlotIcon[shown].sprite = e.Icon;
+                shown++;
+            }
+            for (int k = 0; k < c.SlotIcon.Length; k++)
+            {
+                c.SlotBg[k].gameObject.SetActive(k < shown);
+            }
+
+            // no icons in this section: list the first few names instead
+            c.Preview.gameObject.SetActive(shown == 0);
+            if (shown == 0)
+                c.Preview.text = string.Join("\n", entries.Take(4).Select(e => e.Name));
+
             c.Bg.color = RowNormal;
-            c.Stroke.color = new Color(c.Accent.r, c.Accent.g, c.Accent.b, 0.45f);
+            c.Stroke.color = new Color(1f, 1f, 1f, 0.10f);
         }
     }
 
@@ -574,15 +609,17 @@ public static class WikiPanel
             _roleListGo.SetActive(true);
             _detailGo.SetActive(true);
             _backRect.gameObject.SetActive(true);
-            SetTitle(section.ToString().ToUpperInvariant());
+            SetTitle(section.ToString());
         }
 
         Rebuild();
     }
 
-    private static List<WikiRole> CurrentEntries()
+    private static List<WikiRole> CurrentEntries() => EntriesFor(_section);
+
+    private static List<WikiRole> EntriesFor(Section section)
     {
-        switch (_section)
+        switch (section)
         {
             case Section.Modifiers: return WikiRegistry.Modifiers;
             case Section.Settings: return WikiRegistry.Settings;
@@ -737,7 +774,7 @@ public static class WikiPanel
             go.transform.Find("Accent").GetComponent<Image>().color = color;
             SetIcon(go.transform.Find("Icon").GetComponent<Image>(), role.Icon);
             go.transform.Find("Label").GetComponent<TextMeshProUGUI>().text =
-                role.Name + "\n<size=55%><cspace=0.12em><color=#" + ColorUtility.ToHtmlStringRGB(color) + ">" + role.Team.ToUpperInvariant() + "</color></cspace></size>";
+                role.Name + "\n<size=60%><color=#" + ColorUtility.ToHtmlStringRGB(color) + ">" + role.Team + "</color></size>";
 
             var highlight = go.transform.Find("Highlight").gameObject;
             highlight.SetActive(false);
@@ -786,7 +823,7 @@ public static class WikiPanel
         bool has = role.Abilities != null && role.Abilities.Count > 0;
         _abilitiesHeader.SetActive(has);
         if (_abilitiesHeaderText != null)
-            _abilitiesHeaderText.text = _section == Section.Settings ? "OPTIONS" : _abilitiesHeaderDefault;
+            _abilitiesHeaderText.text = _section == Section.Settings ? "Options" : "Abilities";
         _abilityContainer.gameObject.SetActive(has);
 
         if (has)
@@ -954,7 +991,7 @@ public static class WikiPanel
         {
             bool hover = Hit(c.Rect, mouse);
             c.Bg.color = hover ? RowHover : RowNormal;
-            c.Stroke.color = new Color(c.Accent.r, c.Accent.g, c.Accent.b, hover ? 1f : 0.45f);
+            c.Stroke.color = hover ? new Color(c.Accent.r, c.Accent.g, c.Accent.b, 0.9f) : new Color(1f, 1f, 1f, 0.10f);
         }
 
         if (Input.GetMouseButtonDown(0))

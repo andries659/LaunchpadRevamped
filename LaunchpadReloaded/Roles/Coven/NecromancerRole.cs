@@ -17,7 +17,6 @@ public class NecromancerRole(IntPtr ptr) : CrewmateRole(ptr), ICovenRole
         CanUseVent = false,
         TasksCountForProgress = false,
         Icon = LaunchpadAssets.CovenIcon,
-        OptionsScreenshot = LaunchpadAssets.MedicBanner,
     };
 
     // The Coven only wins together, never with the crew.

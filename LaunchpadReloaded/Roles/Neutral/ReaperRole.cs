@@ -24,7 +24,6 @@ public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
         CanUseVent = false,
         GhostRole = (RoleTypes)RoleId.Get<NeutralGhostRole>(),
         Icon = LaunchpadAssets.SoulButton,
-        OptionsScreenshot = LaunchpadAssets.JesterBanner,
     };
 
     [HideFromIl2Cpp]

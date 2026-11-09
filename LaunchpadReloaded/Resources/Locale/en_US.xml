@@ -322,6 +322,8 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.options.general.notepad.WikiDesc">Shows a notepad button on the HUD so players can jot down notes during the game.</string>
     <string name="launchpad.options.general.banCheaters.WikiDesc">Players caught cheating by the host's anti-cheat are banned instead of only being kicked.</string>
     <string name="launchpad.options.general.disableMeetingTeleport.WikiDesc">Players stay where they are after a meeting instead of being teleported back to their spawn point.</string>
+    <string name="launchpad.options.general.welcomeMessage.WikiDesc">The host sends the message in LPR_DATA/Welcome/welcome.txt in chat to every player who joins the lobby.</string>
+    <string name="launchpad.options.general.playerTags.WikiDesc">Shows tags above players. The host gets a Host tag, and players listed in the LPR_DATA/Tags folders (Mod-Tags, Sponsor-Tags, VIP-Tags) get theirs.</string>
     <string name="launchpad.options.funOptions.WikiDesc">Optional settings that make matches a bit more chaotic.</string>
     <string name="launchpad.options.funOptions.friendlyFire.WikiDesc">Allows Impostors to target and hurt each other with their abilities.</string>
     <string name="launchpad.options.funOptions.uniqueColors.WikiDesc">When enabled, players cannot pick a color (or gradient) that another player already has.</string>
@@ -381,6 +383,8 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.general.banCheaters">Ban Cheaters</string>
     <string name="launchpad.options.general.disableMeetingTeleport">Disable Meeting Teleport</string>
     <string name="launchpad.options.general.notepad">Notepad</string>
+    <string name="launchpad.options.general.welcomeMessage">Welcome Message</string>
+    <string name="launchpad.options.general.playerTags">Player Tags</string>
     <string name="launchpad.options.mayor">Mayor</string>
     <string name="launchpad.options.mayor.extraVotes">Extra Votes</string>
     <string name="launchpad.options.mayor.allowMultipleVotesOnSamePlayer">Allow Multiple Votes on Same Player</string>

@@ -15,7 +15,6 @@ public class SealerRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.SealButton,
-        OptionsScreenshot = LaunchpadAssets.MedicBanner,
     };
 
     [HideFromIl2Cpp]

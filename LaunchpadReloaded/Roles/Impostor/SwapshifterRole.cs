@@ -14,7 +14,6 @@ public class SwapshifterRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.SwapButton,
-        OptionsScreenshot = LaunchpadAssets.HackerBanner,
     };
     public override void OnDeath(DeathReason reason)
     {

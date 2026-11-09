@@ -221,6 +221,7 @@ public static class WikiRegistry
                     Team = crew ? "Crewmate" : "Universal",
                     Color = crew ? new Color(0.55f, 1f, 1f) : new Color(0.74f, 0.52f, 1f),
                     Description = SafeText(() => mod.GetDescription()),
+                    Icon = LoadSprite(() => mod.ModifierIcon?.LoadAsset()),
                     GetDescription = () => SafeText(() => mod.GetDescription()),
                     GetAmount = () => mod.GetAmountPerGame(),
                     GetChance = () => mod.GetAssignmentChance(),

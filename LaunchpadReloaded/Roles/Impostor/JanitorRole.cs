@@ -14,7 +14,6 @@ public class JanitorRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.DragButton,
-        OptionsScreenshot = LaunchpadAssets.JanitorBanner,
     };
 
     public override bool CanUse(IUsable usable)

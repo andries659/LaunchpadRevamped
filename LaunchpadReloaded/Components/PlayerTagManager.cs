@@ -1,4 +1,6 @@
 ﻿using LaunchpadRevamped.Features;
+using LaunchpadRevamped.Options;
+using MiraAPI.GameOptions;
 using MiraAPI.Utilities;
 using MonoMod.Utils;
 using Reactor.Utilities.Attributes;
@@ -98,8 +100,91 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
         UpdatePosition();
     }
 
+    private const string HostTagName = "Host";
+    private static readonly Color HostTagColor = new(0.95f, 0.72f, 0.15f);
+    private static readonly Func<PlayerControl, bool> HostTagVisible = _ => true;
+    private float _nextHostTagCheck;
+
+    /// <summary>
+    /// Everyone sees a "Host" tag above the lobby host (while the Player Tags option is on).
+    /// </summary>
+    private void RefreshHostTag()
+    {
+        if (_inMeeting || !player || !AmongUsClient.Instance)
+        {
+            return;
+        }
+
+        bool tagsEnabled;
+        try
+        {
+            tagsEnabled = OptionGroupSingleton<GeneralOptions>.Instance.PlayerTags;
+        }
+        catch
+        {
+            return;
+        }
+
+        var wanted = tagsEnabled && player.OwnerId == AmongUsClient.Instance.HostId;
+        var existing = GetTagByName(HostTagName);
+
+        if (wanted && !existing.HasValue)
+        {
+            AddTag(new PlayerTag(HostTagName, "Host", HostTagColor) { IsLocallyVisible = HostTagVisible, TextOnly = true });
+        }
+        else if (!wanted && existing.HasValue)
+        {
+            RemoveTag(existing.Value);
+        }
+    }
+
+    private const string CustomTagName = "LPR_Tag";
+
+    /// <summary>
+    /// Shows the tag from LPR_DATA/Tags that the host gave this player.
+    /// </summary>
+    private string? _customTagKey;
+
+    private void RefreshCustomTag()
+    {
+        if (_inMeeting || !player)
+        {
+            return;
+        }
+
+        var has = LobbyTags.TryGet(player.PlayerId, out var entry);
+        var key = has ? entry.Text + "|" + entry.Hex : null;
+        var existing = GetTagByName(CustomTagName);
+
+        if (existing.HasValue && key != _customTagKey)
+        {
+            RemoveTag(existing.Value);
+            existing = null;
+        }
+
+        if (has && !existing.HasValue)
+        {
+            var colors = LprData.ParseColors(entry.Hex) ?? [Color.white];
+            AddTag(new PlayerTag(CustomTagName, entry.Text, colors[0])
+            {
+                IsLocallyVisible = HostTagVisible,
+                TextOnly = true,
+                Gradient = colors,
+            });
+        }
+
+        _customTagKey = key;
+    }
+
     public void Update()
     {
+        if (Time.unscaledTime >= _nextHostTagCheck)
+        {
+            _nextHostTagCheck = Time.unscaledTime + 1f;
+            RefreshHostTag();
+            RefreshCustomTag();
+        }
+
         foreach (var tagPair in Tags)
         {
             if (!tagPair.Value)
@@ -183,6 +268,34 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
         }
     }
 
+    private static string ApplyGradient(string text, Color[] colors)
+    {
+        var visible = text.Count(c => !char.IsWhiteSpace(c));
+        var result = new System.Text.StringBuilder();
+        var index = 0;
+
+        foreach (var c in text)
+        {
+            if (char.IsWhiteSpace(c))
+            {
+                result.Append(c);
+                continue;
+            }
+
+            var t = visible <= 1 ? 0f : index / (float)(visible - 1);
+            index++;
+
+            var scaled = t * (colors.Length - 1);
+            var from = Mathf.Min(Mathf.FloorToInt(scaled), colors.Length - 1);
+            var to = Mathf.Min(from + 1, colors.Length - 1);
+            var color = Color.Lerp(colors[from], colors[to], scaled - from);
+
+            result.Append("<color=#").Append(ColorUtility.ToHtmlStringRGB(color)).Append('>').Append(c).Append("</color>");
+        }
+
+        return result.ToString();
+    }
+
     [HideFromIl2Cpp]
     public void AddTag(PlayerTag plrTag)
     {
@@ -197,7 +310,36 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
         tagText.text = plrTag.Text;
         newTag.name = plrTag.Name;
 
-        if (plrTag.Color != Color.clear)
+        if (plrTag.TextOnly)
+        {
+            // Just bold, slightly larger text, no background. Optionally with a colour gradient.
+            bgRend.enabled = false;
+
+            if (tagText.enableAutoSizing)
+            {
+                tagText.enableAutoSizing = false;
+            }
+
+            tagText.fontStyle |= FontStyles.Bold;
+            tagText.enableWordWrapping = false;
+            tagText.overflowMode = TextOverflowModes.Overflow;
+            tagText.outlineColor = new Color32(0, 0, 0, 255);
+            tagText.outlineWidth = 0.15f;
+
+            var body = plrTag.Text;
+            if (plrTag.Gradient is { Length: > 1 })
+            {
+                body = ApplyGradient(plrTag.Text, plrTag.Gradient);
+                tagText.color = Color.white;
+            }
+            else if (plrTag.Color != Color.clear)
+            {
+                tagText.color = plrTag.Color;
+            }
+
+            tagText.text = $"<b><size=130%>{body}</size></b>";
+        }
+        else if (plrTag.Color != Color.clear)
         {
             tagText.color = plrTag.Color.LightenColor(0.25f);
             bgRend.color = plrTag.Color;
@@ -212,4 +354,14 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
 public record struct PlayerTag(string Name, string Text, Color Color)
 {
     public Func<PlayerControl, bool> IsLocallyVisible { get; set; } = _ => false;
+
+    /// <summary>
+    /// Only show bold, larger text without the background.
+    /// </summary>
+    public bool TextOnly { get; set; }
+
+    /// <summary>
+    /// Colours the text goes through from the first letter to the last. Only used with <see cref="TextOnly"/>.
+    /// </summary>
+    public Color[]? Gradient { get; set; }
 }

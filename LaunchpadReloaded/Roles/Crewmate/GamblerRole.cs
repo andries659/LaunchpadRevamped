@@ -12,6 +12,5 @@ public class GamblerRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.GambleButton,
-        OptionsScreenshot = LaunchpadAssets.DetectiveBanner,
     };
 }

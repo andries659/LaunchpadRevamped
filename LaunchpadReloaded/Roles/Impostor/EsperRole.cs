@@ -19,7 +19,6 @@ public class EsperRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     {
         // TODO: replace with dedicated Esper art once it exists in the asset bundle.
         Icon = LaunchpadAssets.HideButton,
-        OptionsScreenshot = LaunchpadAssets.HackerBanner,
     };
 
     public override void Deinitialize(PlayerControl targetPlayer)

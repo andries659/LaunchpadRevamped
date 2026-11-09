@@ -14,7 +14,6 @@ public class CaptainRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.ZoomButton,
-        OptionsScreenshot = LaunchpadAssets.CaptainBanner,
     };
 
     public override void OnDeath(DeathReason reason)

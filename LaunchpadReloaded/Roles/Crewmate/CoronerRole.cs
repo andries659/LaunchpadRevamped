@@ -12,6 +12,5 @@ public class CoronerRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.FreezeButton,
-        OptionsScreenshot = LaunchpadAssets.CaptainBanner,
     };
 }

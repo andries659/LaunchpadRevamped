@@ -17,7 +17,6 @@ public class CovenLeaderRole(IntPtr ptr) : CrewmateRole(ptr), ICovenRole
         CanUseVent = false,
         TasksCountForProgress = false,
         Icon = LaunchpadAssets.CovenIcon,
-        OptionsScreenshot = LaunchpadAssets.SheriffBanner,
     };
 
     // The Coven only wins together, never with the crew.

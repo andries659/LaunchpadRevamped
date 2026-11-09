@@ -14,7 +14,6 @@ public class LpDetectiveRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.InvestigateButton,
-        OptionsScreenshot = LaunchpadAssets.DetectiveBanner,
     };
 
     public override void OnDeath(DeathReason reason)

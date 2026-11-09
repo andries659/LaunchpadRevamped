@@ -16,7 +16,6 @@ public class SurvivorRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
         CanUseVent = false,
         GhostRole = (RoleTypes)RoleId.Get<NeutralGhostRole>(),
         Icon = LaunchpadAssets.SurvivorIcon,
-        OptionsScreenshot = LaunchpadAssets.JesterBanner,
     };
 
     public override void AppendTaskHint(Il2CppSystem.Text.StringBuilder taskStringBuilder)

@@ -13,6 +13,5 @@ public class SurgeonRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     {
         Icon = LaunchpadAssets.DissectButton,
         UseVanillaKillButton = false,
-        OptionsScreenshot = LaunchpadAssets.SurgeonBanner,
     };
 }

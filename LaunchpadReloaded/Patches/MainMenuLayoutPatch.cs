@@ -429,6 +429,22 @@ public static class MainMenuLayoutPatch
 {
     public static void Postfix(MainMenuManager __instance)
     {
+        if (!LaunchpadRevamped.LaunchpadRevampedPlugin.CustomMenuLayout.Value)
+        {
+            Info("Menu layout: turned off in the config, using the normal menu");
+            return;
+        }
+
+        if (LaunchpadRevamped.LaunchpadRevampedPlugin.MenuLayoutOnly16By9.Value)
+        {
+            var aspect = Screen.width / (float)Screen.height;
+            if (Mathf.Abs(aspect - 16f / 9f) > 0.12f)
+            {
+                Info($"Menu layout: the window is {Screen.width}x{Screen.height}, not 16:9, using the normal menu");
+                return;
+            }
+        }
+
         MainMenuLayout.Apply(__instance.transform);
     }
 }

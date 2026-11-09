@@ -1,8 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using HarmonyLib;
 using InnerNet;
+using LaunchpadRevamped.Features;
 using LaunchpadRevamped.Features.Managers;
+using LaunchpadRevamped.Networking;
 using LaunchpadRevamped.Networking.Color;
 using Reactor.Networking.Rpc;
 using Reactor.Utilities;
@@ -29,9 +31,9 @@ public static class AmongUsClientPatch
         {
             yield return new WaitForSeconds(0.1f);
         }
-        
+
         var colorData = new Dictionary<byte, CustomColorData>();
-        
+
         foreach (var player in GameData.Instance.AllPlayers)
         {
             if (GradientManager.TryGetColor(player.PlayerId, out var color))
@@ -43,5 +45,7 @@ public static class AmongUsClientPatch
         // typically we would split this into multiple packets
         // however, it wouldnt exceed the limit unless there was over 300 players
         Rpc<RpcSyncAllColors>.Instance.SendTo(clientData.Id, colorData);
+
+        LobbyTags.Broadcast();
     }
 }

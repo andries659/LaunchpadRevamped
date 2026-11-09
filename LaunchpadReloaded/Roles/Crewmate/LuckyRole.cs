@@ -12,7 +12,6 @@ public class LuckyRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.LuckyIcon,
-        OptionsScreenshot = LaunchpadAssets.SheriffBanner,
     };
 
     /// <summary>

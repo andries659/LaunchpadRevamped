@@ -22,7 +22,6 @@ public class ArsonistRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
         CanUseVent = false,
         GhostRole = (RoleTypes)RoleId.Get<NeutralGhostRole>(),
         Icon = LaunchpadAssets.ArsonistIcon,
-        OptionsScreenshot = LaunchpadAssets.JesterBanner,
     };
 
     [HideFromIl2Cpp]

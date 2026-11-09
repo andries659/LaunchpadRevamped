@@ -23,5 +23,7 @@ public enum LaunchpadRpc : uint
     CovenReanimate,
     VestBlock,
     EsperProject,
-    EsperReturn
+    EsperReturn,
+    WelcomeMessage,
+    LobbyTags
 }

@@ -12,6 +12,5 @@ public class GrenadierRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.GrenadierIcon,
-        OptionsScreenshot = LaunchpadAssets.HackerBanner,
     };
 }

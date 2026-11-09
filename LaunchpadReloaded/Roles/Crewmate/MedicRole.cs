@@ -12,6 +12,5 @@ public class MedicRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
     public CustomRoleConfiguration Configuration => new(this)
     {
         Icon = LaunchpadAssets.ReviveButton,
-        OptionsScreenshot = LaunchpadAssets.MedicBanner,
     };
 }
