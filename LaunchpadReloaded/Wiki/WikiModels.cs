@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using LaunchpadRevamped.Features;
 using LaunchpadRevamped.Modifiers;
 using LaunchpadRevamped.Roles.Coven;
 using MiraAPI.Hud;
@@ -26,6 +27,7 @@ public class WikiRole
 {
     public string Name = "Role";
     public string Team = "Crewmate";  // free text, so custom teams work
+    public string Faction = "";       // sub-category of the team, e.g. "Crewmate Killing". Empty = the role has none.
     public Color Color = Color.white; // role colour (name, accent bar, ability titles)
     public string Description = "";
     public Func<string>? GetDescription; // optional: read live each time the entry is shown (overrides Description)
@@ -34,6 +36,9 @@ public class WikiRole
     public Func<int?>? GetChance;     // role chance 0-100. Read live each time the role is shown. null = hidden.
     public List<WikiAbility> Abilities = new();
     public List<WikiAbility> Settings = new(); // optional "Settings" block: Name = option, Cooldown = its current value
+
+    /// <summary>What is shown under the role's name: its faction (which already names the team), or just the team.</summary>
+    public string TeamLabel => string.IsNullOrEmpty(Faction) ? Team : Faction;
 }
 
 /// <summary>
@@ -119,6 +124,7 @@ public static class WikiRegistry
                 {
                     Name = custom.RoleName,
                     Team = TeamName(behaviour, custom),
+                    Faction = FactionName(custom),
                     Color = custom.RoleColor,
                     Description = WikiDescription(behaviour, custom),
                     Icon = LoadSprite(() => config.Icon?.LoadAsset()),
@@ -159,7 +165,10 @@ public static class WikiRegistry
         RoleList.Sort((a, b) =>
         {
             var byTeam = string.Compare(a.Team, b.Team, StringComparison.Ordinal);
-            return byTeam != 0 ? byTeam : string.Compare(a.Name, b.Name, StringComparison.Ordinal);
+            if (byTeam != 0) return byTeam;
+
+            var byFaction = string.Compare(a.Faction, b.Faction, StringComparison.Ordinal);
+            return byFaction != 0 ? byFaction : string.Compare(a.Name, b.Name, StringComparison.Ordinal);
         });
     }
 
@@ -240,7 +249,10 @@ public static class WikiRegistry
         ModifierList.Sort((a, b) =>
         {
             var byTeam = string.Compare(a.Team, b.Team, StringComparison.Ordinal);
-            return byTeam != 0 ? byTeam : string.Compare(a.Name, b.Name, StringComparison.Ordinal);
+            if (byTeam != 0) return byTeam;
+
+            var byFaction = string.Compare(a.Faction, b.Faction, StringComparison.Ordinal);
+            return byFaction != 0 ? byFaction : string.Compare(a.Name, b.Name, StringComparison.Ordinal);
         });
     }
 
@@ -316,6 +328,21 @@ public static class WikiRegistry
     private static string AbilityDescription(string buttonKey)
     {
         return LocaleOrEmpty(buttonKey + ".WikiDesc");
+    }
+
+    /// <summary>
+    /// The role's faction, for example "Crewmate Killing". Empty when the role is only in its team's default group.
+    /// </summary>
+    internal static string FactionName(ICustomRole custom)
+    {
+        try
+        {
+            return LaunchpadRoleGroups.TryGetFactionName(custom.RoleOptionsGroup, out var name) ? name : "";
+        }
+        catch
+        {
+            return "";
+        }
     }
 
     internal static string TeamName(RoleBehaviour behaviour, ICustomRole custom)

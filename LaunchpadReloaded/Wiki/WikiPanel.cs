@@ -718,7 +718,7 @@ public static class WikiPanel
 
     private static string BuildHaystack(WikiRole role)
     {
-        var parts = new List<string> { role.Name, role.Team, role.Description };
+        var parts = new List<string> { role.Name, role.Team, role.Faction, role.Description };
         if (role.Abilities != null)
         {
             foreach (var a in role.Abilities)
@@ -816,7 +816,7 @@ public static class WikiPanel
             go.transform.Find("Accent").GetComponent<Image>().color = color;
             SetIcon(go.transform.Find("Icon").GetComponent<Image>(), role.Icon);
             go.transform.Find("Label").GetComponent<TextMeshProUGUI>().text =
-                role.Name + "\n<size=60%><color=#" + ColorUtility.ToHtmlStringRGB(color) + ">" + role.Team + "</color></size>";
+                role.Name + "\n<size=60%><color=#" + ColorUtility.ToHtmlStringRGB(color) + ">" + role.TeamLabel + "</color></size>";
 
             var highlight = go.transform.Find("Highlight").gameObject;
             highlight.SetActive(false);
@@ -854,7 +854,7 @@ public static class WikiPanel
 
         _detailName.text = role.Name;
         _detailName.color = role.Color;
-        _detailTeam.text = role.Team;
+        _detailTeam.text = role.TeamLabel;
         _detailTeam.color = role.Color;
         WikiTheme.StyleDetail(role.Color);
         WikiTheme.SetStats(SafeInt(role.GetAmount), SafeInt(role.GetChance), role.Color);

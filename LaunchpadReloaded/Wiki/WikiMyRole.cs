@@ -72,6 +72,7 @@ public static class WikiMyRole
                 {
                     Name = custom.RoleName,
                     Team = WikiRegistry.TeamName(role, custom),
+                    Faction = WikiRegistry.FactionName(custom),
                     Color = custom.RoleColor,
                     Description = WikiRegistry.WikiDescription(role, custom),
                     Icon = WikiRegistry.LoadSprite(() => custom.Configuration.Icon?.LoadAsset()),
@@ -101,6 +102,7 @@ public static class WikiMyRole
         {
             Name = source.Name,
             Team = source.Team,
+            Faction = source.Faction,
             Color = source.Color,
             Description = source.Description,
             GetDescription = source.GetDescription,
