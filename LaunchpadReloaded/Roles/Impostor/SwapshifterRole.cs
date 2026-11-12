@@ -10,6 +10,7 @@ namespace LaunchpadRevamped.Roles.Impostor;
 public class SwapshifterRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.SwapperColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.ImpostorConcealing;
     public ModdedRoleTeams Team => ModdedRoleTeams.Impostor;
     public CustomRoleConfiguration Configuration => new(this)
     {

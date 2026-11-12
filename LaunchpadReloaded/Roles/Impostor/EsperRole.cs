@@ -13,6 +13,7 @@ namespace LaunchpadRevamped.Roles.Impostor;
 public class EsperRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.EsperColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.ImpostorConcealing;
     public ModdedRoleTeams Team => ModdedRoleTeams.Impostor;
 
     public CustomRoleConfiguration Configuration => new(this)

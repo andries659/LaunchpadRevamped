@@ -16,12 +16,14 @@ public class HexMasterRole(IntPtr ptr) : CrewmateRole(ptr), ICovenRole
     public static readonly HashSet<byte> Hexed = [];
 
     public Color RoleColor => LaunchpadPalette.HexMasterColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CovenPower;
 
     public CustomRoleConfiguration Configuration => new(this)
     {
         UseVanillaKillButton = false,
         CanUseVent = false,
         TasksCountForProgress = false,
+        FreeplayFolder = LaunchpadRoleGroups.CovenFreeplayFolder,
         Icon = LaunchpadAssets.CovenIcon,
     };
 

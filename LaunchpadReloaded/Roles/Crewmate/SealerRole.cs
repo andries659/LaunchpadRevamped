@@ -11,6 +11,7 @@ namespace LaunchpadRevamped.Roles.Crewmate;
 public class SealerRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.SealerColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CrewmateProtective;
     public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
     public CustomRoleConfiguration Configuration => new(this)
     {

@@ -8,6 +8,7 @@ namespace LaunchpadRevamped.Roles.Impostor;
 public class SurgeonRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.SurgeonColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.ImpostorKilling;
     public ModdedRoleTeams Team => ModdedRoleTeams.Impostor;
     public CustomRoleConfiguration Configuration => new(this)
     {

@@ -14,6 +14,7 @@ namespace LaunchpadRevamped.Roles.Neutral;
 public class ReaperRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public Color RoleColor => LaunchpadPalette.ReaperColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.NeutralEvil;
     public override bool IsDead => false;
 
     public int collectedSouls;

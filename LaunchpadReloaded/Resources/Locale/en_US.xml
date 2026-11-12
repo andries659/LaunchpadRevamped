@@ -250,6 +250,20 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.neutral.roleTitle">Neutral</string>
     <string name="launchpad.neutral.teamIntroDescription">You are a Neutral. You do not have a team.</string>
     <string name="launchpad.coven.group">Coven Roles</string>
+    <!-- Role factions (the sub-categories of a team) -->
+    <string name="launchpad.faction.crewmate.investigative">Crewmate Investigative</string>
+    <string name="launchpad.faction.crewmate.killing">Crewmate Killing</string>
+    <string name="launchpad.faction.crewmate.protective">Crewmate Protective</string>
+    <string name="launchpad.faction.crewmate.support">Crewmate Support</string>
+    <string name="launchpad.faction.impostor.concealing">Impostor Concealing</string>
+    <string name="launchpad.faction.impostor.killing">Impostor Killing</string>
+    <string name="launchpad.faction.impostor.support">Impostor Support</string>
+    <string name="launchpad.faction.neutral.benign">Neutral Benign</string>
+    <string name="launchpad.faction.neutral.evil">Neutral Evil</string>
+    <string name="launchpad.faction.neutral.killing">Neutral Killing</string>
+    <string name="launchpad.faction.coven.power">Coven Power</string>
+    <string name="launchpad.faction.coven.killing">Coven Killing</string>
+    <string name="launchpad.faction.coven.support">Coven Support</string>
     <string name="launchpad.coven.roleTitle">Coven</string>
     <string name="launchpad.coven.teamIntroDescription">You are part of the Coven. Eliminate everyone else together.</string>
     <!-- Buttons (MiraAPI uppercases button text) -->
@@ -344,6 +358,9 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.modifier.vendetta">Vendetta</string>
     <string name="launchpad.modifier.torch">Torch</string>
     <string name="launchpad.modifier.mayor">Mayor</string>
+    <string name="launchpad.modifier.testImpostor">Test Impostor Modifier</string>
+    <string name="launchpad.modifier.testNeutral">Test Neutral Modifier</string>
+    <string name="launchpad.modifier.testCoven">Test Coven Modifier</string>
     <string name="launchpad.modifier.hacked">Hacked</string>
     <string name="launchpad.modifier.poisoned">Poisoned</string>
     <string name="launchpad.modifier.dragBody">Drag Body</string>
@@ -372,6 +389,12 @@ if lights are sabotaged.</string>
 if lights are sabotaged.</string>
     <string name="launchpad.modifier.mayor.TabDescription">You have an additional 
 {votes} votes every meeting.</string>
+    <string name="launchpad.modifier.testImpostor.TabDescription">A test modifier for Impostors.
+It does nothing yet.</string>
+    <string name="launchpad.modifier.testNeutral.TabDescription">A test modifier for Neutrals.
+It does nothing yet.</string>
+    <string name="launchpad.modifier.testCoven.TabDescription">A test modifier for the Coven.
+It does nothing yet.</string>
     <!-- Option groups and options -->
     <string name="launchpad.options.battleRoyaleOptions">Battle Royale Options</string>
     <string name="launchpad.options.battleRoyaleOptions.useSeekerCharacter">Use Seeker Character</string>
@@ -401,6 +424,12 @@ if lights are sabotaged.</string>
     <string name="launchpad.options.crewmateModifiers.mayorChance">Mayor Chance</string>
     <string name="launchpad.options.crewmateModifiers.torchChance">Torch Chance</string>
     <string name="launchpad.options.crewmateModifiers.vendettaChance">Vendetta Chance</string>
+    <string name="launchpad.options.impostorModifiers">Impostor Modifiers</string>
+    <string name="launchpad.options.impostorModifiers.testImpostorChance">Test Impostor Modifier Chance</string>
+    <string name="launchpad.options.neutralModifiers">Neutral Modifiers</string>
+    <string name="launchpad.options.neutralModifiers.testNeutralChance">Test Neutral Modifier Chance</string>
+    <string name="launchpad.options.covenModifiers">Coven Modifiers</string>
+    <string name="launchpad.options.covenModifiers.testCovenChance">Test Coven Modifier Chance</string>
     <string name="launchpad.options.modifierOptions">Modifier Options</string>
     <string name="launchpad.options.modifierOptions.playerModifierLimit">Player Modifier Limit</string>
     <string name="launchpad.options.gravityField">Gravity Field</string>

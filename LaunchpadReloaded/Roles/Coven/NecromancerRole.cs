@@ -10,12 +10,14 @@ namespace LaunchpadRevamped.Roles.Coven;
 public class NecromancerRole(IntPtr ptr) : CrewmateRole(ptr), ICovenRole
 {
     public Color RoleColor => LaunchpadPalette.NecromancerColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CovenSupport;
 
     public CustomRoleConfiguration Configuration => new(this)
     {
         UseVanillaKillButton = false,
         CanUseVent = false,
         TasksCountForProgress = false,
+        FreeplayFolder = LaunchpadRoleGroups.CovenFreeplayFolder,
         Icon = LaunchpadAssets.CovenIcon,
     };
 

@@ -8,6 +8,7 @@ namespace LaunchpadRevamped.Roles.Neutral;
 public class SurvivorRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public Color RoleColor => LaunchpadPalette.SurvivorColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.NeutralBenign;
     public override bool IsDead => false;
 
     public CustomRoleConfiguration Configuration => new(this)

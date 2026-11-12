@@ -214,13 +214,13 @@ public static class WikiRegistry
                 if (!ns.StartsWith("LaunchpadRevamped.Modifiers.Game", StringComparison.Ordinal)) continue;
 
                 var mod = (LPModifier)Activator.CreateInstance(type)!;
-                var crew = ns.EndsWith(".Crewmate", StringComparison.Ordinal);
+                var (team, color) = ModifierTeam(ns);
 
                 var entry = new WikiRole
                 {
                     Name = mod.ModifierName,
-                    Team = crew ? "Crewmate" : "Universal",
-                    Color = crew ? new Color(0.55f, 1f, 1f) : new Color(0.74f, 0.52f, 1f),
+                    Team = team,
+                    Color = color,
                     Description = SafeText(() => mod.GetDescription()),
                     Icon = LoadSprite(() => mod.ModifierIcon?.LoadAsset()),
                     GetDescription = () => SafeText(() => mod.GetDescription()),
@@ -242,6 +242,16 @@ public static class WikiRegistry
             var byTeam = string.Compare(a.Team, b.Team, StringComparison.Ordinal);
             return byTeam != 0 ? byTeam : string.Compare(a.Name, b.Name, StringComparison.Ordinal);
         });
+    }
+
+    /// <summary>The wiki team and colour of a modifier, from the folder (namespace) it lives in.</summary>
+    private static (string Team, Color Color) ModifierTeam(string ns)
+    {
+        if (ns.EndsWith(".Crewmate", StringComparison.Ordinal)) return ("Crewmate", new Color(0.55f, 1f, 1f));
+        if (ns.EndsWith(".Impostor", StringComparison.Ordinal)) return ("Impostor", Palette.ImpostorRed);
+        if (ns.EndsWith(".Neutral", StringComparison.Ordinal)) return ("Neutral", Color.gray);
+        if (ns.EndsWith(".Coven", StringComparison.Ordinal)) return ("Coven", LaunchpadRevamped.Features.LaunchpadPalette.CovenColor);
+        return ("Universal", new Color(0.74f, 0.52f, 1f));
     }
 
     private static void AutoPopulateSettings()

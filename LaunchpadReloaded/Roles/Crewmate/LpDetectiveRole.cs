@@ -10,6 +10,7 @@ namespace LaunchpadRevamped.Roles.Crewmate;
 public class LpDetectiveRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.DetectiveColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CrewmateInvestigative;
     public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
     public CustomRoleConfiguration Configuration => new(this)
     {

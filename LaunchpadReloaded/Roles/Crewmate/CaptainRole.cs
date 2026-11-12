@@ -10,6 +10,7 @@ namespace LaunchpadRevamped.Roles.Crewmate;
 public class CaptainRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.CaptainColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CrewmateSupport;
     public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
     public CustomRoleConfiguration Configuration => new(this)
     {

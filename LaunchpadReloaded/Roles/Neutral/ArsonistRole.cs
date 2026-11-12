@@ -14,6 +14,7 @@ namespace LaunchpadRevamped.Roles.Neutral;
 public class ArsonistRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public Color RoleColor => LaunchpadPalette.ArsonistColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.NeutralKilling;
     public override bool IsDead => false;
 
     public CustomRoleConfiguration Configuration => new(this)

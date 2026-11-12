@@ -10,6 +10,7 @@ namespace LaunchpadRevamped.Roles.Impostor;
 public class BurrowerRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.BurrowerColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.ImpostorSupport;
     public ModdedRoleTeams Team => ModdedRoleTeams.Impostor;
     public CustomRoleConfiguration Configuration => new(this)
     {

@@ -25,6 +25,7 @@ public class ExecutionerRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRo
         new() { ["{target}"] = target ? target!.Data.PlayerName : MiraLocaleManager.Get("launchpad.role.executioner.noTarget") });
     public string RoleLongDescription => RoleDescription;
     public Color RoleColor => LaunchpadPalette.ExecutionerColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.NeutralEvil;
     public override bool IsDead => false;
 
     public CustomRoleConfiguration Configuration => new(this)

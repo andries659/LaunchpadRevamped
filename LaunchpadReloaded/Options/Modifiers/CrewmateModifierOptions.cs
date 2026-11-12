@@ -9,6 +9,7 @@ public class CrewmateModifierOptions : AbstractOptionGroup
 {
     public override string GroupName => "launchpad.options.crewmateModifiers";
     public override MenuCategory ParentMenu => MenuCategory.Modifiers;
+    public override uint GroupPriority => 2;
     public override Color GroupColor => Palette.CrewmateRoleHeaderBlue;
 
     [ModdedNumberOption("launchpad.options.crewmateModifiers.mayorChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]

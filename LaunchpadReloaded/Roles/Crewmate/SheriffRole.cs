@@ -8,6 +8,7 @@ namespace LaunchpadRevamped.Roles.Crewmate;
 public class SheriffRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.SheriffColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CrewmateKilling;
     public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
 
     public CustomRoleConfiguration Configuration => new(this)

@@ -8,6 +8,7 @@ namespace LaunchpadRevamped.Roles.Crewmate;
 public class TimeRewinderRole(IntPtr ptr) : CrewmateRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.TimeRewinderColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CrewmateSupport;
     public ModdedRoleTeams Team => ModdedRoleTeams.Crewmate;
     public CustomRoleConfiguration Configuration => new(this)
     {

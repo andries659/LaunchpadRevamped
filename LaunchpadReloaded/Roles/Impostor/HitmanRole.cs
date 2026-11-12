@@ -14,6 +14,7 @@ namespace LaunchpadRevamped.Roles.Impostor;
 public class HitmanRole(IntPtr ptr) : ImpostorRole(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.HitmanColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.ImpostorKilling;
     public ModdedRoleTeams Team => ModdedRoleTeams.Impostor;
     public CustomRoleConfiguration Configuration => new(this)
     {

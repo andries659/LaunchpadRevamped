@@ -13,6 +13,7 @@ namespace LaunchpadRevamped.Roles.Impostor;
 public class PoltergeistRole(IntPtr ptr) : RoleBehaviour(ptr), ICustomRole
 {
     public Color RoleColor => LaunchpadPalette.PoltergeistColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.ImpostorSupport;
     public ModdedRoleTeams Team => ModdedRoleTeams.Impostor;
 
     public CustomRoleConfiguration Configuration => new(this)

@@ -13,6 +13,7 @@ namespace LaunchpadRevamped.Roles.Neutral;
 public class JesterRole(System.IntPtr ptr) : RoleBehaviour(ptr), INeutralRole
 {
     public Color RoleColor => LaunchpadPalette.JesterColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.NeutralEvil;
     public override bool IsDead => false;
 
     public CustomRoleConfiguration Configuration => new(this)

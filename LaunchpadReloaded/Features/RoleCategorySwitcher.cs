@@ -1222,7 +1222,7 @@ public static class RoleCategorySwitcher
 
         foreach (var category in TeamCategories)
         {
-            if (!hidden.ContainsKey(TeamGroup(category)))
+            if (!TeamGroups(category).Any(hidden.ContainsKey))
             {
                 continue;
             }
@@ -1266,15 +1266,17 @@ public static class RoleCategorySwitcher
             return false;
         }
 
-        if (_selected is not { } selected || !hidden.ContainsKey(TeamGroup(selected)))
+        if (_selected is not { } selected || !TeamGroups(selected).Any(hidden.ContainsKey))
         {
             // This mod has no roles on that team, so there is nothing to show.
             return false;
         }
 
+        // Every faction of the chosen team is opened, everything else is collapsed.
+        var open = TeamGroups(selected);
         foreach (var group in hidden.Keys.ToArray())
         {
-            hidden[group] = group != TeamGroup(selected);
+            hidden[group] = !open.Contains(group);
         }
 
         var modIdx = MenuState.Instance.CurrentModIdx;
@@ -2262,14 +2264,17 @@ public static class RoleCategorySwitcher
         }
     }
 
-    private static RoleOptionsGroup TeamGroup(Category category)
+    /// <summary>
+    /// All the role groups of a team: its factions (like "Crewmate Killing") plus the team's default group.
+    /// </summary>
+    private static IReadOnlyList<RoleOptionsGroup> TeamGroups(Category category)
     {
         return category switch
         {
-            Category.Crewmate => RoleOptionsGroup.Crewmate,
-            Category.Impostor => RoleOptionsGroup.Impostor,
-            Category.Coven => LaunchpadRoleGroups.Coven,
-            _ => LaunchpadRoleGroups.Neutral,
+            Category.Crewmate => LaunchpadRoleGroups.CrewmateGroups,
+            Category.Impostor => LaunchpadRoleGroups.ImpostorGroups,
+            Category.Coven => LaunchpadRoleGroups.CovenGroups,
+            _ => LaunchpadRoleGroups.NeutralGroups,
         };
     }
 

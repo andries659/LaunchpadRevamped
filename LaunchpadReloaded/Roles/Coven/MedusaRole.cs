@@ -10,12 +10,14 @@ namespace LaunchpadRevamped.Roles.Coven;
 public class MedusaRole(IntPtr ptr) : CrewmateRole(ptr), ICovenRole
 {
     public Color RoleColor => LaunchpadPalette.MedusaColor;
+    public RoleOptionsGroup RoleOptionsGroup => LaunchpadRoleGroups.CovenPower;
 
     public CustomRoleConfiguration Configuration => new(this)
     {
         UseVanillaKillButton = false,
         CanUseVent = false,
         TasksCountForProgress = false,
+        FreeplayFolder = LaunchpadRoleGroups.CovenFreeplayFolder,
         Icon = LaunchpadAssets.CovenIcon,
     };
 
