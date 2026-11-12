@@ -16,6 +16,7 @@ public class WikiRunner : MonoBehaviour
 
         // TEMPORARY test hotkey - delete this once your own open button exists.
         if (Input.GetKeyDown(KeyCode.F1)) WikiPanel.Toggle();
+        if (Input.GetKeyDown(KeyCode.F2)) WikiPanel.ToggleMyRole(); // shows your own role / modifier (in a game)
     }
 }
 

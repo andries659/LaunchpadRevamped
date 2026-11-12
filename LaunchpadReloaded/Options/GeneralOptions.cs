@@ -24,5 +24,6 @@ public class GeneralOptions : AbstractOptionGroup
     [ModdedToggleOption("launchpad.options.general.disableMeetingTeleport")] public bool DisableMeetingTeleport { get; set; } = false;
     [ModdedToggleOption("launchpad.options.general.welcomeMessage")] public bool WelcomeMessage { get; set; } = true;
     [ModdedToggleOption("launchpad.options.general.playerTags")] public bool PlayerTags { get; set; } = true;
+    [ModdedToggleOption("launchpad.options.general.roleIcons")] public bool RoleIcons { get; set; } = true;
 
 }

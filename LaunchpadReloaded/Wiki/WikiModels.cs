@@ -33,6 +33,7 @@ public class WikiRole
     public Func<int?>? GetAmount;     // role amount (how many can spawn). Read live each time the role is shown. null = hidden.
     public Func<int?>? GetChance;     // role chance 0-100. Read live each time the role is shown. null = hidden.
     public List<WikiAbility> Abilities = new();
+    public List<WikiAbility> Settings = new(); // optional "Settings" block: Name = option, Cooldown = its current value
 }
 
 /// <summary>
@@ -167,7 +168,7 @@ public static class WikiRegistry
     /// Tries the class name without the "Role" suffix first (CaptainRole -> Captain), then the role's display name
     /// with spaces removed. Falls back to the role's long description if no key exists.
     /// </summary>
-    private static string WikiDescription(RoleBehaviour behaviour, ICustomRole custom)
+    internal static string WikiDescription(RoleBehaviour behaviour, ICustomRole custom)
     {
         var candidates = new List<string>();
 
@@ -286,7 +287,7 @@ public static class WikiRegistry
         }
     }
 
-    private static string SafeText(Func<string> get)
+    internal static string SafeText(Func<string> get)
     {
         try { return get() ?? ""; }
         catch { return ""; }
@@ -307,7 +308,7 @@ public static class WikiRegistry
         return LocaleOrEmpty(buttonKey + ".WikiDesc");
     }
 
-    private static string TeamName(RoleBehaviour behaviour, ICustomRole custom)
+    internal static string TeamName(RoleBehaviour behaviour, ICustomRole custom)
     {
         if (behaviour is ICovenRole) return "Coven";
 
@@ -319,7 +320,7 @@ public static class WikiRegistry
         };
     }
 
-    private static Sprite? LoadSprite(Func<Sprite?> load)
+    internal static Sprite? LoadSprite(Func<Sprite?> load)
     {
         try
         {

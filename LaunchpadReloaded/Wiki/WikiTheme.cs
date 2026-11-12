@@ -320,6 +320,34 @@ public static class WikiTheme
         le.ignoreLayout = true;
     }
 
+    /// <summary>A compact one-line row for a setting: no icon, name on the left, value on the right.</summary>
+    public static void StyleSettingRow(GameObject row, Color c)
+    {
+        if (!Installed) return;
+
+        Skin(row.GetComponent<Image>(), Round(10), new Color(0.150f, 0.153f, 0.182f, 1f));
+
+        var icon = row.transform.Find("Icon");
+        if (icon != null) icon.gameObject.SetActive(false);
+
+        var group = row.GetComponent<LayoutGroup>();
+        if (group != null) group.padding = Pad(22, 20, 12, 12);
+
+        var rowLe = row.GetComponent<LayoutElement>();
+        if (rowLe == null) rowLe = row.AddComponent<LayoutElement>();
+        rowLe.minHeight = 54f;
+
+        var stripe = NewImage("Stripe", row.transform);
+        var srt = stripe.rectTransform;
+        srt.anchorMin = new Vector2(0f, 0f);
+        srt.anchorMax = new Vector2(0f, 1f);
+        srt.pivot = new Vector2(0f, 0.5f);
+        srt.anchoredPosition = Vector2.zero;
+        srt.sizeDelta = new Vector2(4f, -24f);
+        stripe.color = c;
+        stripe.gameObject.AddComponent<LayoutElement>().ignoreLayout = true;
+    }
+
     /// <summary>A thin scroll indicator on the right edge of a scroll area. Returns its rect for UpdateScrollbar.</summary>
     public static RectTransform CreateScrollbar(Transform scrollArea)
     {

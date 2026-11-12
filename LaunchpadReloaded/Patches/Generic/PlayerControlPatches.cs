@@ -215,6 +215,7 @@ public static class PlayerControlPatches
     {
         __instance.gameObject.AddComponent<PlayerGradientData>();
         __instance.gameObject.AddComponent<PlayerTagManager>();
+        __instance.gameObject.AddComponent<RoleIconManager>();
     }
 
     /// <summary>

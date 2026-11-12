@@ -45,7 +45,7 @@ public static class WikiPanel
     private static readonly Color BackNormal = new(0.19f, 0.195f, 0.23f, 1f);
     private static readonly Color BackHover = new(0.26f, 0.265f, 0.31f, 1f);
 
-    private enum Section { Home, Roles, Modifiers, Settings }
+    private enum Section { Home, Roles, Modifiers, Settings, MyRole }
 
     private class HomeCard
     {
@@ -73,7 +73,8 @@ public static class WikiPanel
 
     private static RectTransform _closeRect, _listViewport, _listContent, _detailViewport, _detailContent, _abilityContainer;
     private static Image _closeBg, _detailIcon;
-    private static GameObject _emptyState, _detailScrollObj, _abilitiesHeader;
+    private static GameObject _emptyState, _detailScrollObj, _abilitiesHeader, _settingsHeader;
+    private static RectTransform _settingsContainer;
     private static TextMeshProUGUI _detailName, _detailTeam, _detailDesc;
     private static RectTransform _listBar, _detailBar;   // scroll indicators
     private static Image _searchRing;
@@ -117,6 +118,20 @@ public static class WikiPanel
         if (_homeBuilt) ShowHome();
         else OpenSection(Section.Roles); // home screen failed to build: behave like the old single page
         WikiTheme.OnOpen();
+    }
+
+    /// <summary>Opens the panel straight on the local player's own role and modifiers.</summary>
+    public static void OpenMyRole()
+    {
+        if (!EnsureLoaded()) return;
+        _root.SetActive(true);
+        OpenSection(Section.MyRole);
+        WikiTheme.OnOpen();
+    }
+
+    public static void ToggleMyRole()
+    {
+        if (IsOpen) Close(); else OpenMyRole();
     }
 
     public static void Close()
@@ -207,6 +222,31 @@ public static class WikiPanel
             catch (Exception e)
             {
                 Debug.LogError("[Wiki] Theme failed, using the default look: " + e);
+            }
+
+            try
+            {
+                // second block under the abilities: copies of the abilities header and container
+                var parent = _abilitiesHeader.transform.parent;
+                _settingsHeader = Object.Instantiate(_abilitiesHeader, parent);
+                _settingsHeader.name = "SettingsHeader";
+                var settingsHeaderText = _settingsHeader.GetComponentInChildren<TextMeshProUGUI>(true);
+                if (settingsHeaderText != null) settingsHeaderText.text = "Settings";
+
+                _settingsContainer = Object.Instantiate(_abilityContainer.gameObject, parent).GetComponent<RectTransform>();
+                _settingsContainer.name = "SettingsContainer";
+                ClearChildren(_settingsContainer);
+
+                _settingsHeader.transform.SetSiblingIndex(_abilityContainer.GetSiblingIndex() + 1);
+                _settingsContainer.SetSiblingIndex(_settingsHeader.transform.GetSiblingIndex() + 1);
+                _settingsHeader.SetActive(false);
+                _settingsContainer.gameObject.SetActive(false);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError("[Wiki] Settings block failed, role settings will not be shown: " + e);
+                _settingsHeader = null;
+                _settingsContainer = null;
             }
 
             try
@@ -602,6 +642,7 @@ public static class WikiPanel
         _section = section;
         _placeholder = section == Section.Modifiers ? "Search modifiers..."
             : section == Section.Settings ? "Search settings..." : "Search roles...";
+        if (_searchRect != null) _searchRect.gameObject.SetActive(section != Section.MyRole); // only a couple of entries
 
         if (_homeBuilt)
         {
@@ -609,7 +650,7 @@ public static class WikiPanel
             _roleListGo.SetActive(true);
             _detailGo.SetActive(true);
             _backRect.gameObject.SetActive(true);
-            SetTitle(section.ToString());
+            SetTitle(section == Section.MyRole ? "My Role" : section.ToString());
         }
 
         Rebuild();
@@ -623,6 +664,7 @@ public static class WikiPanel
         {
             case Section.Modifiers: return WikiRegistry.Modifiers;
             case Section.Settings: return WikiRegistry.Settings;
+            case Section.MyRole: return WikiMyRole.Build(); // fresh every time: your role can change between games
             default: return WikiRegistry.Roles;
         }
     }
@@ -852,6 +894,35 @@ public static class WikiPanel
             }
         }
 
+        if (_settingsContainer != null)
+        {
+            ClearChildren(_settingsContainer);
+            bool hasSettings = role.Settings != null && role.Settings.Count > 0;
+            _settingsHeader.SetActive(hasSettings);
+            _settingsContainer.gameObject.SetActive(hasSettings);
+
+            if (hasSettings)
+            {
+                foreach (var setting in role.Settings)
+                {
+                    var row = Object.Instantiate(_abilityRowPrefab, _settingsContainer);
+                    row.name = "Setting_" + setting.Name;
+                    WikiTheme.StyleSettingRow(row, role.Color);
+
+                    var nameT = row.transform.Find("TextColumn/Header/Name").GetComponent<TextMeshProUGUI>();
+                    nameT.text = setting.Name;
+                    nameT.color = WikiTheme.Text;
+
+                    var valueT = row.transform.Find("TextColumn/Header/Cooldown").GetComponent<TextMeshProUGUI>();
+                    valueT.gameObject.SetActive(true);
+                    valueT.text = setting.Cooldown;
+                    valueT.color = role.Color;
+
+                    row.transform.Find("TextColumn/Description").gameObject.SetActive(false);
+                }
+            }
+        }
+
         LayoutRebuilder.ForceRebuildLayoutImmediate(_detailContent);
         _detailContent.anchoredPosition = Vector2.zero;
     }
@@ -943,7 +1014,7 @@ public static class WikiPanel
             }
             else
             {
-                _searchFocused = Hit(_searchRect, mouse);
+                _searchFocused = _searchRect.gameObject.activeSelf && Hit(_searchRect, mouse);
             }
             RefreshSearchVisual();
             _pressStart = _lastMouse = mouse;

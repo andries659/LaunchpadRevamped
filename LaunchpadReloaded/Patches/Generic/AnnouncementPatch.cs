@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using AmongUs.Data;
 using AmongUs.Data.Player;
 using Assets.InnerNet;
@@ -23,6 +24,46 @@ public static class LaunchpadAnnouncementFetcherPatch
     public static void Postfix()
     {
         LaunchpadAnnouncementFetcher.CheckForNews();
+    }
+}
+
+// The game's hyperlink parser (SelectableHyperLinkHelper) crashes on <color> tags, so the game
+// is given the text WITHOUT them. After the game has built the popup, the colored text is set
+// directly on the text box (this is what Unity Explorer was doing).
+[HarmonyPatch(typeof(AnnouncementPopUp), nameof(AnnouncementPopUp.UpdateAnnouncementText))]
+public static class LaunchpadAnnouncementRichTextPatch
+{
+    [HarmonyPostfix]
+    public static void Postfix(AnnouncementPopUp __instance, int id)
+    {
+        var news = LaunchpadAnnouncementFetcher.News.FirstOrDefault(item => item.Number == id);
+        if (news == null || !news.HasColor)
+        {
+            return;
+        }
+
+        var marker = news.PlainText.Trim();
+        if (marker.Length > 40)
+        {
+            marker = marker.Substring(0, 40);
+        }
+
+        var applied = false;
+        foreach (var tmp in __instance.GetComponentsInChildren<TMPro.TextMeshPro>(true))
+        {
+            var current = tmp.text;
+            if (!string.IsNullOrEmpty(current) && current.Contains(marker))
+            {
+                tmp.richText = true;
+                tmp.text = news.Text;
+                applied = true;
+            }
+        }
+
+        if (!applied)
+        {
+            Warning($"Could not find the text box for announcement {id}; colors were not applied.");
+        }
     }
 }
 
@@ -219,6 +260,13 @@ internal static class LaunchpadAnnouncementFetcher
 
 internal sealed record LaunchpadModNews(int Number, string Title, string SubTitle, string ShortTitle, string Text, string Date)
 {
+    private static readonly Regex ColorTagRegex = new(@"</?color[^>]*>", RegexOptions.IgnoreCase | RegexOptions.Compiled);
+
+    // The same text with <color> tags removed; this is what the game's own parser receives.
+    internal string PlainText => ColorTagRegex.Replace(Text, string.Empty);
+
+    internal bool HasColor => ColorTagRegex.IsMatch(Text);
+
     internal Announcement ToAnnouncement()
     {
         return new Announcement
@@ -228,7 +276,7 @@ internal sealed record LaunchpadModNews(int Number, string Title, string SubTitl
             ShortTitle = ShortTitle,
             SubTitle = SubTitle,
             Title = Title,
-            Text = Text,
+            Text = PlainText,
             Language = (uint)DataManager.Settings.Language.CurrentLanguage,
             Id = "LaunchpadRevamped"
         };

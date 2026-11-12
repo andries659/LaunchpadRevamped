@@ -41,6 +41,7 @@ public class ProjectButton : BaseLaunchpadButton
         var pos = local.transform.position;
 
         local.RpcEsperProject(pos.x, pos.y);
+        LaunchpadAudio.PlaySound(LaunchpadAudio.EsperProjectSound);
         OverrideName("launchpad.button.esperReturn".Translate().ToUpperInvariant());
     }
 
@@ -54,6 +55,7 @@ public class ProjectButton : BaseLaunchpadButton
         var local = PlayerControl.LocalPlayer;
         if (local && EsperProjection.IsProjected(local))
         {
+            LaunchpadAudio.PlaySound(LaunchpadAudio.EsperReturnSound);
             local.RpcEsperReturn();
         }
     }

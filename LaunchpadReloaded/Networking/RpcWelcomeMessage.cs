@@ -91,6 +91,25 @@ public class RpcWelcomeMessage(LaunchpadRevampedPlugin plugin, uint id) : Player
         }
     }
 
+    /// <summary>
+    /// Host only: sends a message to every player and shows it in the host's own chat as the system message.
+    /// </summary>
+    public static void Broadcast(string message)
+    {
+        var host = PlayerControl.LocalPlayer;
+        if (!host || !AmongUsClient.Instance.AmHost || string.IsNullOrWhiteSpace(message))
+        {
+            return;
+        }
+
+        foreach (var chunk in Split(message))
+        {
+            Rpc<RpcWelcomeMessage>.Instance.Send(host, chunk);
+        }
+
+        Show(host, message); // LocalHandling is None, so the host adds it to its own chat here
+    }
+
     private static void Show(PlayerControl host, string message)
     {
         if (!HudManager.Instance || !HudManager.Instance.Chat)

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using BepInEx;
 using Reactor.Utilities;
 using UnityEngine;
@@ -140,6 +141,71 @@ public static class LprData
         }
 
         return messages;
+    }
+
+    // A block starts with "name:" at the very start of a line (lowercase letters, digits, - or _) and runs until the
+    // next such line. welcome.txt looks like:  welcome:...  rules:...  onmeeting:...  vip:...  help:...
+    private static readonly Regex BlockHeader = new("^([a-z][a-z0-9_-]*):", RegexOptions.Compiled);
+
+    /// <summary>
+    /// Splits a welcome file into its named blocks (key = the name before the colon, case-insensitive).
+    /// Everything inside a block is kept exactly as written (rich text tags, spaces, line breaks); only \n escapes are
+    /// turned into real line breaks and blank lines around the block are dropped. Text before the first header is ignored.
+    /// </summary>
+    public static Dictionary<string, string> ParseWelcomeBlocks(string raw)
+    {
+        var blocks = new Dictionary<string, List<string>>(StringComparer.OrdinalIgnoreCase);
+        List<string>? current = null;
+
+        foreach (var line in raw.Replace("\r\n", "\n").Split('\n'))
+        {
+            var header = BlockHeader.Match(line);
+            if (header.Success)
+            {
+                var name = header.Groups[1].Value;
+                if (!blocks.TryGetValue(name, out current))
+                {
+                    current = blocks[name] = [];
+                }
+
+                var rest = line[header.Length..]; // text on the header line is the start of the block
+                if (rest.Length > 0)
+                {
+                    current.Add(rest);
+                }
+
+                continue;
+            }
+
+            current?.Add(line);
+        }
+
+        return blocks.ToDictionary(
+            pair => pair.Key,
+            pair => Unescape(string.Join("\n", pair.Value)).Trim('\n').TrimEnd(),
+            StringComparer.OrdinalIgnoreCase);
+    }
+
+    /// <summary>
+    /// The "onmeeting:" block of welcome.txt and nothing else, or null when there is none (or it is empty).
+    /// </summary>
+    public static string? ReadOnMeetingMessage()
+    {
+        try
+        {
+            if (!File.Exists(WelcomeFile))
+            {
+                return null;
+            }
+
+            var blocks = ParseWelcomeBlocks(File.ReadAllText(WelcomeFile));
+            return blocks.TryGetValue("onmeeting", out var text) && !string.IsNullOrWhiteSpace(text) ? text : null;
+        }
+        catch (Exception e)
+        {
+            Logger<LaunchpadRevampedPlugin>.Warning($"Could not read {WelcomeFile}: {e.Message}");
+            return null;
+        }
     }
 
     /// <summary>

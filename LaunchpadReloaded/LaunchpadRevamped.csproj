@@ -10,7 +10,7 @@
         <Configurations>Debug;Release</Configurations>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
-        <ModBuild>Beta</ModBuild>
+        <ModBuild>Dev</ModBuild>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(ModBuild)' == 'Alpha'"><VersionSuffix>a</VersionSuffix></PropertyGroup>
@@ -33,6 +33,7 @@
         <EmbeddedResource Include="Resources/launchpad-assets-win.bundle" />
         <EmbeddedResource Include="Resources/launchpad-assets-android.bundle" />
         <EmbeddedResource Include="Resources/wiki.bundle" />
+        <EmbeddedResource Include="Resources/Sounds/*.wav" />
         <EmbeddedResource Include="Resources/**/*.png" />
         <EmbeddedResource Include="Resources/Announcements/*.json" />
         <EmbeddedResource Include="Resources/Locale/*.xml" />

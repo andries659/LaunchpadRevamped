@@ -102,7 +102,8 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
 
     private const string HostTagName = "Host";
     private static readonly Color HostTagColor = new(0.95f, 0.72f, 0.15f);
-    private static readonly Func<PlayerControl, bool> HostTagVisible = _ => true;
+    // Lobby tags only exist in the lobby, never during a game.
+    private static readonly Func<PlayerControl, bool> HostTagVisible = _ => !!LobbyBehaviour.Instance;
     private float _nextHostTagCheck;
 
     /// <summary>
@@ -125,7 +126,7 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
             return;
         }
 
-        var wanted = tagsEnabled && player.OwnerId == AmongUsClient.Instance.HostId;
+        var wanted = tagsEnabled && !!LobbyBehaviour.Instance && player.OwnerId == AmongUsClient.Instance.HostId;
         var existing = GetTagByName(HostTagName);
 
         if (wanted && !existing.HasValue)
@@ -152,7 +153,8 @@ public class PlayerTagManager(IntPtr ptr) : MonoBehaviour(ptr)
             return;
         }
 
-        var has = LobbyTags.TryGet(player.PlayerId, out var entry);
+        var entry = default(LobbyTagEntry);
+        var has = !!LobbyBehaviour.Instance && LobbyTags.TryGet(player.PlayerId, out entry);
         var key = has ? entry.Text + "|" + entry.Hex : null;
         var existing = GetTagByName(CustomTagName);
 
