@@ -8,7 +8,7 @@
       "Title": "The first release, coming soon",
       "Text": [
         "\r<size=120%><b>Launchpad: Revamped — First Stable Release</b></size>",
-        "\n<i>This is just a template for when the actual mod releases since it isn't fully released yet. <color="#134e5e">L</color></i>",
+        "\n<i>This is just a template for when the actual mod releases since it isn't fully released yet. <color=green>L</color></i>",
         "\n\n<b>★ Added ★</b>",
         "\n  • Role settings now have a Role Selector which can be toggled On/Off in the Settings",
         "\n  • Each player can set their own Backgrounds for the game (for the Main Menu) in LPR_DATA/Background",
