@@ -13,6 +13,7 @@ public static class LaunchpadPalette
     public static readonly Color GamblerColor = new Color32(207, 181, 59, 255);
     public static readonly Color LuckyColor = new Color32(140, 211, 90, 255);
     public static readonly Color SnitchColor = new Color32(186, 85, 211, 255);
+    public static readonly Color InfiltratorColor = new Color32(201, 78, 78, 255);
     public static readonly Color TimeRewinderColor = new Color32(66, 153, 225, 255);
     public static readonly Color SurvivorColor = new Color32(230, 200, 90, 255);
     public static readonly Color PoltergeistColor = new Color32(200, 80, 120, 255);

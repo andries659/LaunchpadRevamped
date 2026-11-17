@@ -64,6 +64,15 @@ the Impostors will be able to find you.</string>
     <string name="SnitchWikiDesc">Finish all your tasks to see the Impostors.
 But when you are close to finishing,
 the Impostors will be able to find you.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.InfiltratorRole">Infiltrator</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.InfiltratorRole.IntroBlurb">The Impostors think you're one of them.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.InfiltratorRole.MedDescription">The Impostors think you're one of them.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.InfiltratorRole.TabDescription">The Impostors see you as an Impostor.
+Make them suspect each other: they can kill each other while you're in the game.
+You can vent, even during comms, and lights don't affect you.</string>
+    <string name="InfiltratorWikiDesc">The Impostors see you as an Impostor.
+Make them suspect each other: they can kill each other while you're in the game.
+You can vent, even during comms, and lights don't affect you.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole">Time Rewinder</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.IntroBlurb">Turn back time.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.MedDescription">Turn back time.</string>
@@ -224,6 +233,7 @@ If you get voted out, you win the game.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SheriffRole.MenuRoleDesc">Take your chance by shooting a player.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.LuckyRole.MenuRoleDesc">Luck is on your side.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.SnitchRole.MenuRoleDesc">Finish your tasks to expose the Impostors.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.InfiltratorRole.MenuRoleDesc">The Impostors think you're one of them.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.TimeRewinderRole.MenuRoleDesc">Turn back time.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BomberRole.MenuRoleDesc">Plant bombs and blow up the crew.</string>
     <string name="LaunchpadRevamped.Roles.Impostor.BurrowerRole.MenuRoleDesc">Create vents around the map.</string>

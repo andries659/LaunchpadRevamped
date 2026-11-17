@@ -1,18 +1,19 @@
 ﻿using HarmonyLib;
 using LaunchpadRevamped.Options;
+using LaunchpadRevamped.Utilities;
 using MiraAPI.GameOptions;
 
 namespace LaunchpadRevamped.Patches.Generic;
 
 /// <summary>
-/// Allow Impostors to kill each other if can kill is enabled in gamemode or friendly fire is toggled on
+/// Allow Impostors to kill each other if friendly fire is toggled on or an Infiltrator is in the game
 /// </summary>
 [HarmonyPatch(typeof(ImpostorRole), nameof(ImpostorRole.IsValidTarget))]
 public static class ImpostorValidTargetPatch
 {
     public static bool Prefix(ImpostorRole __instance, [HarmonyArgument(0)] NetworkedPlayerInfo target, ref bool __result)
     {
-        if (!OptionGroupSingleton<FunOptions>.Instance.FriendlyFire)
+        if (!OptionGroupSingleton<FunOptions>.Instance.FriendlyFire && !InfiltratorUtilities.InfiltratorInGame())
         {
             return true;
         }
