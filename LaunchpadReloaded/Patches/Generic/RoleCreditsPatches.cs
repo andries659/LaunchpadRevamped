@@ -5,6 +5,7 @@ using HarmonyLib;
 using LaunchpadRevamped.Features;
 using MiraAPI.Patches.Options;
 using MiraAPI.Roles;
+using MiraAPI.Utilities.Components;
 using TMPro;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -12,22 +13,36 @@ using Object = UnityEngine.Object;
 namespace LaunchpadRevamped.Patches.Generic;
 
 /// <summary>
-/// Shows "Role Idea by ..." / "Coded by ..." under the description (the INFO box) on the settings page of a role.
-/// It is a separate postfix so it also works when the role category picker is switched off.
+/// Shows "Role Idea by ..." on a flipped copy of the role name tab (RolesSettingsMenu.roleHeaderSprite, the coloured
+/// tab with the role name), hanging directly under it. Nothing else on the page is moved.
 /// </summary>
 [HarmonyPatch(typeof(RolesSettingsMenu), nameof(RolesSettingsMenu.Update))]
 public static class RoleCreditsPatches
 {
-    // Tweak these if the credits sit too close to / too far from the description, or are too big.
-    private const float FontScale = 0.6f;
-    private const float Gap = 0.06f;
-    private const string CreditsName = "LaunchpadRoleCredits";
+    // Tweak these if the tab sits too close to / too far from the role name tab, or is too big / small.
+    private const float FontScale = 0.8f;   // credit text size relative to the role name text
+    private const float HeightScale = 0.6f; // credit tab height relative to the role name tab
+    private const float WidthScale = 1f;    // credit tab width relative to the role name tab (grows to the left)
+    private const bool ShowCodedBy = false; // also show the "Coded by" line
+    private const float Gap = 0f;           // space between the two tabs (positive = further apart)
+    private const float OffsetX = 0f;       // positive = further right
+    private const float Darken = 0.55f;     // credit tab colour = role tab colour * this (1 = same, 0 = black)
+    private const string TabName = "LaunchpadRoleCreditsTab";
+    private const string TextName = "LaunchpadRoleCreditsText";
 
     private static readonly PropertyInfo? CurrentRoleProperty = AccessTools.Property(
         typeof(RoleSettingMenuPatches), "CurrentRole");
 
-    private static TextMeshPro? _credits;
+    private static GameObject? _tab;
+    private static GameObject? _text;
     private static bool _broken;
+    private static bool _logged;
+
+    /// <summary>
+    /// Kept so RoleCategorySwitcher still compiles. The credits tab hangs off the role name tab and takes no room
+    /// on the page, so nothing has to be moved down any more.
+    /// </summary>
+    public static float ExtraHeight => 0f;
 
     [HarmonyPostfix]
     public static void UpdatePostfix(RolesSettingsMenu __instance)
@@ -44,6 +59,7 @@ public static class RoleCreditsPatches
         catch (Exception e)
         {
             _broken = true;
+            Hide();
             Warning($"[RoleCredits] Turned off after an error: {e}");
         }
     }
@@ -53,90 +69,151 @@ public static class RoleCreditsPatches
         var page = menu.AdvancedRolesSettings;
         if (!page || !page.activeInHierarchy)
         {
-            SetCreditsActive(false);
+            Hide();
             return;
         }
 
         var role = CurrentRoleProperty?.GetValue(null) as RoleBehaviour;
-        if (!role || role is not ICustomRole customRole
+        if (!role || role is not ICustomRole
             || !RoleCredits.TryGet(role!.GetType(), out var credit))
         {
-            SetCreditsActive(false);
+            Hide();
             return;
         }
 
-        var description = FindDescription(menu, customRole);
-        if (!description)
+        // "Role Idea by" and (optionally) "Coded by", one per line.
+        var line = string.Join("\n", credit.ToMenuText()
+            .Split('\n')
+            .Where(l => !string.IsNullOrWhiteSpace(l)
+                        && (ShowCodedBy || !l.Contains("Coded", StringComparison.OrdinalIgnoreCase))));
+        if (string.IsNullOrWhiteSpace(line))
         {
-            SetCreditsActive(false);
+            Hide();
             return;
         }
 
-        if (!_credits || _credits!.transform.parent != description!.transform.parent)
+        var header = menu.roleHeaderSprite;
+        var headerText = menu.roleHeaderText;
+        if (!header || !headerText || !header.gameObject.activeInHierarchy)
         {
-            if (_credits)
+            Hide();
+            return;
+        }
+
+        EnsureClones(header, headerText);
+
+        var tabRenderer = _tab!.GetComponent<SpriteRenderer>();
+        var textMesh = _text!.GetComponent<TextMeshPro>();
+        if (!tabRenderer || !textMesh)
+        {
+            Hide();
+            return;
+        }
+
+        // Same look as the role name tab, mirrored top to bottom and shorter.
+        // Mirrored with a negative scale (works for every sprite draw mode, unlike flipY).
+        tabRenderer.flipY = false;
+        tabRenderer.enabled = true;
+        var tabColor = header.color;
+        tabRenderer.color = new Color(tabColor.r * Darken, tabColor.g * Darken, tabColor.b * Darken, tabColor.a);
+        var scale = header.transform.localScale;
+        _tab.transform.localScale = new Vector3(scale.x * WidthScale, -Mathf.Abs(scale.y) * HeightScale, scale.z);
+        _tab.transform.position = header.transform.position;
+
+        // Hang it right under the role name tab, right edges lined up (absolute every frame: nothing builds up).
+        var original = header.bounds;
+        var flipped = tabRenderer.bounds;
+        _tab.transform.position += new Vector3(
+            original.max.x - flipped.max.x + OffsetX,
+            original.min.y - flipped.max.y - Gap,
+            0f);
+        flipped = tabRenderer.bounds;
+
+        // Text: a copy of the role name text, showing the credit line, centred vertically on the new tab.
+        textMesh.enableAutoSizing = false;
+        textMesh.enableWordWrapping = false;
+        textMesh.fontSize = headerText.fontSize * FontScale;
+        textMesh.fontStyle = FontStyles.Normal;
+        textMesh.color = Color.white; // the role name colour is dark, which would vanish on the darker tab
+        textMesh.text = line;
+
+        // Same distance from the right edge as the role name has on its tab.
+        var textInsetX = original.max.x - headerText.transform.position.x;
+        _text.transform.position = new Vector3(
+            flipped.max.x - textInsetX,
+            flipped.center.y,
+            headerText.transform.position.z);
+
+        // Draw the tab just behind the credit text, in front of the dark strip it overlaps.
+        var tabPosition = _tab.transform.position;
+        _tab.transform.position = new Vector3(tabPosition.x, tabPosition.y, _text.transform.position.z + 0.01f);
+        tabRenderer.sortingLayerID = header.sortingLayerID;
+        tabRenderer.sortingOrder = Mathf.Max(header.sortingOrder, textMesh.sortingOrder);
+
+        _tab.SetActive(true);
+        _text.SetActive(true);
+
+        if (!_logged)
+        {
+            _logged = true;
+            Warning($"[RoleCredits] header z={header.transform.position.z} order={header.sortingOrder} "
+                + $"mode={header.drawMode} size={header.size} bounds={header.bounds}; "
+                + $"tab z={_tab.transform.position.z} order={tabRenderer.sortingOrder} bounds={tabRenderer.bounds}; "
+                + $"text z={_text.transform.position.z} order={textMesh.sortingOrder}");
+        }
+    }
+
+    private static void EnsureClones(SpriteRenderer header, TMP_Text headerText)
+    {
+        if (!_tab || _tab!.transform.parent != header.transform.parent)
+        {
+            if (_tab)
             {
-                Object.Destroy(_credits!.gameObject);
+                Object.Destroy(_tab!);
             }
 
-            _credits = Object.Instantiate(description, description.transform.parent);
-            _credits.name = CreditsName;
+            _tab = Object.Instantiate(header.gameObject, header.transform.parent);
+            _tab.name = TabName;
+
+            // Only the tab shape is wanted, not whatever hangs under it.
+            for (var i = 0; i < _tab.transform.childCount; i++)
+            {
+                Object.Destroy(_tab.transform.GetChild(i).gameObject);
+            }
         }
 
-        var tmp = _credits!;
-        tmp.gameObject.SetActive(true);
-        tmp.enableAutoSizing = false;
-        tmp.enableWordWrapping = false;
-        tmp.fontSize = description.fontSize * FontScale;
-        tmp.fontStyle = FontStyles.Normal;
-        tmp.alignment = TextAlignmentOptions.Top;
-        tmp.color = new Color(1f, 1f, 1f, 0.6f);
-        tmp.text = credit.ToMenuText();
-        tmp.rectTransform.pivot = new Vector2(0.5f, 1f);
+        if (!_text || _text!.transform.parent != headerText.transform.parent)
+        {
+            if (_text)
+            {
+                Object.Destroy(_text!);
+            }
 
-        // Sit just under the last line of the description, centred on it.
-        description.ForceMeshUpdate();
-        var bounds = description.textBounds;
-        var bottom = description.transform.TransformPoint(new Vector3(bounds.center.x, bounds.min.y, 0f));
-        var local = description.transform.parent.InverseTransformPoint(bottom);
-        tmp.transform.localPosition = new Vector3(local.x, local.y - Gap, description.transform.localPosition.z);
+            _text = Object.Instantiate(headerText.gameObject, headerText.transform.parent);
+            _text.name = TextName;
+            DropTranslator(_text);
+        }
     }
 
-    // The description is the text of the role page that shows the role's description. The field is tried first,
-    // then any visible text on the page that matches one of the role's descriptions.
-    private static TextMeshPro? FindDescription(RolesSettingsMenu menu, ICustomRole role)
+    private static void DropTranslator(GameObject target)
     {
-        // Il2Cpp fields are exposed as properties, so the lookup goes by property name.
-        TextMeshPro? field = null;
-        try
+        var translator = target.GetComponent<TextTranslatorTMP>();
+        if (translator)
         {
-            field = Traverse.Create(menu).Property("roleDescriptionText").GetValue<TextMeshPro>();
+            Object.Destroy(translator);
         }
-        catch (Exception)
-        {
-            // not there in this game version: the text scan below is used instead
-        }
-
-        if (field && field!.gameObject.activeInHierarchy)
-        {
-            return field;
-        }
-
-        var candidates = new[] { role.RoleMedDescription, role.RoleLongDescription, role.RoleDescription }
-            .Where(text => !string.IsNullOrWhiteSpace(text))
-            .Select(text => text.Trim())
-            .ToArray();
-
-        return menu.AdvancedRolesSettings.GetComponentsInChildren<TextMeshPro>(false)
-            .FirstOrDefault(tmp => tmp.name != CreditsName
-                && candidates.Any(text => tmp.text.Contains(text, StringComparison.OrdinalIgnoreCase)));
     }
 
-    private static void SetCreditsActive(bool active)
+    private static void Hide()
     {
-        if (_credits && _credits!.gameObject.activeSelf != active)
+        if (_tab && _tab!.activeSelf)
         {
-            _credits.gameObject.SetActive(active);
+            _tab.SetActive(false);
+        }
+
+        if (_text && _text!.activeSelf)
+        {
+            _text.SetActive(false);
         }
     }
 }

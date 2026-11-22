@@ -25,5 +25,6 @@ public enum LaunchpadRpc : uint
     EsperProject,
     EsperReturn,
     WelcomeMessage,
-    LobbyTags
+    LobbyTags,
+    Guess
 }

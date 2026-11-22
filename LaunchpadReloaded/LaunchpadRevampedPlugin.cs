@@ -17,7 +17,7 @@ using Reactor.Utilities;
 
 namespace LaunchpadRevamped;
 
-[BepInAutoPlugin("dev.andriess.launchpad", "LaunchpadRevamped")]
+[BepInAutoPlugin("dev.andriess.launchpad", "LPO")]
 [BepInProcess("Among Us.exe")]
 [BepInDependency(ReactorPlugin.Id)]
 [BepInDependency(MiraApiPlugin.Id)]
@@ -36,7 +36,7 @@ public partial class LaunchpadRevampedPlugin : BasePlugin, IMiraPlugin
         MiraLocaleManager.Register(Id);
     }
 
-    public string OptionsTitleText => "Launchpad";
+    public string OptionsTitleText => "Launchpad:\nOptimized";
 
     /// <summary>
     /// Turns Launchpad's rearranged main menu on or off.
@@ -58,7 +58,7 @@ public partial class LaunchpadRevampedPlugin : BasePlugin, IMiraPlugin
         Harmony.PatchAll();
         WikiBootstrap.Init();
 
-        ReactorCredits.Register("Launchpad", Version, true, ReactorCredits.AlwaysShow);
+        ReactorCredits.Register("Launchpad Optimized", Version, true, ReactorCredits.AlwaysShow);
 
         LprData.EnsureCreated();
 

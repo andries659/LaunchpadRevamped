@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
-    <!-- Roles (default ICustomRole keys: &lt;namespace&gt;.&lt;ClassName&gt;[.suffix]). The custom wiki reads &lt;ClassName without "Role"&gt;WikiDesc, e.g. CaptainWikiDesc -->
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole">Captain</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.IntroBlurb">Protect the crew with your abilities</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.MedDescription">Protect the crew with your abilities</string>
@@ -223,7 +222,7 @@ If you get voted out, you win the game.</string>
     <string name="LaunchpadRevamped.Roles.Neutral.ReaperRole.TabDescription">Collect souls from dead bodies to win the game.</string>
     <string name="ReaperWikiDesc">Collect souls from dead bodies to win the game.</string>
     <string name="launchpad.role.executioner.noTarget">your target</string>
-    <!-- Role descriptions shown by the "?" button in the role list. Edit the text; a role without an entry here uses its .MedDescription -->
+
     <string name="LaunchpadRevamped.Roles.Crewmate.CaptainRole.MenuRoleDesc">Protect the crew with your abilities</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.CoronerRole.MenuRoleDesc">Freeze bodies to prevent them from disappearing.</string>
     <string name="LaunchpadRevamped.Roles.Crewmate.GamblerRole.MenuRoleDesc">Guess a player's role to reveal it!</string>
@@ -255,12 +254,12 @@ If you get voted out, you win the game.</string>
     <string name="LaunchpadRevamped.Roles.Coven.MedusaRole.MenuRoleDesc">Turn the room to stone.</string>
     <string name="LaunchpadRevamped.Roles.Coven.PoisonerRole.MenuRoleDesc">Poison them. Be far away when it works.</string>
     <string name="LaunchpadRevamped.Roles.Coven.CovenLeaderRole.MenuRoleDesc">Lead the Coven. Smite the town.</string>
-    <!-- Neutral team -->
+
     <string name="launchpad.neutral.group">Neutral Roles</string>
     <string name="launchpad.neutral.roleTitle">Neutral</string>
     <string name="launchpad.neutral.teamIntroDescription">You are a Neutral. You do not have a team.</string>
     <string name="launchpad.coven.group">Coven Roles</string>
-    <!-- Role factions (the sub-categories of a team) -->
+
     <string name="launchpad.faction.crewmate.investigative">Crewmate Investigative</string>
     <string name="launchpad.faction.crewmate.killing">Crewmate Killing</string>
     <string name="launchpad.faction.crewmate.protective">Crewmate Protective</string>
@@ -276,7 +275,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.faction.coven.support">Coven Support</string>
     <string name="launchpad.coven.roleTitle">Coven</string>
     <string name="launchpad.coven.teamIntroDescription">You are part of the Coven. Eliminate everyone else together.</string>
-    <!-- Buttons (MiraAPI uppercases button text) -->
+
     <string name="launchpad.button.seal">Seal</string>
     <string name="launchpad.button.shoot">Shoot</string>
     <string name="launchpad.button.call">Call</string>
@@ -309,7 +308,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.reanimate">Reanimate</string>
     <string name="launchpad.button.hex">Hex</string>
     <string name="launchpad.button.vest">Vest</string>
-    <!-- Ability descriptions shown on a role's wiki page. Key: <button key>.WikiDesc (shared by every role that has the button) -->
+
     <string name="launchpad.button.seal.WikiDesc">Seal a nearby vent so nobody can enter it. Limited uses.</string>
     <string name="launchpad.button.shoot.WikiDesc">Shoot a nearby player. An Impostor dies if hit. If you hit a Crewmate, you die (and so do they, if the setting is enabled). Limited shots.</string>
     <string name="launchpad.button.call.WikiDesc">Call an emergency meeting from anywhere on the map. Limited uses, and unavailable while zoomed out or while a hack is active.</string>
@@ -341,7 +340,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.button.reanimate.WikiDesc">Reanimate a nearby dead body. The player returns to life as a Crewmate. Limited uses.</string>
     <string name="launchpad.button.hex.WikiDesc">Hex a nearby player. When the next meeting ends, every hexed player who is still alive dies. You can only hold a limited number of hexes at once.</string>
     <string name="launchpad.button.vest.WikiDesc">Put on a vest for a short time to survive attacks. Limited uses.</string>
-    <!-- Settings page of the wiki. Key: <option key>.WikiDesc (group keys describe the whole group) -->
+
     <string name="launchpad.options.general.WikiDesc">Core options that apply to every game.</string>
     <string name="launchpad.options.general.notepad.WikiDesc">Shows a notepad button on the HUD so players can jot down notes during the game.</string>
     <string name="launchpad.options.general.banCheaters.WikiDesc">Players caught cheating by the host's anti-cheat are banned instead of only being kicked.</string>
@@ -360,7 +359,7 @@ If you get voted out, you win the game.</string>
     <string name="launchpad.options.votingType.allowConfirmingVotes.WikiDesc">Players have to confirm their vote before it locks in. Only used by Classic and Chance voting.</string>
     <string name="launchpad.options.votingType.hideVotingIcons.WikiDesc">Hides who voted for whom in the meeting results.</string>
     <string name="launchpad.options.votingType.showPercentages.WikiDesc">Shows each player's share of the votes as a percentage once voting ends.</string>
-    <!-- Modifiers -->
+
     <string name="launchpad.modifier.chameleon">Chameleon</string>
     <string name="launchpad.modifier.giant">Giant</string>
     <string name="launchpad.modifier.smol">Smol</string>
@@ -405,7 +404,7 @@ It does nothing yet.</string>
 It does nothing yet.</string>
     <string name="launchpad.modifier.testCoven.TabDescription">A test modifier for the Coven.
 It does nothing yet.</string>
-    <!-- Option groups and options -->
+
     <string name="launchpad.options.battleRoyaleOptions">Battle Royale Options</string>
     <string name="launchpad.options.battleRoyaleOptions.useSeekerCharacter">Use Seeker Character</string>
     <string name="launchpad.options.battleRoyaleOptions.showKnife">Show Knife</string>
@@ -579,7 +578,7 @@ It does nothing yet.</string>
     <string name="launchpad.options.votingType.allowConfirmingVotes">Allow Confirming Votes</string>
     <string name="launchpad.options.votingType.hideVotingIcons">Hide Voting Icons</string>
     <string name="launchpad.options.votingType.showPercentages">Show Percentages</string>
-    <!-- Game over -->
+
     <string name="launchpad.gameover.jester.win">Jester Wins!</string>
     <string name="launchpad.gameover.reaper.win">Reaper Wins!</string>
     <string name="launchpad.gameover.coven.win">Coven Wins!</string>
@@ -590,4 +589,57 @@ It does nothing yet.</string>
     <string name="launchpad.rolecategory.neutral">Neutral</string>
     <string name="launchpad.rolecategory.modifiers">Modifiers</string>
     <string name="launchpad.gameover.executioner.win">Executioner Wins!</string>
+    <string name="launchpad.modifier.guesser">Guesser</string>
+    <string name="launchpad.modifier.guesser.TabDescription">Guess roles in meetings. A right guess
+kills them, a wrong one kills you.
+{guesses} guesses per game, {perMeeting} per meeting.</string>
+    <string name="launchpad.options.guesser">Guesser</string>
+    <string name="launchpad.options.guesser.maxGuessesPerGame">Max Guesses Per Game</string>
+    <string name="launchpad.options.guesser.maxGuessesPerMeeting">Max Guesses Per Meeting</string>
+    <string name="launchpad.options.guesser.canGuessBasicRoles">Can Guess Crewmate / Impostor</string>
+    <string name="launchpad.options.universalModifiers.guesserChance">Guesser Chance</string>
+<!-- Visitor, Rage, Surge, Bloody -->
+    <string name="LaunchpadRevamped.Roles.Crewmate.VisitorRole">Visitor</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.VisitorRole.IntroBlurb">Visit players to learn what they do.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.VisitorRole.MedDescription">Visit players to learn what they do.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.VisitorRole.TabDescription">Visit a nearby player to follow them until the next meeting.
+You learn which rooms they entered, how many tasks they finished
+and how many kills they made.</string>
+    <string name="VisitorWikiDesc">Visit a nearby player to follow them until the next meeting.
+You learn which rooms they entered, how many tasks they finished
+and how many kills they made.</string>
+    <string name="LaunchpadRevamped.Roles.Crewmate.VisitorRole.MenuRoleDesc">Follow a player and report on them.</string>
+    <string name="launchpad.button.visit">Visit</string>
+    <string name="launchpad.button.visit.WikiDesc">Visit a nearby player. Until the next meeting you track their rooms, tasks and kills, and get a report when the meeting starts. Limited uses.</string>
+    <string name="launchpad.visitor.visiting">You are now visiting {name}.</string>
+    <string name="launchpad.visitor.report">Visit report on {name}: rooms entered: {rooms}. Tasks completed: {tasks}. Kills made: {kills}.</string>
+    <string name="launchpad.visitor.noRooms">none</string>
+    <string name="launchpad.visitor.killerReveal">{name} was killed by {killer} ({role}).</string>
+    <string name="launchpad.options.visitor">Visitor</string>
+    <string name="launchpad.options.visitor.visitUses">Visits Per Game</string>
+    <string name="launchpad.options.visitor.visitCooldown">Visit Cooldown</string>
+    <string name="launchpad.options.visitor.revealKiller">Know Killer Identity</string>
+    <string name="launchpad.modifier.rage">Rage</string>
+    <string name="launchpad.modifier.rage.TabDescription">You get {extra} extra tasks.
+Finish ALL your tasks to unlock a kill button
+with a {cooldown} second cooldown.</string>
+    <string name="launchpad.modifier.rage.unlocked">All tasks done. Unleash your rage!</string>
+    <string name="launchpad.button.rageKill">Rage Kill</string>
+    <string name="launchpad.options.rage">Rage</string>
+    <string name="launchpad.options.rage.killCooldown">Kill Cooldown</string>
+    <string name="launchpad.options.rage.extraTasks">Extra Tasks</string>
+    <string name="launchpad.options.crewmateModifiers.rageChance">Rage Chance</string>
+    <string name="launchpad.modifier.surge">Surge</string>
+    <string name="launchpad.modifier.surge.TabDescription">Every kill gives you a speed boost of {boost}x
+for {seconds} seconds.</string>
+    <string name="launchpad.options.surge">Surge</string>
+    <string name="launchpad.options.surge.speedBoost">Speed Boost</string>
+    <string name="launchpad.options.surge.duration">Boost Duration</string>
+    <string name="launchpad.options.impostorModifiers.surgeChance">Surge Chance</string>
+    <string name="launchpad.modifier.bloody">Bloody</string>
+    <string name="launchpad.modifier.bloody.TabDescription">If you are killed, your killer leaves
+bloody footprints for {seconds} seconds.</string>
+    <string name="launchpad.options.bloody">Bloody</string>
+    <string name="launchpad.options.bloody.trailDuration">Trail Duration</string>
+    <string name="launchpad.options.covenModifiers.bloodyChance">Bloody Chance</string>
 </resources>

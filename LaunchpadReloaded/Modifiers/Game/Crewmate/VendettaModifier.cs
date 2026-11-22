@@ -1,4 +1,4 @@
-﻿using LaunchpadRevamped.Buttons.Modifiers;
+using LaunchpadRevamped.Buttons.Modifiers;
 using MiraAPI.Translation;
 using LaunchpadRevamped.Options.Modifiers;
 using LaunchpadRevamped.Options.Modifiers.Crewmate;
@@ -8,7 +8,6 @@ using MiraAPI.GameOptions;
 using MiraAPI.Hud;
 using MiraAPI.Modifiers;
 using MiraAPI.Networking;
-using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
@@ -16,7 +15,6 @@ using LaunchpadRevamped.Features;
 
 namespace LaunchpadRevamped.Modifiers.Game.Crewmate;
 
-[MiraIgnore]
 public sealed class VendettaModifier : LPModifier
 {
     public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.vendetta");
@@ -64,6 +62,11 @@ public sealed class VendettaModifier : LPModifier
         foreach (var mod in victims)
         {
             mod.Player.RpcRemoveModifier<VendettaMarkModifier>();
+            if (!mod.Vendetta || mod.Player.Data.IsDead || mod.Vendetta.Data.IsDead)
+            {
+                continue;
+            }
+
             var voteData = mod.Player.GetVoteData();
             if (voteData && voteData.VotedFor(mod.Vendetta.PlayerId))
             {

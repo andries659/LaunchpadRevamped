@@ -44,6 +44,7 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> BlindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Blind.png");
     public static readonly LoadableAsset<Sprite> BombButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Bomb.png");
     public static readonly LoadableAsset<Sprite> RewindButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.Rewind.png");
+    public static readonly LoadableAsset<Sprite> GuesserAbility = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.GuessButton.png");
     public static readonly LoadableAsset<Sprite> SmiteButton = ShootButton;
     public static readonly LoadableAsset<Sprite> PoisonButton = InjectButton;
     public static readonly LoadableAsset<Sprite> GazeButton = FreezeButton;

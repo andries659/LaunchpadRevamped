@@ -14,4 +14,7 @@ public class CovenModifierOptions : AbstractOptionGroup
 
     [ModdedNumberOption("launchpad.options.covenModifiers.testCovenChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]
     public float TestCovenChance { get; set; } = 0f;
+
+    [ModdedNumberOption("launchpad.options.covenModifiers.bloodyChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]
+    public float BloodyChance { get; set; } = 0f;
 }

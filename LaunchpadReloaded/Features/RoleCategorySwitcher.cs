@@ -2070,7 +2070,7 @@ public static class RoleCategorySwitcher
         }
 
         var hasImage = role!.RoleScreenshot != null;
-        var start = hasImage ? -0.872f : -1f;
+        var start = (hasImage ? -0.872f : -1f) - Patches.Generic.RoleCreditsPatches.ExtraHeight; // room for the CREDITS block
         var x = hasImage ? 2.17f : 1.1f;
         var y = start;
         var extra = 0;

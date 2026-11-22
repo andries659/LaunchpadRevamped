@@ -55,6 +55,7 @@ public static class RoleCredits
         [typeof(SheriffRole)] = new(null, Angxl),
         [typeof(SnitchRole)] = new(Andries, Andries),
         [typeof(TimeRewinderRole)] = new(Andries, Andries),
+        [typeof(VisitorRole)] = new(Farhan, Andries),
 
         // Impostor
         [typeof(BomberRole)] = new(Andries, Andries),

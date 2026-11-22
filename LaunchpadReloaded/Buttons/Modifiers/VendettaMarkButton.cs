@@ -1,17 +1,16 @@
 ﻿using Il2CppSystem;
 using LaunchpadRevamped.Features;
 using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Modifiers.Game.Crewmate;
 using LaunchpadRevamped.Options.Modifiers.Crewmate;
 using MiraAPI.GameOptions;
 using MiraAPI.Modifiers;
-using MiraAPI.PluginLoading;
 using MiraAPI.Utilities;
 using MiraAPI.Utilities.Assets;
 using UnityEngine;
 
 namespace LaunchpadRevamped.Buttons.Modifiers;
 
-[MiraIgnore]
 public class VendettaMarkButton : BaseLaunchpadButton<PlayerControl>
 {
     public override string Name => "launchpad.button.mark";
@@ -30,7 +29,8 @@ public class VendettaMarkButton : BaseLaunchpadButton<PlayerControl>
 
     public override bool Enabled(RoleBehaviour? role)
     {
-        return Button && Button!.gameObject.activeSelf;
+        var local = PlayerControl.LocalPlayer;
+        return local != null && local.HasModifier<VendettaModifier>();
     }
 
     public override PlayerControl? GetTarget()

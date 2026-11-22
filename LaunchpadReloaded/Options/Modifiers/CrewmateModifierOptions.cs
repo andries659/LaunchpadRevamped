@@ -23,4 +23,7 @@ public class CrewmateModifierOptions : AbstractOptionGroup
 
     [ModdedNumberOption("launchpad.options.crewmateModifiers.chameleonChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]
     public float ChameleonChance { get; set; } = 0f;
+
+    [ModdedNumberOption("launchpad.options.crewmateModifiers.rageChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]
+    public float RageChance { get; set; } = 0f;
 }

@@ -1,10 +1,8 @@
 ﻿using MiraAPI.Modifiers;
 using MiraAPI.Translation;
-using MiraAPI.PluginLoading;
 
 namespace LaunchpadRevamped.Modifiers;
 
-[MiraIgnore]
 public class VendettaMarkModifier(byte vendettaPlayer) : BaseModifier
 {
     public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.vendettaMark");
