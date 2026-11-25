@@ -48,7 +48,7 @@ public static class VisitorUtilities
             KillsAtStart = KillCounts.GetValueOrDefault(target.PlayerId),
         };
 
-        Say(MiraLocaleManager.GetParsed("launchpad.visitor.visiting", new() { ["{name}"] = target.Data.PlayerName }));
+        Say(MiraLocaleManager.GetParsed("launchpad.visitor.visiting", new[] { ("{name}", target.Data.PlayerName) }));
     }
 
     /// <summary>Records the rooms of visited players. Called from the Visit button's fixed update.</summary>
@@ -103,11 +103,11 @@ public static class VisitorUtilities
             return;
         }
 
-        data.KillerInfo = MiraLocaleManager.GetParsed("launchpad.visitor.killerReveal", new()
+        data.KillerInfo = MiraLocaleManager.GetParsed("launchpad.visitor.killerReveal", new[]
         {
-            ["{name}"] = @event.Target.Data.PlayerName,
-            ["{killer}"] = @event.Source.Data.PlayerName,
-            ["{role}"] = @event.Source.Data.Role.NiceName,
+            ("{name}", @event.Target.Data.PlayerName),
+            ("{killer}", @event.Source.Data.PlayerName),
+            ("{role}", @event.Source.Data.Role.NiceName),
         });
 
         Say(data.KillerInfo);
@@ -138,12 +138,12 @@ public static class VisitorUtilities
             var tasks = target != null ? System.Math.Max(0, CompletedTasks(target) - data.TasksAtStart) : 0;
             var kills = System.Math.Max(0, KillCounts.GetValueOrDefault(id) - data.KillsAtStart);
 
-            Say(MiraLocaleManager.GetParsed("launchpad.visitor.report", new()
+            Say(MiraLocaleManager.GetParsed("launchpad.visitor.report", new[]
             {
-                ["{name}"] = name,
-                ["{rooms}"] = rooms,
-                ["{tasks}"] = tasks.ToString(),
-                ["{kills}"] = kills.ToString(),
+                ("{name}", name),
+                ("{rooms}", rooms),
+                ("{tasks}", tasks.ToString()),
+                ("{kills}", kills.ToString()),
             }));
 
             if (data.KillerInfo != null)

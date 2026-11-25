@@ -21,4 +21,7 @@ public class UniversalModifierOptions : AbstractOptionGroup
 
     [ModdedNumberOption("launchpad.options.universalModifiers.guesserChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]
     public float GuesserChance { get; set; } = 0f;
+
+    [ModdedNumberOption("launchpad.options.universalModifiers.baitChance", 0f, 100f, 10f, suffixType: MiraNumberSuffixes.Percent)]
+    public float BaitChance { get; set; } = 0f;
 }

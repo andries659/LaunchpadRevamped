@@ -21,10 +21,10 @@ public sealed class VendettaModifier : LPModifier
     public override string GetDescription()
     {
         var uses = OptionGroupSingleton<VendettaOptions>.Instance.MarkUses;
-        return MiraLocaleManager.GetParsed("launchpad.modifier.vendetta.TabDescription", new()
+        return MiraLocaleManager.GetParsed("launchpad.modifier.vendetta.TabDescription", new[]
         {
-            ["{uses}"] = uses.ToString(),
-            ["{unit}"] = MiraLocaleManager.Get(uses > 1 ? "launchpad.modifier.vendetta.unit.other" : "launchpad.modifier.vendetta.unit.one"),
+            ("{uses}", uses.ToString()),
+            ("{unit}", MiraLocaleManager.Get(uses > 1 ? "launchpad.modifier.vendetta.unit.other" : "launchpad.modifier.vendetta.unit.one")),
         });
     }
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.VendettaIcon;

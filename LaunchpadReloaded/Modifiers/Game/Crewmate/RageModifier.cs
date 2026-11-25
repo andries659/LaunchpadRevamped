@@ -27,10 +27,10 @@ public sealed class RageModifier : LPModifier
     public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.rage");
     public override string GetDescription() => MiraLocaleManager.GetParsed(
         "launchpad.modifier.rage.TabDescription",
-        new()
+        new[]
         {
-            ["{extra}"] = OptionGroupSingleton<RageOptions>.Instance.ExtraTasks.ToString("0"),
-            ["{cooldown}"] = OptionGroupSingleton<RageOptions>.Instance.KillCooldown.ToString("0"),
+            ("{extra}", OptionGroupSingleton<RageOptions>.Instance.ExtraTasks.ToString("0")),
+            ("{cooldown}", OptionGroupSingleton<RageOptions>.Instance.KillCooldown.ToString("0")),
         });
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.RageChance;

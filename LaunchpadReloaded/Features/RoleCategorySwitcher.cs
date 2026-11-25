@@ -1567,6 +1567,7 @@ public static class RoleCategorySwitcher
     private static NumberOption? _detailCount;
     private static NumberOption? _detailChance;
     private static RoleOptionSetting? _detailRow;
+    private static bool _detailMismatchLogged;
 
     private static void SkinList(RolesSettingsMenu menu)
     {
@@ -2062,11 +2063,13 @@ public static class RoleCategorySwitcher
         if (countEditable && !_detailCount)
         {
             _detailCount = CreateNumberRow(menu, "Role Count", StoredCount(customRole, row!), 0f, configuration.MaxRoleCount, 1f, false);
+            _detailMismatchLogged = false;
         }
 
         if (chanceEditable && !_detailChance)
         {
             _detailChance = CreateNumberRow(menu, "Chance", StoredChance(customRole, row!), 0f, 100f, 10f, true);
+            _detailMismatchLogged = false;
         }
 
         var hasImage = role!.RoleScreenshot != null;
@@ -2087,6 +2090,11 @@ public static class RoleCategorySwitcher
             y -= DetailRowHeight;
             extra++;
         }
+
+        // Switching a number option on can reset what it shows (its text, or its value), and the game only redraws the text
+        // when the value changes. Every change made here is stored right away, so the stored values are always what the
+        // widgets should show, and they are put back whenever they differ.
+        SyncDetailValues(customRole, row!);
 
         // MiraAPI has already placed the role's own options from the top, so they are moved down below these rows.
         var visible = 0;
@@ -2150,6 +2158,7 @@ public static class RoleCategorySwitcher
 
         // Initialize can reset the widget, so the stored value is put back afterwards.
         option.Value = value;
+        UpdateDetailButtons(option);
         return option;
     }
 
@@ -2169,14 +2178,52 @@ public static class RoleCategorySwitcher
     /// </summary>
     private static void SyncDetailValues(ICustomRole role, RoleOptionSetting row)
     {
-        if (_detailCount)
+        ApplyDetailValue(_detailCount, StoredCount(role, row), false, role.RoleName);
+        ApplyDetailValue(_detailChance, StoredChance(role, row), true, role.RoleName);
+    }
+
+    private static void ApplyDetailValue(NumberOption? option, float value, bool percent, string roleName)
+    {
+        if (!option)
         {
-            _detailCount!.Value = StoredCount(role, row);
+            return;
         }
 
-        if (_detailChance)
+        var text = percent ? $"{value:0}%" : value.ToString("0");
+        if (Mathf.Approximately(option!.Value, value) && option.ValueText && option.ValueText.text == text)
         {
-            _detailChance!.Value = StoredChance(role, row);
+            return;
+        }
+
+        if (!_detailMismatchLogged)
+        {
+            _detailMismatchLogged = true;
+            Info($"[RoleCategorySwitcher] {roleName}: the {(percent ? "chance" : "count")} widget showed {option.Value} / \"{(option.ValueText ? option.ValueText.text : "?")}\" but {value} is stored, correcting it.");
+        }
+
+        option.Value = value;
+        if (option.ValueText)
+        {
+            option.ValueText.text = text;
+        }
+
+        UpdateDetailButtons(option);
+    }
+
+    /// <summary>
+    /// The game works out which of the - and + buttons can be pressed when the option is created (at 0, so "-" is greyed out)
+    /// and again after each press, but not when the value is set from code. So it is done here whenever a value is put in.
+    /// </summary>
+    private static void UpdateDetailButtons(NumberOption option)
+    {
+        if (option.MinusBtn)
+        {
+            option.MinusBtn.SetInteractable(option.Value > option.ValidRange.min);
+        }
+
+        if (option.PlusBtn)
+        {
+            option.PlusBtn.SetInteractable(option.Value < option.ValidRange.max);
         }
     }
 

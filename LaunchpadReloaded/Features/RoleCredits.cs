@@ -39,6 +39,7 @@ public static class RoleCredits
     private const string Angxl = "angxlwtf";
     private const string Andries = "<color=#3293a8>Andries</color>";
     private const string Farhan = "<color=#ff1f1f>Farhan</color>";
+    private const string Toho = "TOHO";
 
     // "Coded by" is filled in from who first added each role's file in the git history, so check it, and fill in
     // the "Role Idea by" names yourself (null = not shown). Roles missing from this table show no credits.
@@ -69,6 +70,10 @@ public static class RoleCredits
         [typeof(SurgeonRole)] = new(null, Angxl),
         [typeof(SwapshifterRole)] = new(null, Angxl),
         [typeof(InfiltratorRole)] = new(Farhan, Andries),
+        [typeof(VampireRole)] = new(Toho, Andries),
+        [typeof(PuppeteerRole)] = new(Toho, Andries),
+        [typeof(BlackmailerRole)] = new(Toho, Andries),
+        [typeof(EraserRole)] = new(Toho, Andries),
 
         // Neutral
         [typeof(ArsonistRole)] = new(Andries, Andries),
@@ -84,6 +89,9 @@ public static class RoleCredits
         [typeof(MedusaRole)] = new(Andries, Andries),
         [typeof(NecromancerRole)] = new(Andries, Andries),
         [typeof(PoisonerRole)] = new(Andries, Andries),
+        [typeof(DarkFairyRole)] = new(Toho, Andries),
+        [typeof(IllusionistRole)] = new(Toho, Andries),
+        [typeof(JinxRole)] = new(Toho, Andries),
     };
 
     public static bool TryGet(Type roleType, out RoleCredit credit)

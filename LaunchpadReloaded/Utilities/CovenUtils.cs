@@ -1,8 +1,12 @@
 using System;
 using System.Linq;
 using LaunchpadRevamped.GameOver;
+using LaunchpadRevamped.Modifiers;
+using LaunchpadRevamped.Options.Roles.Coven;
 using LaunchpadRevamped.Roles.Coven;
 using MiraAPI.GameEnd;
+using MiraAPI.GameOptions;
+using MiraAPI.Modifiers;
 using UnityEngine;
 
 namespace LaunchpadRevamped.Utilities;
@@ -49,13 +53,25 @@ public static class CovenUtils
         }
 
         var alive = players.Where(player => !player.Data.IsDead).ToArray();
-        var coven = alive.Where(player => IsCoven(player)).ToArray();
-        if (coven.Length == 0 || alive.Length - coven.Length > coven.Length)
+
+        // Players darkened by the Dark Fairy are counted the way the Dark Fairy's setting says:
+        // out of the game, on the Coven's side, or still on their original side.
+        var darkened = alive.Where(player => player.HasModifier<DarkenedModifier>()).ToArray();
+        var mode = OptionGroupSingleton<DarkFairyOptions>.Instance.DarkenedCountMode;
+        var counted = mode == DarkFairyOptions.DarkenedCounts.None ? alive.Except(darkened).ToArray() : alive;
+        var coven = counted
+            .Where(player => IsCoven(player) || (mode == DarkFairyOptions.DarkenedCounts.DarkFairy && darkened.Contains(player)))
+            .ToArray();
+
+        if (!counted.Any(player => IsCoven(player)) || counted.Length - coven.Length > coven.Length)
         {
             return false;
         }
 
-        CustomGameOver.Trigger<CovenGameOver>(coven.Select(player => player.Data).ToArray());
+        // Every darkened player who is still alive wins together with the Coven.
+        var winners = coven.Concat(darkened).Distinct().ToArray();
+
+        CustomGameOver.Trigger<CovenGameOver>(winners.Select(player => player.Data).ToArray());
         return true;
     }
 }

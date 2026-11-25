@@ -15,10 +15,10 @@ public sealed class GuesserModifier : LPModifier
 
     public override string GetDescription() => MiraLocaleManager.GetParsed(
         "launchpad.modifier.guesser.TabDescription",
-        new()
+        new[]
         {
-            ["{guesses}"] = ((int)OptionGroupSingleton<GuesserOptions>.Instance.MaxGuessesPerGame).ToString(),
-            ["{perMeeting}"] = ((int)OptionGroupSingleton<GuesserOptions>.Instance.MaxGuessesPerMeeting).ToString(),
+            ("{guesses}", ((int)OptionGroupSingleton<GuesserOptions>.Instance.MaxGuessesPerGame).ToString()),
+            ("{perMeeting}", ((int)OptionGroupSingleton<GuesserOptions>.Instance.MaxGuessesPerMeeting).ToString()),
         });
 
     public override int GetAssignmentChance() =>

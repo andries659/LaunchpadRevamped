@@ -642,4 +642,136 @@ bloody footprints for {seconds} seconds.</string>
     <string name="launchpad.options.bloody">Bloody</string>
     <string name="launchpad.options.bloody.trailDuration">Trail Duration</string>
     <string name="launchpad.options.covenModifiers.bloodyChance">Bloody Chance</string>
+
+    <!-- Roles ported from TOHO: Bait, Vampire, Puppeteer, Blackmailer, Eraser, Dark Fairy, Illusionist, Jinx -->
+    <string name="LaunchpadRevamped.Roles.Impostor.VampireRole">Vampire</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.VampireRole.IntroBlurb">Bite them. They die a little later.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.VampireRole.MedDescription">Bite them. They die a little later.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.VampireRole.TabDescription">Bite a player instead of killing them.
+The victim dies after a delay. Biting a Bait kills right away.
+The timer pauses during meetings and the bite fades if you die first.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.VampireRole.MenuRoleDesc">Bite them. They die a little later.</string>
+    <string name="VampireWikiDesc">Bite a player instead of killing them.
+The victim dies after a delay. Biting a Bait kills right away.
+The timer pauses during meetings and the bite fades if you die first.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PuppeteerRole">Puppeteer</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PuppeteerRole.IntroBlurb">Pull the strings. Let your puppet do the killing.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PuppeteerRole.MedDescription">Pull the strings. Let your puppet do the killing.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PuppeteerRole.TabDescription">Take control of a player.
+They kill the nearest non-Impostor they walk up to, then are released.
+Puppets are released when a meeting starts.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.PuppeteerRole.MenuRoleDesc">Pull the strings. Let your puppet do the killing.</string>
+    <string name="PuppeteerWikiDesc">Take control of a player.
+They kill the nearest non-Impostor they walk up to, then are released.
+Puppets are released when a meeting starts.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BlackmailerRole">Blackmailer</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BlackmailerRole.IntroBlurb">Keep one player quiet in the next meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BlackmailerRole.MedDescription">Keep one player quiet in the next meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BlackmailerRole.TabDescription">Blackmail a player.
+They cannot speak in the next meeting.
+Everyone sees who was blackmailed.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.BlackmailerRole.MenuRoleDesc">Keep one player quiet in the next meeting.</string>
+    <string name="BlackmailerWikiDesc">Blackmail a player.
+They cannot speak in the next meeting.
+Everyone sees who was blackmailed.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EraserRole">Eraser</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EraserRole.IntroBlurb">Erase a player's role in a meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EraserRole.MedDescription">Erase a player's role in a meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EraserRole.TabDescription">In a meeting, click the erase button on a player to erase their role.
+After the meeting they become a plain Crewmate or Impostor.
+Neutrals and the Coven cannot be erased. One erase per meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Impostor.EraserRole.MenuRoleDesc">Erase a player's role in a meeting.</string>
+    <string name="EraserWikiDesc">In a meeting, click the erase button on a player to erase their role.
+After the meeting they become a plain Crewmate or Impostor.
+Neutrals and the Coven cannot be erased. One erase per meeting.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.DarkFairyRole">Dark Fairy</string>
+    <string name="LaunchpadRevamped.Roles.Coven.DarkFairyRole.IntroBlurb">Mark your tasks. Whoever finishes them joins the dark.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.DarkFairyRole.MedDescription">Mark your tasks. Whoever finishes them joins the dark.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.DarkFairyRole.TabDescription">Tasks you finish get marked until the next meeting ends.
+Anyone who finishes a marked task becomes Darkened and fights for the Coven.
+You and the Darkened can see each other.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.DarkFairyRole.MenuRoleDesc">Mark your tasks. Whoever finishes them joins the dark.</string>
+    <string name="DarkFairyWikiDesc">Tasks you finish get marked until the next meeting ends.
+Anyone who finishes a marked task becomes Darkened and fights for the Coven.
+You and the Darkened can see each other.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.IllusionistRole">Illusionist</string>
+    <string name="LaunchpadRevamped.Roles.Coven.IllusionistRole.IntroBlurb">Make the innocent look guilty.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.IllusionistRole.MedDescription">Make the innocent look guilty.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.IllusionistRole.TabDescription">Illusion a player. Only the Coven can see who is illusioned.
+If the setting is on, the Snitch sees illusioned players as Impostors.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.IllusionistRole.MenuRoleDesc">Make the innocent look guilty.</string>
+    <string name="IllusionistWikiDesc">Illusion a player. Only the Coven can see who is illusioned.
+If the setting is on, the Snitch sees illusioned players as Impostors.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.JinxRole">Jinx</string>
+    <string name="LaunchpadRevamped.Roles.Coven.JinxRole.IntroBlurb">Curse them. Whoever attacks them pays for it.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.JinxRole.MedDescription">Curse them. Whoever attacks them pays for it.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.JinxRole.TabDescription">Jinx a player.
+If a jinxed player is attacked, the attacker dies instead and the jinx is used up.
+The jinx does nothing while you are dead.</string>
+    <string name="LaunchpadRevamped.Roles.Coven.JinxRole.MenuRoleDesc">Curse them. Whoever attacks them pays for it.</string>
+    <string name="JinxWikiDesc">Jinx a player.
+If a jinxed player is attacked, the attacker dies instead and the jinx is used up.
+The jinx does nothing while you are dead.</string>
+
+    <string name="launchpad.button.bite">Bite</string>
+    <string name="launchpad.button.puppet">Puppet</string>
+    <string name="launchpad.button.blackmail">Blackmail</string>
+    <string name="launchpad.button.illusion">Illusion</string>
+    <string name="launchpad.button.jinx">Jinx</string>
+    <string name="launchpad.button.bite.WikiDesc">Bite a nearby player. They die after a delay. Biting a Bait is an ordinary kill. The timer pauses during meetings, and the bite fades if you die first.</string>
+    <string name="launchpad.button.puppet.WikiDesc">Take control of a nearby player. They kill the nearest non-Impostor they get close to, then are released. Puppets are released when a meeting starts.</string>
+    <string name="launchpad.button.blackmail.WikiDesc">Silence a nearby player in the next meeting. They cannot use the chat, and everyone sees who was blackmailed.</string>
+    <string name="launchpad.button.illusion.WikiDesc">Illusion a nearby player. Only the Coven can see who is illusioned. Limited uses.</string>
+    <string name="launchpad.button.jinx.WikiDesc">Jinx a nearby player. If they are attacked, the attacker dies instead and the jinx is used up. Limited uses.</string>
+
+    <string name="launchpad.options.vampire">Vampire</string>
+    <string name="launchpad.options.vampire.biteCooldown">Bite Cooldown</string>
+    <string name="launchpad.options.vampire.biteDelay">Bite Delay</string>
+    <string name="launchpad.options.vampire.dieAfterMeeting">Bitten Players Die After Meeting</string>
+    <string name="launchpad.options.puppeteer">Puppeteer</string>
+    <string name="launchpad.options.puppeteer.puppetCooldown">Puppet Cooldown</string>
+    <string name="launchpad.options.puppeteer.doubleKills">Puppet Dies After Killing</string>
+    <string name="launchpad.options.blackmailer">Blackmailer</string>
+    <string name="launchpad.options.blackmailer.blackmailCooldown">Blackmail Cooldown</string>
+    <string name="launchpad.options.eraser">Eraser</string>
+    <string name="launchpad.options.eraser.eraseUses">Erases Per Game</string>
+    <string name="launchpad.options.darkFairy">Dark Fairy</string>
+    <string name="launchpad.options.darkFairy.markedTasks">Tasks Marked Per Round</string>
+    <string name="launchpad.options.darkFairy.darkenedCountMode">Darkened Players Count As</string>
+    <string name="launchpad.options.darkFairy.canDarkenNeutral">Can Darken Neutrals</string>
+    <string name="launchpad.options.illusionist">Illusionist</string>
+    <string name="launchpad.options.illusionist.illusionCooldown">Illusion Cooldown</string>
+    <string name="launchpad.options.illusionist.maxIllusions">Max Illusions</string>
+    <string name="launchpad.options.illusionist.snitchAffected">Snitch Is Fooled By Illusions</string>
+    <string name="launchpad.options.illusionist.resetPerRound">Reset Illusions After Each Meeting</string>
+    <string name="launchpad.options.illusionist.clearWhenDead">Clear Illusions When Illusionist Dies</string>
+    <string name="launchpad.options.jinx">Jinx</string>
+    <string name="launchpad.options.jinx.jinxCooldown">Jinx Cooldown</string>
+    <string name="launchpad.options.jinx.maxJinxes">Max Jinxes</string>
+    <string name="launchpad.options.jinx.covenCanDieToJinx">Coven Can Die To Jinx</string>
+
+    <string name="launchpad.modifier.bait">Bait</string>
+    <string name="launchpad.modifier.bait.TabDescription">If a player kills you, they are forced to report your body.
+★ Role Idea by TOHO</string>
+    <string name="launchpad.modifier.bait.notify">You killed a Bait! You will report the body in {seconds}s.</string>
+    <string name="launchpad.modifier.bait.aliveList">Baits still alive: {players}</string>
+    <string name="launchpad.options.bait">Bait</string>
+    <string name="launchpad.options.bait.delayMin">Minimum Report Delay</string>
+    <string name="launchpad.options.bait.delayMax">Maximum Report Delay</string>
+    <string name="launchpad.options.bait.notifyKiller">Warn The Killer Before The Report</string>
+    <string name="launchpad.options.bait.showAliveBaits">List Living Baits In The First Meeting</string>
+    <string name="launchpad.options.universalModifiers.baitChance">Bait Chance</string>
+    <string name="launchpad.modifier.darkened">Darkened</string>
+    <string name="launchpad.modifier.darkened.TabDescription">The Dark Fairy has darkened you. You win with the Coven.
+You and the Dark Fairy can see each other.</string>
+
+    <string name="launchpad.blackmailer.silenced">You were blackmailed. You cannot speak this meeting.</string>
+    <string name="launchpad.blackmailer.announce">Blackmailed this meeting: {players}. They cannot speak.</string>
+    <string name="launchpad.eraser.self">You cannot erase your own role.</string>
+    <string name="launchpad.eraser.cannotErase">{player}'s role cannot be erased.</string>
+    <string name="launchpad.eraser.erasing">{player}'s role will be erased when the meeting ends.</string>
+    <string name="launchpad.eraser.erased">The Eraser erased your role.</string>
+    <string name="launchpad.darkFairy.marked">Task marked.</string>
+    <string name="launchpad.button.setDummyRole">Set Role</string>
+    <string name="launchpad.button.setDummyRole.WikiDesc">Freeplay only. Pick a role for the nearest dummy, so you can test roles against it.</string>
 </resources>

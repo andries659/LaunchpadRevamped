@@ -18,10 +18,10 @@ public sealed class SurgeModifier : LPModifier
     public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.surge");
     public override string GetDescription() => MiraLocaleManager.GetParsed(
         "launchpad.modifier.surge.TabDescription",
-        new()
+        new[]
         {
-            ["{boost}"] = OptionGroupSingleton<SurgeOptions>.Instance.SpeedBoost.ToString("0.0"),
-            ["{seconds}"] = OptionGroupSingleton<SurgeOptions>.Instance.Duration.ToString("0"),
+            ("{boost}", OptionGroupSingleton<SurgeOptions>.Instance.SpeedBoost.ToString("0.0")),
+            ("{seconds}", OptionGroupSingleton<SurgeOptions>.Instance.Duration.ToString("0")),
         });
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<ImpostorModifierOptions>.Instance.SurgeChance;

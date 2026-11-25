@@ -52,6 +52,16 @@ public static class LaunchpadAssets
     public static readonly LoadableAsset<Sprite> HexButton = SealButton;
     public static readonly LoadableAsset<Sprite> VestButton = HideButton;
 
+    // Ported from TOHO. These reuse existing art until dedicated sprites exist.
+    public static readonly LoadableAsset<Sprite> BiteButton = DissectButton;
+    public static readonly LoadableAsset<Sprite> PuppetButton = SwapButton;
+    public static readonly LoadableAsset<Sprite> BlackmailButton = HackButton;
+    public static readonly LoadableAsset<Sprite> IllusionButton = InstinctButton;
+    public static readonly LoadableAsset<Sprite> JinxButton = GambleButton;
+    public static readonly LoadableAsset<Sprite> EraseButton = new LoadableResourceAsset("LaunchpadRevamped.Resources.Buttons.EraseButton.png");
+    public static readonly LoadableAsset<Sprite> SetDummyRoleButton = SwapButton;
+    public static readonly LoadableAsset<Sprite> BaitIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Lucky.png");
+
     // Role icons
     public static readonly LoadableAsset<Sprite> ArsonistIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Arsonist.png");
     public static readonly LoadableAsset<Sprite> BomberIcon = new LoadableResourceAsset("LaunchpadRevamped.Resources.Icons.Bomber.png");

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using LaunchpadRevamped.Components;
 using LaunchpadRevamped.Features;
 using LaunchpadRevamped.Options.Roles.Crewmate;
+using LaunchpadRevamped.Roles.Coven;
 using LaunchpadRevamped.Roles.Crewmate;
 using MiraAPI.GameOptions;
 using UnityEngine;
@@ -75,7 +76,7 @@ public static class SnitchUtilities
                 continue;
             }
 
-            if (localIsSnitch && player.Data.Role.IsImpostor)
+            if (localIsSnitch && (player.Data.Role.IsImpostor || IllusionistRole.FoolsSnitch(player)))
             {
                 EnsureTag(player, ImpostorTagName, "Impostor", Palette.ImpostorRed, IsImpostorRevealedToLocal);
             }
@@ -158,6 +159,6 @@ public static class SnitchUtilities
             return false;
         }
 
-        return impostor.Data.Role.IsImpostor && !impostor.Data.IsDead && GetTasksLeft(local) == 0;
+        return (impostor.Data.Role.IsImpostor || IllusionistRole.FoolsSnitch(impostor)) && !impostor.Data.IsDead && GetTasksLeft(local) == 0;
     }
 }

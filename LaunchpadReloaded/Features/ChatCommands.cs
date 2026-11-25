@@ -153,6 +153,12 @@ public static class ChatCommands
     {
         input = input.Trim();
 
+        // /r lists the enabled and disabled roles.
+        if (input.Equals("/r", StringComparison.OrdinalIgnoreCase))
+        {
+            return RoleListCommand.Build();
+        }
+
         if (!input.StartsWith(Prefix + " ", StringComparison.OrdinalIgnoreCase))
         {
             return null;

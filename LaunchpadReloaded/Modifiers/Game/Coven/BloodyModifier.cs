@@ -16,7 +16,7 @@ public sealed class BloodyModifier : LPModifier
     public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.bloody");
     public override string GetDescription() => MiraLocaleManager.GetParsed(
         "launchpad.modifier.bloody.TabDescription",
-        new() { ["{seconds}"] = OptionGroupSingleton<BloodyOptions>.Instance.TrailDuration.ToString("0") });
+        new[] { ("{seconds}", OptionGroupSingleton<BloodyOptions>.Instance.TrailDuration.ToString("0")) });
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CovenModifierOptions>.Instance.BloodyChance;
     public override int GetAmountPerGame() => 1;

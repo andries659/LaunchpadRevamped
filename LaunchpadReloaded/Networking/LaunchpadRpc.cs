@@ -26,5 +26,12 @@ public enum LaunchpadRpc : uint
     EsperReturn,
     WelcomeMessage,
     LobbyTags,
-    Guess
+    Guess,
+    Blackmail,
+    DarkFairyMark,
+    IllusionMark,
+    JinxMark,
+    Erase,
+    ModifierBlock,
+    KillMissed
 }

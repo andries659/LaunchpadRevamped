@@ -110,6 +110,18 @@ public class RpcWelcomeMessage(LaunchpadRevampedPlugin plugin, uint id) : Player
         Show(host, message); // LocalHandling is None, so the host adds it to its own chat here
     }
 
+    /// <summary>
+    /// Shows a system message in this client's own chat only (nothing is sent over the network).
+    /// </summary>
+    public static void ShowLocal(string message)
+    {
+        var local = PlayerControl.LocalPlayer;
+        if (local && !string.IsNullOrWhiteSpace(message))
+        {
+            Show(local, message);
+        }
+    }
+
     private static void Show(PlayerControl host, string message)
     {
         if (!HudManager.Instance || !HudManager.Instance.Chat)

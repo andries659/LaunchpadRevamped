@@ -257,7 +257,7 @@ public static class WikiRegistry
     }
 
     /// <summary>The wiki team and colour of a modifier, from the folder (namespace) it lives in.</summary>
-    private static (string Team, Color Color) ModifierTeam(string ns)
+    internal static (string Team, Color Color) ModifierTeam(string ns)
     {
         if (ns.EndsWith(".Crewmate", StringComparison.Ordinal)) return ("Crewmate", new Color(0.55f, 1f, 1f));
         if (ns.EndsWith(".Impostor", StringComparison.Ordinal)) return ("Impostor", Palette.ImpostorRed);

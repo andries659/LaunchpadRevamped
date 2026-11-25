@@ -14,7 +14,7 @@ public sealed class MayorModifier : LPModifier
     public override string ModifierName => MiraLocaleManager.Get("launchpad.modifier.mayor");
     public override string GetDescription() => MiraLocaleManager.GetParsed(
         "launchpad.modifier.mayor.TabDescription",
-        new() { ["{votes}"] = OptionGroupSingleton<MayorOptions>.Instance.ExtraVotes.ToString() });
+        new[] { ("{votes}", OptionGroupSingleton<MayorOptions>.Instance.ExtraVotes.ToString()) });
     public override LoadableAsset<Sprite>? ModifierIcon => LaunchpadAssets.MayorIcon;
 
     public override int GetAssignmentChance() => (int)OptionGroupSingleton<CrewmateModifierOptions>.Instance.MayorChance;

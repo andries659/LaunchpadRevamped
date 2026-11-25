@@ -43,4 +43,15 @@ public static class LaunchpadPalette
     public static readonly Color ReaperColor = new Color32(81, 131, 142, 255);
     public static readonly Color ExecutionerColor = new Color32(221, 176, 152, 255);
     public static readonly Color ArsonistColor = new Color32(255, 69, 0, 255);
+
+    // Ported from TOHO
+    public static readonly Color BaitColor = new Color32(0, 247, 255, 255);
+    public static readonly Color VampireColor = new Color32(160, 20, 40, 255);
+    public static readonly Color PuppeteerColor = new Color32(190, 90, 90, 255);
+    public static readonly Color BlackmailerColor = new Color32(90, 90, 110, 255);
+    public static readonly Color EraserColor = new Color32(210, 90, 160, 255);
+    public static readonly Color DarkFairyColor = new Color32(150, 80, 220, 255);
+    public static readonly Color IllusionistColor = new Color32(110, 200, 230, 255);
+    public static readonly Color JinxColor = new Color32(190, 70, 170, 255);
+    public static readonly Color RadarColor = new Color32(255, 200, 60, 255);
 }
